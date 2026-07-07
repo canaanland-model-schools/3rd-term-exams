@@ -109,6 +109,16 @@
             opacity: 0.9;
         }
        
+        /* Bold styling for Third Term heading */
+        .exam-info-header .third-term-bold {
+            font-weight: 900;
+            font-size: 32px;
+            color: #ffeb3b;
+            text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+            display: inline-block;
+            margin: 0 4px;
+        }
+       
         .student-info-container {
             display: flex;
             flex-wrap: wrap;
@@ -498,6 +508,25 @@
             85% { opacity: 1; transform: translateX(-50%) translateY(0); }
             100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
         }
+
+        /* Bold heading style for exam title */
+        .exam-title-bold {
+            font-weight: 900;
+            font-size: 32px;
+            color: #ffeb3b;
+            text-shadow: 0 0 15px rgba(255, 235, 59, 0.6);
+        }
+        .exam-title-regular {
+            font-weight: 700;
+        }
+        .third-term-bold {
+            font-weight: 900;
+            font-size: 34px;
+            color: #ffeb3b;
+            text-shadow: 0 0 15px rgba(255, 235, 59, 0.6);
+            display: inline-block;
+            margin: 0 4px;
+        }
     </style>
 </head>
 <body>
@@ -516,7 +545,10 @@
             <span class="marquee-text">CANAANLAND GROUP OF SCHOOLS : GOD IS OUR STRENGTH</span>
         </div>
         <div class="exam-info-header">   
-            <h2 id="examInfoHeader">EXAMINATION RESULTS</h2>
+            <h2 id="examInfoHeader">
+                <span class="exam-title-regular">EXAMINATION RESULTS</span>
+                <span class="third-term-bold">— THIRD TERM —</span>
+            </h2>
             <p id="examDetails">Loading exam information...</p>
         </div>
        
@@ -532,24 +564,24 @@
             </div>
         </div>
        
-        <!-- Confirmation Section with Two Buttons -->
+        <!-- Confirmation Section with OK button redirecting to index.html -->
         <div class="confirmation-section" id="confirmationSection">
             <div class="confirmation-message">
                 📝 <strong>Important:</strong> Please confirm your exam attempt by clicking the button below.
                 This will mark your exam as completed.
             </div>
             <div class="button-group">
-                <!--<button class="btn btn-copy" onclick="copyDataOnly()">
-                    <i class="fa-solid fa-copy"></i> 📋 Copy Data Only
-                </button>-->
-                <button class="btn btn-success" onclick="confirmAndCopy()">
-                    <i class="fa-solid fa-check-circle"></i> ✅ OK (Copy & Continue)
+                <button class="btn btn-success" onclick="confirmAndRedirect()">
+                    <i class="fa-solid fa-check-circle"></i> ✅ OK (Confirm & Continue)
                 </button>
             </div>
         </div>
        
         <div class="score-container">
-            <h2 class="score-title">EXAMINATION RESULT</h2>
+            <h2 class="score-title">
+                <span class="exam-title-regular">EXAMINATION RESULT</span>
+                <span style="font-weight:900; color:#4a0080; font-size:36px; display:inline-block; margin-left:8px;">— THIRD TERM —</span>
+            </h2>
             <div id="scoreCircle" class="score-circle" style="background: linear-gradient(blue, aqua, fuchsia);">
                 <span id="scoreValue">0</span>/<span id="totalQuestions">0</span>
             </div>
@@ -559,8 +591,8 @@
     </div>
    
     <footer>
-        <p>&copy; 2026 cbt.canaanland model schools.org - All rights reserved</p>
-        <p>Computer-Based Testing Portal - canaanland model Schools</p>
+        <p>&copy; 2026 cbt.canaanlandmodelschools.org - All rights reserved</p>
+        <p>Computer-Based Testing Portal - Canaanland Model Schools</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
@@ -621,27 +653,8 @@
             };
         }
 
-        // ✅ FUNCTION: ONLY copies data to clipboard - NO redirect, NO mark as completed
-        function copyDataOnly() {
-            const data = getStudentData();
-            
-            if (!data.cls || !data.sub || !data.username) {
-                showToast("❌ Error: Could not get student data. Please contact administrator.", true);
-                return;
-            }
-            
-            // Copy to clipboard
-            navigator.clipboard.writeText(data.copyString).then(() => {
-                console.log("Data copied to clipboard:", data.copyString);
-                showToast("✅ Data copied to clipboard! Format: Name|Class|Subject|Score|Total|Percentage|Grade|Date");
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                showToast("❌ Failed to copy data. Please try again.", true);
-            });
-        }
-
-        // ✅ FUNCTION: Copies data AND marks exam as completed AND redirects dynamically
-        function confirmAndCopy() {
+        // ✅ UPDATED FUNCTION: Copies data, marks exam as completed, then redirects to index.html
+        function confirmAndRedirect() {
             const data = getStudentData();
            
             if (!data.cls || !data.sub || !data.username) {
@@ -652,7 +665,6 @@
             // Copy to clipboard
             navigator.clipboard.writeText(data.copyString).then(() => {
                 console.log("Data copied to clipboard:", data.copyString);
-                console.log("Dynamic URL to redirect to:", data.dynamicUrl);
                 
                 // Mark the exam as completed
                 markExamCompleted(data.cls, data.sub, data.username);
@@ -668,12 +680,12 @@
                     confirmationSection.style.display = "none";
                 }
                 
-                // Show success message with redirect info
-                showToast(`✅ Data copied! Redirecting to ${data.dynamicUrl}...`);
+                // Show success message
+                showToast(`✅ Exam confirmed! Redirecting to homepage...`);
                 
-                // Redirect to the dynamic data entry page after a short delay
+                // Redirect to index.html after short delay
                 setTimeout(() => {
-                    window.location.href = data.dynamicUrl;
+                    window.location.href = "index.html";
                 }, 1000);
             }).catch(err => {
                 console.error('Failed to copy: ', err);
@@ -710,8 +722,14 @@
             const examClass = localStorage.getItem('examClass') || '';
             const examSubject = localStorage.getItem('examSubject') || '';
            
-            // Display exam information
-            document.getElementById('examInfoHeader').textContent = examSubject ? `${examSubject.toUpperCase()} EXAMINATION RESULTS` : 'EXAMINATION RESULTS';
+            // Display exam information with bold Third Term
+            const headerElement = document.getElementById('examInfoHeader');
+            const subjectText = examSubject ? `${examSubject.toUpperCase()}` : 'EXAMINATION';
+            headerElement.innerHTML = `
+                <span class="exam-title-regular">${subjectText} RESULTS</span>
+                <span class="third-term-bold">— THIRD TERM —</span>
+            `;
+           
             document.getElementById('examDetails').textContent = examInfo || 'Exam Results';
            
             // Get student information
@@ -789,11 +807,24 @@
                 const formattedClass = formatForFilename(cls);
                 const formattedSubject = formatForFilename(sub);
                 console.log(`This exam is for: ${cls} - ${sub}`);
-                console.log(`Will redirect to: ${formattedClass}_${formattedSubject}_exam_scores.html`);
+                console.log(`Will redirect to: index.html`);
+            }
+
+            // Also update the score container title to include bold Third Term
+            const scoreTitle = document.querySelector('.score-title');
+            if (scoreTitle) {
+                scoreTitle.innerHTML = `
+                    <span class="exam-title-regular">EXAMINATION RESULT</span>
+                    <span style="font-weight:900; color:#4a0080; font-size:36px; display:inline-block; margin-left:8px;">— THIRD TERM —</span>
+                `;
             }
         });
 
+        // ✅ UPDATED: Logout function redirects to index.html
         function logout() {
+            // Clear any session data if needed
+            localStorage.removeItem('examUser');
+            sessionStorage.removeItem('username');
             window.location.href = "index.html";
         }
     </script>
