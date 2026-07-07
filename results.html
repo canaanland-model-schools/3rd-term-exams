@@ -456,6 +456,7 @@
             padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
+            z-index: 10;
         }
 
         .marquee-container {
@@ -564,7 +565,7 @@
             </div>
         </div>
        
-        <!-- Confirmation Section with OK button redirecting to index.html -->
+        <!-- Confirmation Section with OK button -->
         <div class="confirmation-section" id="confirmationSection">
             <div class="confirmation-message">
                 📝 <strong>Important:</strong> Please confirm your exam attempt by clicking the button below.
@@ -612,7 +613,6 @@
         // Helper function to convert class/subject to filename friendly format
         function formatForFilename(text) {
             if (!text) return '';
-            // Convert to lowercase, replace spaces with underscores, remove special characters
             return text.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
         }
 
@@ -627,14 +627,12 @@
             const now = new Date();
             const formattedDate = now.toLocaleDateString('en-US');
             
-            // Get performance grade
             let grade = '';
             if (percentage >= 80) grade = 'EXCELLENT';
             else if (percentage >= 60) grade = 'GOOD';
             else if (percentage >= 50) grade = 'FAIR';
             else grade = 'POOR';
             
-            // Generate dynamic URL based on class and subject
             const formattedClass = formatForFilename(cls);
             const formattedSubject = formatForFilename(sub);
             const dynamicUrl = `${formattedClass}_${formattedSubject}_exam_scores.html`;
@@ -653,47 +651,7 @@
             };
         }
 
-        // ✅ UPDATED FUNCTION: Copies data, marks exam as completed, then redirects to index.html
-        function confirmAndRedirect() {
-            const data = getStudentData();
-           
-            if (!data.cls || !data.sub || !data.username) {
-                showToast("❌ Error: Could not confirm attempt. Please contact administrator.", true);
-                return;
-            }
-            
-            // Copy to clipboard
-            navigator.clipboard.writeText(data.copyString).then(() => {
-                console.log("Data copied to clipboard:", data.copyString);
-                
-                // Mark the exam as completed
-                markExamCompleted(data.cls, data.sub, data.username);
-                
-                // Remove pending flags
-                localStorage.removeItem("pendingClass");
-                localStorage.removeItem("pendingSubject");
-                localStorage.removeItem("pendingUsername");
-                
-                // Hide confirmation section
-                const confirmationSection = document.getElementById("confirmationSection");
-                if (confirmationSection) {
-                    confirmationSection.style.display = "none";
-                }
-                
-                // Show success message
-                showToast(`✅ Exam confirmed! Redirecting to homepage...`);
-                
-                // Redirect to index.html after short delay
-                setTimeout(() => {
-                    window.location.href = "index.html";
-                }, 1000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                showToast("❌ Failed to copy data. Please try again.", true);
-            });
-        }
-
-        // ✅ Helper functions for attempt tracking
+        // ✅ Helper functions for attempt tracking with localStorage
         function getExamAttempts(cls) {
             const key = `${cls}_exam_attempts`;
             const stored = localStorage.getItem(key);
@@ -712,14 +670,78 @@
             }
             attempts[username][sub] = true;
             saveExamAttempts(cls, attempts);
-            console.log(`Exam attempt marked as completed for ${username} - ${sub} in ${cls}`);
+            console.log(`✅ Exam attempt marked as completed for ${username} - ${sub} in ${cls}`);
+            return true;
+        }
+
+        // ✅ Saves exam result to localStorage history
+        function saveExamHistory(username, cls, sub, score, total, percentage, grade) {
+            const historyKey = `${username}_exam_history`;
+            const history = JSON.parse(localStorage.getItem(historyKey) || '[]');
+            
+            const examEntry = {
+                class: cls,
+                subject: sub,
+                score: score,
+                total: total,
+                percentage: percentage,
+                grade: grade,
+                date: new Date().toISOString(),
+                term: 'Third Term',
+                school: 'Canaanland Model Schools'
+            };
+            
+            history.push(examEntry);
+            localStorage.setItem(historyKey, JSON.stringify(history));
+            console.log(`📊 Exam history saved for ${username}`);
+        }
+
+        // ✅ FUNCTION: Confirms exam, saves to localStorage, and redirects to index.html
+        function confirmAndRedirect() {
+            const data = getStudentData();
+           
+            if (!data.cls || !data.sub || !data.username) {
+                showToast("❌ Error: Could not confirm attempt. Please contact administrator.", true);
+                return;
+            }
+            
+            // Save exam attempt to localStorage
+            markExamCompleted(data.cls, data.sub, data.username);
+            
+            // Save exam history
+            saveExamHistory(data.username, data.cls, data.sub, data.score, data.totalQuestions, data.percentage, data.grade);
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(data.copyString).then(() => {
+                console.log("📋 Data copied to clipboard:", data.copyString);
+            }).catch(err => {
+                console.warn('Could not copy to clipboard: ', err);
+            });
+            
+            // Remove pending flags
+            localStorage.removeItem("pendingClass");
+            localStorage.removeItem("pendingSubject");
+            localStorage.removeItem("pendingUsername");
+            
+            // Hide confirmation section
+            const confirmationSection = document.getElementById("confirmationSection");
+            if (confirmationSection) {
+                confirmationSection.style.display = "none";
+            }
+            
+            // Show success message
+            showToast(`✅ Exam confirmed! Result saved. Redirecting to homepage...`);
+            
+            // Redirect to index.html after short delay
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1500);
         }
 
         // Get data from localStorage
         document.addEventListener('DOMContentLoaded', function() {
             // Get exam information
             const examInfo = localStorage.getItem('examInfo') || '';
-            const examClass = localStorage.getItem('examClass') || '';
             const examSubject = localStorage.getItem('examSubject') || '';
            
             // Display exam information with bold Third Term
@@ -734,7 +756,6 @@
            
             // Get student information
             const username = localStorage.getItem('examUser') || sessionStorage.getItem('username') || 'Student';
-            const userImage = sessionStorage.getItem('image') || 'default_user.jpg';
            
             // Get exam results
             const score = localStorage.getItem('examScore') || 0;
@@ -802,15 +823,7 @@
                 }
             }
             
-            // Log the dynamic URL that would be used (for debugging)
-            if (cls && sub) {
-                const formattedClass = formatForFilename(cls);
-                const formattedSubject = formatForFilename(sub);
-                console.log(`This exam is for: ${cls} - ${sub}`);
-                console.log(`Will redirect to: index.html`);
-            }
-
-            // Also update the score container title to include bold Third Term
+            // Update score container title
             const scoreTitle = document.querySelector('.score-title');
             if (scoreTitle) {
                 scoreTitle.innerHTML = `
@@ -820,12 +833,23 @@
             }
         });
 
-        // ✅ UPDATED: Logout function redirects to index.html
+        // ✅ LOGOUT FUNCTION: Clears data and redirects to index.html
         function logout() {
-            // Clear any session data if needed
+            // Clear exam session data
             localStorage.removeItem('examUser');
+            localStorage.removeItem('examScore');
+            localStorage.removeItem('totalQuestions');
+            localStorage.removeItem('examInfo');
+            localStorage.removeItem('examClass');
+            localStorage.removeItem('examSubject');
             sessionStorage.removeItem('username');
-            window.location.href = "index.html";
+            sessionStorage.removeItem('image');
+            
+            showToast("👋 Logged out successfully. Redirecting...");
+            
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 800);
         }
     </script>
 </body>
