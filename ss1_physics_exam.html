@@ -1,0 +1,1894 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
+    <title>cbt.canaanlandmodelgroupofschools.org - PHYSICS Exam</title>
+    <script>
+         // Disable back navigation
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+
+     let backClickCount = 0;
+            let allowBack = false;
+
+            history.pushState(null, null, location.href);
+
+            window.onpopstate = function () {
+                if (!allowBack) {
+                    backClickCount++;
+
+                    if (backClickCount >= 50) {
+                        allowBack = true;
+                        alert("You have tried 50 times. Going back now...");
+                        history.back();
+                        return;
+                    }
+
+                    showBackModal();
+                }
+            };
+
+            function showBackModal() {
+                document.getElementById("backModalOverlay").style.display = "flex";
+                document.getElementById("passwordContainer").style.display = "none";
+                document.getElementById("backPassword").value = "";
+               
+                document.getElementById("modalButtons").innerHTML = `
+                    <button onclick="handleYes()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: limegreen; color: white; font-size: 16px; cursor: pointer;">Yes</button>
+                    <button onclick="closeBackModal()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: crimson; color: white; font-size: 16px; cursor: pointer;">No</button>
+                `;
+            }
+
+            function closeBackModal() {
+                document.getElementById("backModalOverlay").style.display = "none";
+                history.pushState(null, null, location.href);
+            }
+
+            function handleYes() {
+                document.getElementById("passwordContainer").style.display = "block";
+                document.getElementById("modalButtons").innerHTML = `
+                    <button onclick="checkPassword()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: limegreen; color: white; font-size: 16px; cursor: pointer;">Submit</button>
+                    <button onclick="closeBackModal()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: crimson; color: white; font-size: 16px; cursor: pointer;">Cancel</button>
+                `;
+            }
+
+            function checkPassword() {
+                const correctPassword = "admin123";
+                const enteredPassword = document.getElementById("backPassword").value;
+
+                if (enteredPassword === correctPassword) {
+                    allowBack = true;
+                    document.getElementById("backModalOverlay").style.display = "none";
+                    history.back();
+                } else {
+                    alert("Incorrect password. Staying on this page.");
+                    closeBackModal();
+                }
+            }
+    </script>
+</head>
+         <div id="backModalOverlay" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.8); color: #fff; font-family: Arial, sans-serif; justify-content: center; align-items: center; flex-direction: column;">
+                <div id="backModal" style="background: #222; padding: 30px; border-radius: 10px; text-align: center; width: 90%; max-width: 400px;">
+                    <p style="font-size: 18px; margin: 0 0 10px;">Do you really want to go back?</p>
+
+                    <div id="passwordContainer" style="display: none;">
+                        <p style="margin-top: 10px;">Enter password to go back:</p>
+                        <input type="password" id="backPassword" placeholder="Enter password"
+                            style="padding: 10px; width: 80%; margin-top: 10px; border-radius: 5px; border: none; font-size: 16px;">
+                    </div>
+
+                    <div id="modalButtons" style="margin-top: 20px;">
+                        <button onclick="handleYes()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: limegreen; color: white; font-size: 16px; cursor: pointer;">Yes</button>
+                        <button onclick="closeBackModal()" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: crimson; color: white; font-size: 16px; cursor: pointer;">No</button>
+                    </div>
+                </div>
+            </div>
+                      
+
+    <style>
+        body {
+            position: relative;
+            z-index: 1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/Ctemplogo.jpg') no-repeat center center;
+            background-size: 300px 300px;
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
+        #logout-container {
+            text-align: right;
+            padding: 10px;
+            background: #2c3e50;
+        }
+        #datetime {
+            color:blue;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+        #logout {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        #header {
+            padding: 20px;
+            background: linear-gradient(to right,blue, fuchsia);
+            color: white;
+            border-bottom: 5px solid #ff9800;
+        }
+        #logo img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        #student-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #student-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+            border: 3px solid white;
+            background: #ddd;
+        }
+        #welcome-message {
+            color: #ffeb3b;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        #userAnswerCount {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            width: 200px;
+            z-index: 100;
+        }
+        #answeredLabel {
+            color: lime;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        #unansweredLabel {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #questionText {
+            width: 98%;
+            min-height: 100px;
+            resize: none;
+            padding: 15px;
+            font-size: 18px;
+            color: red; /*#333;*/
+            background-color: lime;/* #f9f9f9;*/
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            font-family: Arial, "Segoe UI Symbol", "Apple Symbols", sans-serif;
+        }
+        .option-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 12px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .option-group:hover {
+            background-color: #e8f5e8;
+        }
+        .option-group input {
+            margin-right: 15px;
+            transform: scale(1.3);
+        }
+        .option-group label {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            font-family: Arial, "Segoe UI Symbol", "Apple Symbols", sans-serif;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .btn-cool {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        .btn-cool:hover {
+            background: #1b5e20;
+        }
+        .questionButtons {
+            margin: 15px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        .question-btn {
+            margin: 3px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #eee;
+            min-width: 40px;
+            transition: all 0.3s;
+        }
+        .question-btn:hover {
+            background-color: #d0f0d0;
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            text-align: center;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #e74c3c;
+        }
+        .section-toggle {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .section-btn {
+            padding: 12px 24px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .section-btn.active {
+            background-color: #2e7d32;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .section-btn:not(.active) {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        #theorySection {
+            display: none;
+            background: #fff9e6;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 80%;
+            border: 2px solid #ff9800;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #theoryQuestionText {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            border-left: 5px solid #ff9800;
+            font-family: Arial, sans-serif;
+        }
+        #theoryAnswer {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 200px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 15px;
+        }
+        .theory-nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .theory-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .theory-save-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .theory-save-btn:hover {
+            background-color: #218838;
+        }
+        .theory-prev-btn, .theory-next-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .theory-prev-btn:hover, .theory-next-btn:hover {
+            background-color: #0069d9;
+        }
+        .theory-submit-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .theory-submit-btn:hover {
+            background-color: #c82333;
+        }
+        .theory-status {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .windows-activate {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+            font-size: 14px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .exam-info {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        /* Math symbols styling */
+        sup, sub {
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        sup {
+            vertical-align: super;
+        }
+        sub {
+            vertical-align: sub;
+        }
+        /* Theory Question Images */
+        .theory-image-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .theory-image-wrapper {
+            display: inline-block;
+            max-width: 100%;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .theory-question-image {
+            max-width: 100%;
+            max-height: 300px;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            background: #f0f0f0;
+            padding: 10px;
+        }
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+        /* Objective question images */
+        #questionImageContainer {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .question-image {
+            max-width: 100%;
+            max-height: 250px;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background: white;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+
+
+
+
+         .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: aqua;
+            padding: 10px 0;
+        }
+    
+        /* Moving text animation */
+        .marquee-text {
+            display: inline-block;
+            color: fuchsia;
+            font-size: 24px;
+            font-weight: bold;
+            animation: marquee 10s linear infinite;
+        }
+
+        /* Keyframes for moving text */
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+    </style>
+</head>
+<body oncontextmenu="return false">
+    <div id="header">
+        <div id="logout-container">
+            <button id="logout" onclick="logout()">Logout</button>
+                 <div class="marquee-container">
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+    </div>
+        </div>
+        <div id="logo">
+            <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
+        </div>
+        <div id="student-info">
+            <center><strong>ATTENTION! CLICK ON SUBMIT BUTTON BEFORE YOUR TIME IS UP TO SAVE YOUR SCORE</strong></center>
+            <center><p id="datetime"></p></center>
+              <div id="welcome-message">
+            <label id="usernameDisplay"></label>
+        </div>
+         <div class="student-info">
+          <img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+          <h2 id="username">Student Name</h2>
+           </div>
+
+        <!--<img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+            <center><img id="userImage"><br><br></center>
+             <img id="userImage" src="img/default_user.jpg" alt="Student Image">
+            <center>Hello: <span id="userName"></span></center>
+        </div>-->
+
+    
+        <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
+        <center><h3>THIRD TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
+       
+        <!-- SECTION TOGGLE BUTTONS -->
+        <div class="section-toggle">
+            <button id="objectivesBtn" class="section-btn active" onclick="showSection('objectives')">OBJECTIVE QUESTIONS</button>
+            <button id="theoryBtn" class="section-btn" onclick="showSection('theory')">THEORY QUESTIONS</button>
+        </div>
+       
+        <div class="exam-info">
+            Exam: <span id="examInfo" style="color: lime;">  PHYSICS - SS1 (THIRD TERM)</span>
+        </div>
+       
+        <div id="timer"></div>
+    </div>
+   
+    <!-- OBJECTIVES SECTION -->
+    <div id="objectivesSection">
+        <div class="container">
+            <h5 style="color: #d35400; text-align: center;">INSTRUCTIONS: READ THE QUESTIONS CAREFULLY BEFORE YOU CHOOSE YOUR ANSWER</h5>
+            <div class="scroll-container">
+                <div id="questionText"></div>
+            </div>
+           
+            <div id="questionImageContainer"></div>
+           
+            <div class="option-group">
+                <label class="option"><strong>A.</strong><input type="radio" name="option" value="A"> <span id="optA"></span></label>
+            </div>
+            <div class="option-group">
+                <label class="option"><strong>B.</strong><input type="radio" name="option" value="B"> <span id="optB"></span></label>
+            </div>
+            <div class="option-group">
+                <label class="option"><strong>C.</strong><input type="radio" name="option" value="C"> <span id="optC"></span></label>
+            </div>
+            <div class="option-group">
+                <label class="option"><strong>D.</strong><input type="radio" name="option" value="D"> <span id="optD"></span></label>
+            </div>
+        </div>
+       
+        <div class="nav-buttons">
+            <button onclick="prevQuestion()" class="btn-cool">Previous</button>
+            <button onclick="nextQuestion()" class="btn-cool">Next</button>
+            <button onclick="submitExam()" class="btn-cool">Submit Objectives</button>
+        </div>
+       
+        <!-- Question navigation buttons -->
+        <div class="container">
+            <div id="questionButtons" class="questionButtons"></div>
+        </div>
+    </div>
+   
+    <!-- THEORY SECTION -->
+    <div id="theorySection">
+        <h3 style="text-align: center; color: #d35400; margin-bottom: 20px;">THEORY QUESTIONS SECTION</h3>
+        <div class="theory-status" id="theoryStatus">
+            Question 1 of 5 | Saved: 0/5
+        </div>
+        <div id="theoryQuestionContainer">
+            <p id="theoryQuestionText">Loading theory questions...</p>
+            <div id="theoryImageContainer"></div>
+            <textarea id="theoryAnswer" rows="8" placeholder="Write your detailed answer here..."></textarea>
+            <div class="theory-nav-buttons">
+                <button onclick="prevTheoryQuestion()" class="theory-btn theory-prev-btn">Previous</button>
+                <button onclick="saveTheoryAnswer()" class="theory-btn theory-save-btn">Save Answer</button>
+                <button onclick="nextTheoryQuestion()" class="theory-btn theory-next-btn">Next</button>
+                <button onclick="submitTheoryExam()" class="theory-btn theory-submit-btn">Submit Theory</button>
+            </div>
+        </div>
+    </div>
+   
+    <div id="userAnswerCount">
+        <p id="answeredLabel">Answered: 0/5</p>
+        <p id="unansweredLabel">Unanswered: 5/5</p>
+    </div>
+             <div class="marquee-container">
+        <span class="marquee-text">3RD TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+    </div>
+   
+    <div class="windows-activate">
+        <p> &copy; cbt.<span style="color: red;">canaanlandmodelgroupof</span><span style="color: green;">schools</span>.org</p>
+    </div>
+
+
+    <script>
+           // Get stored username and image from sessionStorage
+       
+            
+    
+        // ================== STATIC QUESTIONS DATA ==================
+   const staticObjectivesQuestions = [
+{
+      "id": 1,
+      "question": "A fluid is any substance that can flow and take the shape of its container. Which of the following is NOT a fluid?",
+      "options": {
+        "A": "Water",
+        "B": "Air",
+        "C": "Stone",
+        "D": "Oil"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "Pressure in a fluid at rest increases with depth because of the\u2026",
+      "options": {
+        "A": "weight of the fluid above.",
+        "B": "temperature of the fluid.",
+        "C": "surface tension of the fluid.",
+        "D": "viscosity of the fluid."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "The pressure at a point in a liquid at rest depends on the\u2026",
+      "options": {
+        "A": "shape of the container.",
+        "B": "volume of the liquid.",
+        "C": "depth and density of the liquid.",
+        "D": "surface area of the liquid."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "The formula for calculating pressure at a depth h in a liquid of density \u03c1 is\u2026",
+      "options": {
+        "A": "P = h/\u03c1g.",
+        "B": "P = \u03c1gh.",
+        "C": "P = \u03c1g/h.",
+        "D": "P = gh/\u03c1."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Pascal's principle states that pressure applied to a confined fluid is transmitted\u2026",
+      "options": {
+        "A": "only in the direction of the applied force.",
+        "B": "with a loss proportional to the distance.",
+        "C": "equally and undiminished in all directions.",
+        "D": "only to the walls of the container."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "A hydraulic press is a practical application of\u2026",
+      "options": {
+        "A": "Archimedes' principle.",
+        "B": "Bernoulli's principle.",
+        "C": "Pascal's principle.",
+        "D": "the law of flotation."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "In a hydraulic press, the relationship between forces and areas on the pistons is given by\u2026",
+      "options": {
+        "A": "F\u2081A\u2081 = F\u2082A\u2082.",
+        "B": "F\u2081/A\u2081 = F\u2082/A\u2082.",
+        "C": "F\u2081A\u2082 = F\u2082A\u2081.",
+        "D": "F\u2081/F\u2082 = A\u2082/A\u2081."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Archimedes' principle states that when a body is wholly or partially immersed in a fluid, it experiences an upthrust equal to the\u2026",
+      "options": {
+        "A": "weight of the body in air.",
+        "B": "volume of the fluid displaced.",
+        "C": "weight of the fluid displaced.",
+        "D": "mass of the body."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "The upthrust on a submerged object can be calculated using the formula\u2026",
+      "options": {
+        "A": "Fu = mg.",
+        "B": "Fu = \u03c1gh.",
+        "C": "Fu = \u03c1gV.",
+        "D": "Fu = \u03c1V."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "A body weighs 12 N in air and 8 N when fully immersed in water. The upthrust experienced by the body is\u2026",
+      "options": {
+        "A": "4 N.",
+        "B": "8 N.",
+        "C": "12 N.",
+        "D": "20 N."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "The law of flotation states that a body will float in a fluid when its weight is equal to the\u2026",
+      "options": {
+        "A": "density of the fluid.",
+        "B": "volume of fluid displaced.",
+        "C": "weight of the fluid displaced.",
+        "D": "upthrust on the body."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "An object will float in a liquid if its density is\u2026 the density of the liquid.",
+      "options": {
+        "A": "greater than",
+        "B": "equal to",
+        "C": "less than or equal to",
+        "D": "proportional to"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "A ship made of steel floats because its average density is\u2026 the density of water.",
+      "options": {
+        "A": "greater than",
+        "B": "less than",
+        "C": "equal to",
+        "D": "twice"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "The type of flow in which fluid particles move in parallel layers without mixing or crossing paths is called\u2026",
+      "options": {
+        "A": "turbulent flow.",
+        "B": "eddy flow.",
+        "C": "streamline or laminar flow.",
+        "D": "vortex flow."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "The equation of continuity for an incompressible fluid in steady flow is\u2026",
+      "options": {
+        "A": "A\u2081V\u2082 = A\u2082V\u2081.",
+        "B": "A\u2081V\u2081 = A\u2082V\u2082.",
+        "C": "A\u2081/V\u2081 = A\u2082/V\u2082.",
+        "D": "\u03c1\u2081A\u2081V\u2081 = \u03c1\u2082A\u2082V\u2082."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "According to the equation of continuity, when a fluid flows from a wide pipe into a narrow pipe, its velocity\u2026",
+      "options": {
+        "A": "decreases.",
+        "B": "increases.",
+        "C": "remains the same.",
+        "D": "becomes zero."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Bernoulli's principle states that for a streamline flow of an ideal fluid, the sum of pressure energy, kinetic energy, and potential energy per unit volume is\u2026",
+      "options": {
+        "A": "zero.",
+        "B": "variable.",
+        "C": "constant.",
+        "D": "infinite."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "The lift on an airplane wing is explained by Bernoulli's principle because air moves faster over the curved top surface, resulting in\u2026",
+      "options": {
+        "A": "higher pressure above the wing.",
+        "B": "lower pressure above the wing.",
+        "C": "equal pressure above and below.",
+        "D": "no pressure difference."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "An atomizer or spray gun works on the principle of\u2026",
+      "options": {
+        "A": "Pascal.",
+        "B": "Archimedes.",
+        "C": "Bernoulli.",
+        "D": "Boyle."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Surface tension is the force acting along the surface of a liquid, causing it to behave like a\u2026",
+      "options": {
+        "A": "rigid solid.",
+        "B": "stretched elastic skin.",
+        "C": "highly compressed gas.",
+        "D": "viscous liquid."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "A needle can be made to float on the surface of water, even though its density is greater, due to\u2026",
+      "options": {
+        "A": "viscosity.",
+        "B": "upthrust.",
+        "C": "surface tension.",
+        "D": "atmospheric pressure."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "Which of the following factors affects the surface tension of a liquid?",
+      "options": {
+        "A": "Colour of the liquid",
+        "B": "Volume of the liquid",
+        "C": "Temperature of the liquid",
+        "D": "Shape of the container"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "The surface tension of a liquid can be reduced by\u2026",
+      "options": {
+        "A": "decreasing its temperature.",
+        "B": "adding impurities like soap or alcohol.",
+        "C": "increasing its density.",
+        "D": "allowing it to stand undisturbed."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "A hydraulic press has a small piston of area 0.02 m\u00b2 and a large piston of area 0.5 m\u00b2. If a force of 150 N is applied to the small piston, the force exerted by the large piston is\u2026",
+      "options": {
+        "A": "6 N.",
+        "B": "150 N.",
+        "C": "3750 N.",
+        "D": "15000 N."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "A body of volume 0.002 m\u00b3 is fully immersed in a liquid of density 1000 kg/m\u00b3. The upthrust on the body is (g = 10 m/s\u00b2)\u2026",
+      "options": {
+        "A": "2 N.",
+        "B": "20 N.",
+        "C": "200 N.",
+        "D": "2000 N."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "The kinetic theory of gases assumes that gas particles are in a state of\u2026",
+      "options": {
+        "A": "vibratory motion only.",
+        "B": "constant, random motion.",
+        "C": "stationary positions.",
+        "D": "ordered motion."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "According to the kinetic theory, the volume of the gas particles themselves is considered\u2026",
+      "options": {
+        "A": "large compared to the volume of the container.",
+        "B": "negligible compared to the volume of the container.",
+        "C": "equal to the volume of the container.",
+        "D": "irrelevant to the theory."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "Collisions between gas particles and the walls of the container are assumed to be\u2026",
+      "options": {
+        "A": "inelastic.",
+        "B": "perfectly elastic.",
+        "C": "partially elastic.",
+        "D": "non-existent."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "Boyle's law states that at constant temperature, the volume of a fixed mass of gas is\u2026",
+      "options": {
+        "A": "directly proportional to its pressure.",
+        "B": "inversely proportional to its pressure.",
+        "C": "independent of its pressure.",
+        "D": "equal to its pressure."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "The mathematical expression for Boyle's law is\u2026",
+      "options": {
+        "A": "P/T = constant.",
+        "B": "V/T = constant.",
+        "C": "P\u2081V\u2081 = P\u2082V\u2082.",
+        "D": "P\u2081/T\u2081 = P\u2082/T\u2082."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "In the J-tube experiment to verify Boyle's law, if the mercury levels in both limbs are equal, the pressure of the trapped gas is equal to the\u2026",
+      "options": {
+        "A": "atmospheric pressure.",
+        "B": "atmospheric pressure minus the height of the column.",
+        "C": "atmospheric pressure plus the height of the column.",
+        "D": "height of the mercury column only."
+      },
+      "answer": "A",
+      "image": {
+        "present": true,
+        "description": "Diagram of a J-tube experiment showing mercury levels in both limbs"
+      }
+    },
+    {
+      "id": 32,
+      "question": "If an additional 15 cmHg is poured into the open limb, the new pressure on the trapped gas will be\u2026",
+      "options": {
+        "A": "60 cmHg.",
+        "B": "75 cmHg.",
+        "C": "90 cmHg.",
+        "D": "105 cmHg."
+      },
+      "answer": "B",
+      "image": {
+        "present": true,
+        "description": "Diagram of a J-tube experiment with atmospheric pressure at 76 cmHg and mercury column height"
+      }
+    },
+    {
+      "id": 33,
+      "question": "Charles's law states that at constant pressure, the volume of a fixed mass of gas is directly proportional to its\u2026",
+      "options": {
+        "A": "Celsius temperature.",
+        "B": "absolute temperature (Kelvin).",
+        "C": "density.",
+        "D": "mass."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "The mathematical expression for Charles's law is\u2026",
+      "options": {
+        "A": "P\u2081V\u2081 = P\u2082V\u2082.",
+        "B": "V\u2081/T\u2081 = V\u2082/T\u2082.",
+        "C": "P\u2081/T\u2081 = P\u2082/T\u2082.",
+        "D": "P\u2081V\u2081/T\u2081 = P\u2082V\u2082/T\u2082."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "The pressure law (Gay-Lussac's law) states that at constant volume, the pressure of a fixed mass of gas is directly proportional to its\u2026",
+      "options": {
+        "A": "volume.",
+        "B": "density.",
+        "C": "absolute temperature.",
+        "D": "mass."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "The general gas law, which combines Boyle's, Charles's, and Pressure laws, is given by\u2026",
+      "options": {
+        "A": "P\u2081V\u2081 = P\u2082V\u2082.",
+        "B": "V\u2081/T\u2081 = V\u2082/T\u2082.",
+        "C": "P\u2081/T\u2081 = P\u2082/T\u2082.",
+        "D": "P\u2081V\u2081/T\u2081 = P\u2082V\u2082/T\u2082."
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "The ideal gas equation is PV = nRT. In this equation, 'n' represents the\u2026",
+      "options": {
+        "A": "number of molecules.",
+        "B": "number of moles.",
+        "C": "Avogadro's number.",
+        "D": "gas constant."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "The universal gas constant R has a value of approximately\u2026",
+      "options": {
+        "A": "8.31 J/mol\u00b7K.",
+        "B": "8.31 J/K.",
+        "C": "8.31 J/mol.",
+        "D": "8.31 J."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "Avogadro's law states that equal volumes of all gases at the same temperature and pressure contain equal numbers of\u2026",
+      "options": {
+        "A": "atoms.",
+        "B": "molecules.",
+        "C": "protons.",
+        "D": "electrons."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "At Standard Temperature and Pressure (STP), one mole of any ideal gas occupies a volume of approximately\u2026",
+      "options": {
+        "A": "2.24 L.",
+        "B": "22.4 L.",
+        "C": "224 L.",
+        "D": "2240 L."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 41,
+      "question": "The temperature of 27\u00b0C is equivalent to\u2026 K.",
+      "options": {
+        "A": "-246 K",
+        "B": "27 K",
+        "C": "273 K",
+        "D": "300 K"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 42,
+      "question": "A fixed mass of gas at 27\u00b0C is heated at constant volume until its pressure is tripled. The new temperature in \u00b0C is\u2026",
+      "options": {
+        "A": "81\u00b0C.",
+        "B": "300\u00b0C.",
+        "C": "627\u00b0C.",
+        "D": "900\u00b0C."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 43,
+      "question": "The volume of a given mass of gas at a pressure of 2 atm is 3 L. If the pressure is increased to 6 atm at constant temperature, the new volume will be\u2026",
+      "options": {
+        "A": "1 L.",
+        "B": "4 L.",
+        "C": "6 L.",
+        "D": "9 L."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 44,
+      "question": "Real gases deviate most from ideal gas behaviour at\u2026",
+      "options": {
+        "A": "high temperatures and low pressures.",
+        "B": "low temperatures and high pressures.",
+        "C": "standard temperature and pressure.",
+        "D": "very low densities."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 45,
+      "question": "The pressure of one mole of an ideal gas in a volume of 10\u207b\u00b2 m\u00b3 at a temperature of 27\u00b0C is approximately (R = 8.3 J/mol\u00b7K)\u2026",
+      "options": {
+        "A": "2.49 \u00d7 10\u00b3 Pa.",
+        "B": "2.49 \u00d7 10\u2074 Pa.",
+        "C": "2.49 \u00d7 10\u2075 Pa.",
+        "D": "2.49 \u00d7 10\u2076 Pa."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 46,
+      "question": "Simple Harmonic Motion (SHM) is a periodic motion in which the acceleration of the body is directly proportional to its\u2026 and directed towards a fixed point.",
+      "options": {
+        "A": "velocity",
+        "B": "displacement",
+        "C": "time",
+        "D": "force"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 47,
+      "question": "The negative sign in the equation a = -\u03c9\u00b2x indicates that the acceleration is\u2026",
+      "options": {
+        "A": "proportional to displacement.",
+        "B": "opposite to the direction of displacement.",
+        "C": "in the same direction as displacement.",
+        "D": "constant."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 48,
+      "question": "Which of the following is a necessary condition for a body to execute SHM?",
+      "options": {
+        "A": "Constant velocity",
+        "B": "No friction",
+        "C": "A restoring force proportional to displacement",
+        "D": "A circular path"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 49,
+      "question": "A simple pendulum swinging through a small angle is a classic example of a system that performs\u2026",
+      "options": {
+        "A": "random motion.",
+        "B": "circular motion.",
+        "C": "simple harmonic motion.",
+        "D": "translational motion."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 50,
+      "question": "The maximum displacement of a particle from its equilibrium position in SHM is called its\u2026",
+      "options": {
+        "A": "period.",
+        "B": "frequency.",
+        "C": "amplitude.",
+        "D": "phase."
+      },
+      "answer": "C",
+      "image": null
+    }
+];
+
+
+        const staticTheoryQuestions = [
+      {
+      "id": 1,
+      "question": "(a) Define a fluid and state two examples. (2 marks)\n(b) State Pascal's principle. (2 marks)\n(c) Describe with a labelled diagram, the principle of operation of a hydraulic press. (6 marks)\n(d) A hydraulic press has a small piston of area 0.015 m\u00b2 and a large piston of area 0.45 m\u00b2. If a force of 120 N is applied to the small piston, calculate the force exerted by the large piston. (5 marks)\n(e) State Archimedes' principle. (2 marks)\n(f) A body weighs 15.0 N in air and 9.0 N when fully immersed in a liquid. Calculate the upthrust on the body. (3 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "(a) State Boyle's law, Charles's law, and the Pressure law (Gay-Lussac's law). (6 marks)\n(b) A fixed mass of gas occupies a volume of 200 cm\u00b3 at a temperature of 27\u00b0C and a pressure of 750 mmHg. Calculate its volume at STP (0\u00b0C and 760 mmHg). (7 marks)\n(c) A steel cylinder contains 2.0 moles of an ideal gas at a temperature of 300 K and a pressure of 5.0 \u00d7 10\u2075 Pa. Calculate the volume of the cylinder. (R = 8.3 J/mol\u00b7K) (7 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "(a) Define Simple Harmonic Motion (SHM) and state two conditions necessary for a body to execute it. (5 marks)\n(b) A particle executing SHM has an amplitude of 8 cm and a frequency of 10 Hz. Calculate:\n(i) the angular frequency. (3 marks)\n(ii) the maximum velocity. (4 marks)\n(iii) the maximum acceleration. (4 marks)\n(c) A simple pendulum of length 1.0 m has a period of 2.0 s. Calculate the acceleration due to gravity at that location. (\u03c0 = 3.14) (4 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "(a) Define a projectile and sketch its trajectory, clearly indicating the following: angle of projection, maximum height (H), and range (R). (6 marks)\n(b) Derive the expression for the time of flight (T) of a projectile launched from ground level with initial velocity u at an angle \u03b8. (4 marks)\n(c) An object is projected from ground level with a speed of 60 m/s at an angle of 30\u00b0 to the horizontal. Calculate:\n(i) the time of flight. (3 marks)\n(ii) the maximum height reached. (3 marks)\n(iii) the range. (4 marks)\n(Take g = 10 m/s\u00b2, sin 30\u00b0 = 0.5, cos 30\u00b0 = 0.866)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "(a) What is a wave? (2 marks)\n(b) Distinguish between mechanical waves and electromagnetic waves, giving two examples of each. (6 marks)\n(c) With the aid of clearly labelled diagrams, distinguish between a transverse wave and a longitudinal wave. (6 marks)\n(d) A radio station broadcasts at a frequency of 1.5 MHz (1.5 \u00d7 10\u2076 Hz) with a wavelength of 200 m. Calculate the speed of the radio wave. (3 marks)\n(e) The period of a wave is 0.02 s. Calculate its frequency. (3 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "(a) Explain the term \"surface tension\" and give two examples of its effects. (5 marks)\n(b) State two factors on which the surface tension of a liquid depends and two methods by which it can be reduced. (6 marks)\n(c) A uniform capillary tube, closed at one end, contains dry air trapped by a thread of mercury 8.5 \u00d7 10\u207b\u00b2 m long. When the tube was held horizontally, the length of the air column was 5.0 \u00d7 10\u207b\u00b2 m. When held vertically with the closed end downwards, the length was 4.5 \u00d7 10\u207b\u00b2 m. Determine the atmospheric pressure in pascals.\n(g = 10 m/s\u00b2, density of mercury = 1.36 \u00d7 10\u2074 kg/m\u00b3) (9 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "(a) State four assumptions of the kinetic theory of gases. (8 marks)\n(b) Explain why real gases deviate from ideal gas behaviour at high pressures and low temperatures. (4 marks)\n(c) The pressure of one mole of an ideal gas in a container of volume 0.025 m\u00b3 at a temperature of 47\u00b0C is required. (Molar gas constant, R = 8.3 J/mol\u00b7K). Calculate the pressure. (8 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "(a) Define the following terms as they apply to a wave:\n(i) Amplitude\n(ii) Wavelength\n(iii) Frequency\n(iv) Period (8 marks)\n(b) A sonometer wire vibrates with a maximum amplitude of 2.0 cm. The magnitude of its maximum acceleration is 1577.5 m/s\u00b2. Calculate the frequency of vibration of the wire. (Take \u03c0 = 3.14) (6 marks)\n(c) A ray of light is incident on the surface of a rectangular glass prism of refractive index 1.6 at an angle of 50\u00b0. If the angle of refraction is 28.6\u00b0, calculate the speed of light in the prism. (Speed of light in air = 3.0 \u00d7 10\u2078 m/s) (6 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "(a) Explain the following terms related to fluid dynamics:\n(i) Streamline flow\n(ii) Turbulent flow (4 marks)\n(b) State the equation of continuity for an incompressible fluid in steady flow. (2 marks)\n(c) A horizontal pipe has cross-sectional areas of 0.05 m\u00b2 and 0.02 m\u00b2 at two points. If the velocity of water in the wider section is 2.5 m/s, calculate the velocity in the narrower section. (4 marks)\n(d) State Bernoulli's principle. (2 marks)\n(e) A metal cube of side 0.1 m is fully immersed in a liquid of density 900 kg/m\u00b3. Calculate the upthrust acting on the cube. (g = 10 m/s\u00b2) (4 marks)\n(f) Explain why a ship made of steel, which is denser than water, can float. (4 marks)",
+      "marks": 20,
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "(a) Write short notes on the following properties of waves:\n(i) Reflection\n(ii) Refraction\n(iii) Diffraction\n(iv) Interference (8 marks)\n(b) A ray of light traveling in air strikes a glass surface at an angle of incidence of 50\u00b0. If the refractive index of the glass is 1.5, calculate the angle of refraction. (4 marks)\n(c) Calculate the frequency of a wave of wavelength 0.5 m traveling at a speed of 340 m/s. (4 marks)\n(d) What is the period of a wave with a frequency of 500 Hz? (4 marks)",
+      "marks": 20,
+      "image": null
+    }
+];
+        // ================== APPLICATION VARIABLES ==================
+        let questions = [];
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let theoryQuestions = [];
+        let currentTheory = 0;
+        let theoryAnswers = [];
+        let currentSection = 'objectives';
+       
+        // ================== INITIALIZATION ==================
+        window.onload = function () {
+            // Extract exam info from the page
+            const examInfoElement = document.getElementById('examInfo');
+            if (examInfoElement) {
+                const examInfoText = examInfoElement.textContent;
+                // Parse the text to extract subject and class
+                // This is a simple example - adjust based on your actual text format
+                localStorage.setItem('examSubject', 'EXAM');
+                localStorage.setItem('examClass', 'RESULT');
+            }
+            localStorage.setItem('examTerm', 'SECOND TERM 2025/2026');
+             /*let username = sessionStorage.getItem('username');
+             const userImage = sessionStorage.getItem('image');
+            document.getElementById("usernameDisplay").innerText = "WELCOME:" + " " + username;
+            document.getElementById('userImage').src = "img/student.png";
+            document.getElementById('userName').innerText = username;
+            document.getElementById('userImage').src = userImage;
+
+
+            const username = sessionStorage.getItem('username') || 'Student';
+            const userImageFile = sessionStorage.getItem('image');
+            const userImagePath = userImageFile ? `img/${userImageFile}` : 'img/default_user.jpg';
+
+            // Set username
+            const usernameElements = [document.getElementById('userName'), document.getElementById('usernameDisplay')];
+            usernameElements.forEach(el => { if(el) el.innerText = username; });
+
+            // Set user image
+            const userImageElement = document.getElementById('userImage');
+            if(userImageElement){
+                userImageElement.src = userImagePath;
+                userImageElement.onerror = function(){
+                    this.src = 'img/default_user.jpg'; // fallback if image not found
+                };
+            }*/
+             const username = sessionStorage.getItem('username');
+                const image = sessionStorage.getItem('image');
+
+                if (!username) {
+                  window.location.href = 'index.html';
+                } else {
+                  document.getElementById('username').innerText = username;
+                  
+              
+                document.getElementById('userImage').src =
+              (sessionStorage.getItem('image') || 'img/default_user.jpg');
+                }
+           
+            // Load static questions
+            questions = staticObjectivesQuestions;
+            theoryQuestions = staticTheoryQuestions;
+           
+            userAnswers = new Array(questions.length);
+            theoryAnswers = new Array(theoryQuestions.length).fill('');
+           
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+           
+            displayQuestion();
+            renderQuestionButtons();
+            countUserSelections();
+            updateTheoryStatus();
+        };
+       
+        // ================== TIMER ==================
+        let timeLeft = 60 * 60; // 60 minutes
+        const timerEl = document.getElementById('timer');
+        const timerInterval = setInterval(() => {
+            let min = Math.floor(timeLeft / 60);
+            let sec = timeLeft % 60;
+            timerEl.textContent = `Time Remaining: ${min}:${sec < 10 ? '0' + sec : sec}`;
+            timeLeft--;
+           
+            // Change color when time is running out
+            if (timeLeft < 300) { // 5 minutes
+                timerEl.style.color = 'red';
+                timerEl.style.animation = 'pulse 1s infinite';
+            }
+           
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                alert("Time is up! Your exam will be submitted automatically.");
+                submitExam();
+            }
+        }, 1000);
+       
+        // ================== SECTION TOGGLE ==================
+        function showSection(section) {
+            currentSection = section;
+            // Update button states
+            document.getElementById('objectivesBtn').classList.toggle('active', section === 'objectives');
+            document.getElementById('theoryBtn').classList.toggle('active', section === 'theory');
+           
+            // Show/hide sections
+            document.getElementById('objectivesSection').style.display = section === 'objectives' ? 'block' : 'none';
+            document.getElementById('theorySection').style.display = section === 'theory' ? 'block' : 'none';
+           
+            // Update navigation
+            if (section === 'theory') {
+                displayTheoryQuestion();
+            }
+        }
+       
+        // ================== MATH SYMBOL MAPPING ==================
+        function mapMathSymbol(text) {
+            if (!text) return '';
+           
+            return text
+                .replace(/&theta;/g, 'θ')
+                .replace(/&Theta;/g, 'Θ')
+                .replace(/&pi;/g, 'π')
+                .replace(/&Pi;/g, 'Π')
+                .replace(/&alpha;/g, 'α')
+                .replace(/&beta;/g, 'β')
+                .replace(/&gamma;/g, 'γ')
+                .replace(/&delta;/g, 'δ')
+                .replace(/&epsilon;/g, 'ε')
+                .replace(/&phi;/g, 'φ')
+                .replace(/&omega;/g, 'ω')
+                .replace(/&mu;/g, 'μ')
+                .replace(/&sigma;/g, 'σ')
+                .replace(/&lambda;/g, 'λ')
+                .replace(/&radic;/g, '√')
+                .replace(/&infin;/g, '∞')
+                .replace(/&int;/g, '∫')
+                .replace(/&sum;/g, '∑')
+                .replace(/&prod;/g, '∏')
+                .replace(/&part;/g, '∂')
+                .replace(/&deg;/g, '°')
+                .replace(/&times;/g, '×')
+                .replace(/&divide;/g, '÷')
+                .replace(/&plusmn;/g, '±')
+                .replace(/&le;/g, '≤')
+                .replace(/&ge;/g, '≥')
+                .replace(/&ne;/g, '≠')
+                .replace(/&frac12;/g, '½')
+                .replace(/&frac14;/g, '¼')
+                .replace(/&frac34;/g, '¾')
+                .replace(/\^(\d+)/g, '<sup>$1</sup>')
+                .replace(/\^\(([^)]+)\)/g, '<sup>$1</sup>')
+                .replace(/_(\d+)/g, '<sub>$1</sub>')
+                .replace(/_\(([^)]+)\)/g, '<sub>$1</sub>');
+        }
+       
+        // ================== OBJECTIVES FUNCTIONS ==================
+        function saveAnswer() {
+            const selected = document.querySelector('input[name="option"]:checked');
+            if (selected) {
+                userAnswers[currentQuestion] = selected.value;
+                countUserSelections();
+            }
+        }
+       
+        function displayQuestion() {
+            if (currentQuestion >= questions.length) return;
+           
+            const q = questions[currentQuestion];
+           
+            // Apply math symbol mapping
+            const questionText = mapMathSymbol(q.question);
+            const optA = mapMathSymbol(q.options.A);
+            const optB = mapMathSymbol(q.options.B);
+            const optC = mapMathSymbol(q.options.C);
+            const optD = mapMathSymbol(q.options.D);
+           
+            // Display question and options
+            document.getElementById('questionText').innerHTML = `${currentQuestion + 1}. ${questionText}`;
+            document.getElementById('optA').innerHTML = optA;
+            document.getElementById('optB').innerHTML = optB;
+            document.getElementById('optC').innerHTML = optC;
+            document.getElementById('optD').innerHTML = optD;
+           
+            // Handle question image
+            const imageContainer = document.getElementById('questionImageContainer');
+            if (q.image) {
+                imageContainer.innerHTML = `
+                    <div class="theory-image-wrapper">
+                        <img src="${q.image}" alt="Question Diagram" class="question-image">
+                    </div>
+                `;
+            } else {
+                imageContainer.innerHTML = '';
+            }
+           
+            // Clear and set radio buttons
+            const radios = document.getElementsByName('option');
+            radios.forEach(r => r.checked = false);
+           
+            if (userAnswers[currentQuestion]) {
+                document.querySelector(`input[name="option"][value="${userAnswers[currentQuestion]}"]`).checked = true;
+            }
+           
+            highlightCurrentButton();
+        }
+       
+        function nextQuestion() {
+            saveAnswer();
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            }
+        }
+       
+        function prevQuestion() {
+            saveAnswer();
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                displayQuestion();
+            }
+        }
+       
+        function renderQuestionButtons() {
+            const container = document.getElementById('questionButtons');
+            container.innerHTML = '';
+           
+            for (let i = 0; i < questions.length; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i + 1;
+                btn.className = 'question-btn';
+                btn.onclick = () => {
+                    saveAnswer();
+                    currentQuestion = i;
+                    displayQuestion();
+                };
+                container.appendChild(btn);
+            }
+            highlightCurrentButton();
+        }
+       
+        function highlightCurrentButton() {
+            document.querySelectorAll('.question-btn').forEach((btn, index) => {
+                const answered = userAnswers[index] !== undefined;
+                const current = index === currentQuestion;
+               
+                btn.style.backgroundColor = current ? '#5cb85c' : (answered ? '#337ab7' : '#eee');
+                btn.style.color = current || answered ? 'white' : 'black';
+                btn.style.border = current ? '2px solid #2e7d32' : '1px solid #444';
+            });
+        }
+       
+        function countUserSelections() {
+            let totalQuestions = questions.length;
+            let answeredCount = userAnswers.filter(answer => answer !== undefined).length;
+            let unansweredCount = totalQuestions - answeredCount;
+           
+            document.getElementById("answeredLabel").innerText = `Answered: ${answeredCount}/${totalQuestions}`;
+            document.getElementById("unansweredLabel").innerText = `Unanswered: ${unansweredCount}`;
+        }
+       
+        /*function submitExam() {
+            saveAnswer();
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            clearInterval(timerInterval);
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+        }*/
+         function submitExam() {
+            saveAnswer();
+            showResult();
+        }
+       
+        /*function showResult() {
+            clearInterval(timerInterval);
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            const username = localStorage.getItem("username") || "Guest";
+            localStorage.setItem("examUser", username);
+            localStorage.setItem("examScore", score);
+            localStorage.setItem("totalQuestions", questions.length);
+
+
+            // Save exam data before going to result page
+            localStorage.setItem("student_name", username);
+            localStorage.setItem("student_class", selectedClass);
+            localStorage.setItem("exam_subject", selectedSubject);
+            localStorage.setItem("student_image", studentImageURL);
+            localStorage.setItem("exam_score", score);
+            localStorage.setItem("total_questions", totalQuestions);
+
+                // Redirect to results page
+                window.location.href = "results.html";
+           
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+            window.location.href = "results.html";
+        }*/
+        /*function showResult() {
+            clearInterval(timerInterval);
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            const username = localStorage.getItem("username") || "Guest";
+            const cls = sessionStorage.getItem("class");
+            const sub = sessionStorage.getItem("subject");
+           
+            localStorage.setItem("examUser", username);
+            localStorage.setItem("examScore", score);
+            localStorage.setItem("totalQuestions", questions.length);
+            localStorage.setItem("examInfo", document.getElementById('examInfo').textContent.trim());
+           
+            // ✅ Mark exam as completed
+            if (cls && sub) {
+                const attempts = getExamAttempts(cls);
+                if (!attempts[username]) {
+                    attempts[username] = {};
+                }
+                attempts[username][sub] = true;
+                saveExamAttempts(cls, attempts);
+            }
+           
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+            window.location.href = "results.html";
+    }*/
+       /*function showResult() {
+                    clearInterval(timerInterval);
+                    let score = 0;
+                    questions.forEach((q, i) => {
+                        if (userAnswers[i] === q.answer) score++;
+                    });
+                   
+                    const username = sessionStorage.getItem('username') || "Guest";
+                    const cls = sessionStorage.getItem('class');
+                    const sub = sessionStorage.getItem('subject');
+                   
+                    localStorage.setItem("examUser", username);
+                    localStorage.setItem("examScore", score);
+                    localStorage.setItem("totalQuestions", questions.length);
+                    localStorage.setItem("pendingClass", cls);
+                    localStorage.setItem("pendingSubject", sub);
+                    localStorage.setItem("pendingUsername", username);
+                   
+                    // ✅ Get exam info from sessionStorage or use default
+                    const examInfo = sessionStorage.getItem('examInfo') || 'EXAMINATION - RERSULT (2ND TERM)';
+                    localStorage.setItem("examInfo", examInfo);
+                   
+                    // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+                    console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+                   
+                    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
+                    window.location.href = "results.html";
+        }*/
+
+            function showResult() {
+				    clearInterval(timerInterval);
+				    let score = 0;
+				    questions.forEach((q, i) => {
+				        if (userAnswers[i] === q.answer) score++;
+				    });
+				    
+				    const username = sessionStorage.getItem('username') || "Guest";
+				    const cls = sessionStorage.getItem('class');
+				    const sub = sessionStorage.getItem('subject');
+				    
+				    localStorage.setItem("examUser", username);
+				    localStorage.setItem("examScore", score);
+				    localStorage.setItem("totalQuestions", questions.length);
+				    localStorage.setItem("pendingClass", cls);
+				    localStorage.setItem("pendingSubject", sub);
+				    localStorage.setItem("pendingUsername", username);
+				    
+				    // ✅ Get exam info from sessionStorage or use default
+				    const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
+				    localStorage.setItem("examInfo", examInfo);
+				    
+				    // ✅ Secretly download score details to downloads folder
+				    const scoreDetails = {
+				        username: username,
+				        class: cls,
+				        subject: sub,
+				        score: score,
+				        totalQuestions: questions.length,
+				        percentage: ((score / questions.length) * 100).toFixed(2) + '%',
+				        examInfo: examInfo,
+				        timestamp: new Date().toISOString(),
+				        userAnswers: userAnswers,
+				        correctAnswers: questions.map(q => q.answer)
+				    };
+				    
+				    // Create a blob with the data
+				    const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
+				    const url = URL.createObjectURL(blob);
+				    
+				    // Create a hidden anchor element and trigger download
+				    const a = document.createElement('a');
+				    a.href = url;
+				    a.download = `exam_results_${username}_${new Date().getTime()}.json`;
+				    a.style.display = 'none';
+				    document.body.appendChild(a);
+				    a.click();
+				    
+				    // Clean up
+				    document.body.removeChild(a);
+				    URL.revokeObjectURL(url);
+				    
+				    // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+				    console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+				    
+				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
+				    window.location.href = "results.html";
+				}
+
+
+
+            // Add these helper functions to your exam page
+            function getExamAttempts(cls) {
+                const key = `${cls}_exam_attempts`;
+                const stored = localStorage.getItem(key);
+                return stored ? JSON.parse(stored) : {};
+            }
+
+            function saveExamAttempts(cls, data) {
+                const key = `${cls}_exam_attempts`;
+                localStorage.setItem(key, JSON.stringify(data));
+            }
+                   
+        // ================== THEORY QUESTIONS ==================
+        function displayTheoryQuestion() {
+            if (theoryQuestions.length === 0) {
+                document.getElementById('theoryQuestionText').innerText = "No theory questions available.";
+                return;
+            }
+           
+            const tq = theoryQuestions[currentTheory];
+           
+            // Display question text (without math symbol mapping for theory)
+            document.getElementById('theoryQuestionText').innerText = mapMathSymbol(`${currentTheory + 1}. ${tq.question} ${tq.marks ? `[${tq.marks} marks]` : ''}`);
+                
+            document.getElementById('theoryAnswer').value = theoryAnswers[currentTheory] || "";
+           
+            // Handle theory question image
+            const theoryImageContainer = document.getElementById('theoryImageContainer');
+            if (tq.image) {
+                theoryImageContainer.innerHTML = `
+                    <div class="theory-image-wrapper">
+                        <img src="${tq.image}" alt="Theory Question Diagram" class="theory-question-image">
+                        <div class="image-caption">${tq.imageCaption || 'Diagram for question'}</div>
+                    </div>
+                `;
+            } else {
+                theoryImageContainer.innerHTML = '';
+            }
+           
+            updateTheoryStatus();
+        }
+       
+        function updateTheoryStatus() {
+            const savedCount = theoryAnswers.filter(answer => answer.trim() !== "").length;
+            document.getElementById("theoryStatus").innerText =
+                `Question ${currentTheory + 1} of ${theoryQuestions.length} | Saved: ${savedCount}/${theoryQuestions.length}`;
+        }
+       
+        function saveTheoryAnswer() {
+            const answer = document.getElementById('theoryAnswer').value.trim();
+            theoryAnswers[currentTheory] = answer;
+            localStorage.setItem(`theoryAnswer_${currentTheory}`, answer);
+            updateTheoryStatus();
+            alert("Theory answer saved successfully!");
+        }
+       
+        function nextTheoryQuestion() {
+            if (currentTheory < theoryQuestions.length - 1) {
+                currentTheory++;
+                displayTheoryQuestion();
+            } else {
+                alert("You've reached the last theory question.");
+            }
+        }
+       
+        function prevTheoryQuestion() {
+            if (currentTheory > 0) {
+                currentTheory--;
+                displayTheoryQuestion();
+            }
+        }
+       
+        function submitTheoryExam() {
+            const savedCount = theoryAnswers.filter(answer => answer.trim() !== "").length;
+            const confirmSubmit = confirm(
+                `Theory section completed!\n\n` +
+                `You have answered ${savedCount} out of ${theoryQuestions.length} theory questions.\n\n` +
+                `Are you sure you want to submit?`
+            );
+           
+            if (confirmSubmit) {
+                alert("Theory answers submitted successfully!");
+            }
+        }
+       
+        // ================== DATE & TIME ==================
+        function updateDateTime() {
+            let now = new Date();
+            let day = now.getDate();
+            let month = now.toLocaleString('default', { month: 'long' });
+            let year = now.getFullYear();
+            let suffix = "th";
+           
+            if (day === 1 || day === 21 || day === 31) suffix = "st";
+            else if (day === 2 || day === 22) suffix = "nd";
+            else if (day === 3 || day === 23) suffix = "rd";
+           
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+           
+            let formattedDateTime = `${month} ${day}${suffix} ${year}, ${hours}:${minutes}:${seconds} ${ampm}`;
+            document.getElementById("datetime").innerText = formattedDateTime;
+        }
+       
+        // ================== KEYBOARD SHORTCUTS ==================
+        document.addEventListener('keydown', function (event) {
+            if (currentSection === 'objectives') {
+                const key = event.key.toUpperCase();
+               
+                // Answer selection for objectives
+                if (['A', 'B', 'C', 'D'].includes(key)) {
+                    const radio = document.querySelector(`input[name="option"][value="${key}"]`);
+                    if (radio) {
+                        radio.checked = true;
+                        saveAnswer();
+                    }
+                }
+               
+                // Navigation with arrows
+                if (event.key === 'ArrowRight') {
+                    nextQuestion();
+                } else if (event.key === 'ArrowLeft') {
+                    prevQuestion();
+                }
+            } else if (currentSection === 'theory') {
+                // Navigation for theory
+                if (event.key === 'ArrowRight') {
+                    nextTheoryQuestion();
+                } else if (event.key === 'ArrowLeft') {
+                    prevTheoryQuestion();
+                }
+               
+                // Save with Ctrl+S
+                if (event.ctrlKey && event.key === 's') {
+                    event.preventDefault();
+                    saveTheoryAnswer();
+                }
+            }
+        });
+       
+        // ================== ANTI-CHEAT & LOGOUT ==================
+        document.addEventListener('keydown', function (event) {
+            const key = event.key.toLowerCase();
+            if ((event.ctrlKey && (key === 'p' || key === 's')) && currentSection === 'objectives') {
+                event.preventDefault();
+                alert("Right-click and view source are disabled during examination.");
+                return false;
+            }
+        });
+       
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            alert("Right-click is disabled during examination.");
+        });
+       
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                alert("Developer tools are disabled during examination.");
+            }
+        });
+       
+        function logout() {
+            const confirmLogout = confirm("Are you sure you want to logout? Your progress may be lost.");
+            if (confirmLogout) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
