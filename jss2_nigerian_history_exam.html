@@ -624,652 +624,670 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-     {
-          "id": 1,
-          "question": "What is the sum of ¾ and ⅔?",
-          "options": {
-            "A": "1 5/12",
-            "B": "1 ¼",
-            "C": "1 ⅓",
-            "D": "1 ½"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 2,
-          "question": "Subtract 5/8 from 1 ½.",
-          "options": {
-            "A": "1 ⅛",
-            "B": "1 ⅜",
-            "C": "⅞",
-            "D": "1"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 3,
-          "question": "The product of 2/5 and 3/4 is ______.",
-          "options": {
-            "A": "3/10",
-            "B": "5/9",
-            "C": "6/20",
-            "D": "8/15"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 4,
-          "question": "Divide ¾ by ½.",
-          "options": {
-            "A": "1 ½",
-            "B": "1 ¼",
-            "C": "2",
-            "D": "3/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 5,
-          "question": "Round 567.389 to the nearest whole number.",
-          "options": {
-            "A": "567",
-            "B": "568",
-            "C": "567.4",
-            "D": "567.39"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 6,
-          "question": "How many significant figures are in 0.0405?",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 7,
-          "question": "The binary number 1011₂ is equal to ______ in base ten.",
-          "options": {
-            "A": "9",
-            "B": "10",
-            "C": "11",
-            "D": "12"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 8,
-          "question": "Add 101₂ and 110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1011₂",
-            "C": "1101₂",
-            "D": "1111₂"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 9,
-          "question": "Subtract 101₂ from 1110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1101₂",
-            "C": "1011₂",
-            "D": "111₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 10,
-          "question": "Multiply 101₂ by 11₂.",
-          "options": {
-            "A": "1111₂",
-            "B": "1101₂",
-            "C": "1010₂",
-            "D": "1001₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 11,
-          "question": "In the expression 5x + 3y, the coefficient of y is ______.",
-          "options": {
-            "A": "5",
-            "B": "3",
-            "C": "x",
-            "D": "y"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 12,
-          "question": "Simplify: 2a + 3b + a – b.",
-          "options": {
-            "A": "3a + 2b",
-            "B": "3a + 4b",
-            "C": "a + 2b",
-            "D": "5ab"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 13,
-          "question": "Expand: 3(x + 4).",
-          "options": {
-            "A": "3x + 4",
-            "B": "3x + 12",
-            "C": "x + 12",
-            "D": "7x"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 14,
-          "question": "Collect like terms: 5p – 2q + p + 4q.",
-          "options": {
-            "A": "6p + 2q",
-            "B": "6p – 2q",
-            "C": "4p + 2q",
-            "D": "5p + 6q"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 15,
-          "question": "Solve: x + 7 = 15.",
-          "options": {
-            "A": "8",
-            "B": "22",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 16,
-          "question": "If 3y = 27, then y = ______.",
-          "options": {
-            "A": "9",
-            "B": "24",
-            "C": "30",
-            "D": "81"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 17,
-          "question": "An angle less than 90° is called ______.",
-          "options": {
-            "A": "obtuse",
-            "B": "reflex",
-            "C": "acute",
-            "D": "right"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 18,
-          "question": "The sum of angles on a straight line is ______.",
-          "options": {
-            "A": "90°",
-            "B": "180°",
-            "C": "360°",
-            "D": "270°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 19,
-          "question": "Calculate the perimeter of a rectangle of length 8 cm and width 5 cm.",
-          "options": {
-            "A": "13 cm",
-            "B": "26 cm",
-            "C": "40 cm",
-            "D": "30 cm"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 20,
-          "question": "The area of a square of side 6 m is ______.",
-          "options": {
-            "A": "12 m²",
-            "B": "24 m²",
-            "C": "36 m²",
-            "D": "30 m²"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 21,
-          "question": "The mean of 4, 6, 8, and 10 is ______.",
-          "options": {
-            "A": "7",
-            "B": "8",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 22,
-          "question": "The mode of 2, 3, 4, 3, 5, 3 is ______.",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 23,
-          "question": "Which is the smallest fraction?",
-          "options": {
-            "A": "2/3",
-            "B": "3/5",
-            "C": "5/8",
-            "D": "1/2"
-          },
-          "answer": "D",
-          "image": null
-        },
-        {
-          "id": 24,
-          "question": "0.25 as a fraction in its lowest terms is ______.",
-          "options": {
-            "A": "1/4",
-            "B": "25/100",
-            "C": "1/25",
-            "D": "5/20"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 25,
-          "question": "The place value of 7 in 3.076 is ______.",
-          "options": {
-            "A": "tenths",
-            "B": "hundredths",
-            "C": "thousandths",
-            "D": "tens"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 26,
-          "question": "3/8 × 4/9 = ______.",
-          "options": {
-            "A": "1/6",
-            "B": "12/72",
-            "C": "7/17",
-            "D": "1/3"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 27,
-          "question": "Express 0.375 as a fraction.",
-          "options": {
-            "A": "3/8",
-            "B": "375/1000",
-            "C": "3/4",
-            "D": "5/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 28,
-          "question": "Which of these is an algebraic expression?",
-          "options": {
-            "A": "5 + 3 = 8",
-            "B": "2x – 7",
-            "C": "9 > 5",
-            "D": "πr²"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 29,
-          "question": "Simplify: 4a × 3b.",
-          "options": {
-            "A": "7ab",
-            "B": "12ab",
-            "C": "12a",
-            "D": "12b"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 30,
-          "question": "If a = 3 and b = 2, find a² + b².",
-          "options": {
-            "A": "5",
-            "B": "13",
-            "C": "10",
-            "D": "25"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 31,
-          "question": "Convert 25₁₀ to base two.",
-          "options": {
-            "A": "11001₂",
-            "B": "11101₂",
-            "C": "10101₂",
-            "D": "10011₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 32,
-          "question": "The complement of 35° is ______.",
-          "options": {
-            "A": "145°",
-            "B": "55°",
-            "C": "65°",
-            "D": "45°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 33,
-          "question": "How many degrees are in a right angle?",
-          "options": {
-            "A": "45°",
-            "B": "90°",
-            "C": "180°",
-            "D": "360°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 34,
-          "question": "A triangle with all sides equal is called ______.",
-          "options": {
-            "A": "isosceles",
-            "B": "scalene",
-            "C": "equilateral",
-            "D": "right-angled"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 35,
-          "question": "Find the area of a triangle with base 10 cm and height 4 cm.",
-          "options": {
-            "A": "20 cm²",
-            "B": "40 cm²",
-            "C": "14 cm²",
-            "D": "25 cm²"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 36,
-          "question": "The perimeter of a square of side 9 cm is ______.",
-          "options": {
-            "A": "18 cm",
-            "B": "27 cm",
-            "C": "36 cm",
-            "D": "81 cm"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 37,
-          "question": "The median of 5, 8, 3, 9, 2 is ______.",
-          "options": {
-            "A": "5",
-            "B": "8",
-            "C": "3",
-            "D": "9"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 38,
-          "question": "A pie chart represents data in ______.",
-          "options": {
-            "A": "bars",
-            "B": "sectors",
-            "C": "lines",
-            "D": "columns"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 39,
-          "question": "Which is the largest 3-digit number?",
-          "options": {
-            "A": "999",
-            "B": "100",
-            "C": "990",
-            "D": "109"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 40,
-          "question": "Estimate 148 + 63 by rounding to the nearest ten.",
-          "options": {
-            "A": "200",
-            "B": "210",
-            "C": "220",
-            "D": "230"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 41,
-          "question": "7.2 ÷ 0.6 = ______.",
-          "options": {
-            "A": "1.2",
-            "B": "12",
-            "C": "0.12",
-            "D": "120"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 42,
-          "question": "The next number in the sequence 3, 6, 9, 12, … is ______.",
-          "options": {
-            "A": "15",
-            "B": "18",
-            "C": "21",
-            "D": "24"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 43,
-          "question": "5² – 3² = ______.",
-          "options": {
-            "A": "4",
-            "B": "16",
-            "C": "34",
-            "D": "8"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 44,
-          "question": "Find the value of 2x + 5 when x = 4.",
-          "options": {
-            "A": "9",
-            "B": "13",
-            "C": "18",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 45,
-          "question": "A prime number between 10 and 20 is ______.",
-          "options": {
-            "A": "14",
-            "B": "15",
-            "C": "17",
-            "D": "21"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 46,
-          "question": "The HCF of 12 and 18 is ______.",
-          "options": {
-            "A": "3",
-            "B": "6",
-            "C": "9",
-            "D": "12"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 47,
-          "question": "The LCM of 4 and 5 is ______.",
-          "options": {
-            "A": "10",
-            "B": "20",
-            "C": "30",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 48,
-          "question": "If ¼ of a number is 7, the number is ______.",
-          "options": {
-            "A": "21",
-            "B": "24",
-            "C": "28",
-            "D": "35"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 49,
-          "question": "30% of ₦500 is ______.",
-          "options": {
-            "A": "₦100",
-            "B": "₦150",
-            "C": "₦200",
-            "D": "₦250"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 50,
-          "question": "Which is a measure of central tendency?",
-          "options": {
-            "A": "Range",
-            "B": "Median",
-            "C": "Sum",
-            "D": "Product"
-          },
-          "answer": "B",
-          "image": null
-        }
+  {
+      "id": 1,
+      "question": "Queen Amina was a warrior queen of the __________ Kingdom.",
+      "options": {
+        "A": "Benin",
+        "B": "Zazzau (Zaria)",
+        "C": "Oyo",
+        "D": "Kanem-Bornu"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "Queen Amina lived in the __________ century.",
+      "options": {
+        "A": "15th",
+        "B": "16th",
+        "C": "17th",
+        "D": "18th"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "Queen Amina is credited with building strong earthen fortifications called __________.",
+      "options": {
+        "A": "Amina's Walls",
+        "B": "Zaria Fences",
+        "C": "Hausa Barriers",
+        "D": "Northern Defences"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "Funmilayo Ransome-Kuti was from __________.",
+      "options": {
+        "A": "Calabar",
+        "B": "Abeokuta",
+        "C": "Ibadan",
+        "D": "Lagos"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Funmilayo Ransome-Kuti was the mother of the famous musician __________.",
+      "options": {
+        "A": "Femi Kuti",
+        "B": "Fela Kuti",
+        "C": "Seun Kuti",
+        "D": "Wizkid"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "The organization founded by Funmilayo Ransome-Kuti to fight for women's rights was the __________.",
+      "options": {
+        "A": "Nigerian Women's Union",
+        "B": "Abeokuta Women's Union (AWU)",
+        "C": "National Council of Women Societies",
+        "D": "Women's Liberation Movement"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "The AWU successfully protested against unfair __________ imposed on women.",
+      "options": {
+        "A": "taxes",
+        "B": "school fees",
+        "C": "marriage laws",
+        "D": "trading licenses"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "The protest led by Funmilayo Ransome-Kuti led to the temporary removal of the __________.",
+      "options": {
+        "A": "British Governor",
+        "B": "Alake of Egbaland",
+        "C": "Oba of Lagos",
+        "D": "Sultan of Sokoto"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Funmilayo Ransome-Kuti was the first woman in Nigeria to __________.",
+      "options": {
+        "A": "vote",
+        "B": "drive a car",
+        "C": "go to university",
+        "D": "become a lawyer"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Funmilayo Ransome-Kuti is known as the __________.",
+      "options": {
+        "A": "Mother of the Nation",
+        "B": "Iron Lady of Africa",
+        "C": "Queen of the South",
+        "D": "First Lady of Nigeria"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "Margaret Ekpo was from __________, Cross River State.",
+      "options": {
+        "A": "Calabar",
+        "B": "Uyo",
+        "C": "Ogoja",
+        "D": "Ikot Ekpene"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Margaret Ekpo created the __________ to mobilize women.",
+      "options": {
+        "A": "Aba Market Women's Association",
+        "B": "Calabar Women's League",
+        "C": "Eastern Women's Union",
+        "D": "Market Women's Cooperative"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Margaret Ekpo was a leading member of the __________ political party.",
+      "options": {
+        "A": "NPC",
+        "B": "AG",
+        "C": "NCNC",
+        "D": "NPN"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "After independence, Margaret Ekpo was elected to the __________ House of Assembly.",
+      "options": {
+        "A": "Western Region",
+        "B": "Eastern Region",
+        "C": "Northern Region",
+        "D": "Federal"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Margaret Ekpo fought against colonial practices of __________.",
+      "options": {
+        "A": "free education",
+        "B": "separate better facilities for white people",
+        "C": "voting rights for women",
+        "D": "traditional rulers"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "The Calabar International Airport is named after __________.",
+      "options": {
+        "A": "Queen Amina",
+        "B": "Funmilayo Ransome-Kuti",
+        "C": "Margaret Ekpo",
+        "D": "Nnamdi Azikiwe"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Student unionism is the organized activity of __________.",
+      "options": {
+        "A": "teachers",
+        "B": "students",
+        "C": "workers",
+        "D": "politicians"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "The national body for students in Nigeria is called __________.",
+      "options": {
+        "A": "NLC",
+        "B": "NANS (formerly NUNS)",
+        "C": "NUT",
+        "D": "ASUU"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Nigerian students studying in the UK formed the __________ to demand self-government.",
+      "options": {
+        "A": "West African Students' Union (WASU)",
+        "B": "Nigerian Students' Union",
+        "C": "African Students' Association",
+        "D": "Colonial Students' League"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "WASU was a training ground for future __________.",
+      "options": {
+        "A": "teachers",
+        "B": "nationalists",
+        "C": "doctors",
+        "D": "soldiers"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "The 'Ali Must Go' protests of 1978 were against __________.",
+      "options": {
+        "A": "police brutality",
+        "B": "increased school fees",
+        "C": "military rule",
+        "D": "corruption"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "'Ali' in 'Ali Must Go' referred to the Minister of Education, __________.",
+      "options": {
+        "A": "Col. Ahmadu Ali",
+        "B": "Alhaji Ali Monguno",
+        "C": "Ali Babba",
+        "D": "Ali Maigoro"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Students led major protests against the hardship caused by SAP in __________.",
+      "options": {
+        "A": "1978",
+        "B": "1989",
+        "C": "1993",
+        "D": "2020"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "During the June 12 crisis, students and youths protested to demand that the military __________.",
+      "options": {
+        "A": "stay in power",
+        "B": "hand over power to M.K.O. Abiola",
+        "C": "create more states",
+        "D": "increase school fees"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "The #EndSARS protest took place in __________.",
+      "options": {
+        "A": "1993",
+        "B": "1999",
+        "C": "2015",
+        "D": "2020"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "#EndSARS was organized entirely by young people on __________.",
+      "options": {
+        "A": "radio",
+        "B": "social media",
+        "C": "television",
+        "D": "newspapers"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "A trade union is an organization made up of __________.",
+      "options": {
+        "A": "students",
+        "B": "workers",
+        "C": "politicians",
+        "D": "teachers only"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "The main purpose of a trade union is to __________.",
+      "options": {
+        "A": "organize elections",
+        "B": "protect the interests of its members",
+        "C": "form political parties",
+        "D": "run businesses"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "The main weapon used by trade unions is the __________.",
+      "options": {
+        "A": "election",
+        "B": "strike",
+        "C": "protest march",
+        "D": "negotiation"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "The Nigerian Labour Congress (NLC) was formed in __________.",
+      "options": {
+        "A": "1960",
+        "B": "1978",
+        "C": "1999",
+        "D": "2015"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "Nigeria's most famous labour leader who led the 1945 strike was __________.",
+      "options": {
+        "A": "Michael Imoudu",
+        "B": "Funmilayo Ransome-Kuti",
+        "C": "Adams Oshiomhole",
+        "D": "Ayuba Wabba"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "The 1945 General Strike lasted for __________ days.",
+      "options": {
+        "A": "30",
+        "B": "45",
+        "C": "60",
+        "D": "90"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Workers in the 1945 strike demanded a __________.",
+      "options": {
+        "A": "shorter working day",
+        "B": "Cost of Living Allowance (COLA)",
+        "C": "paid leave",
+        "D": "pension"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "The 1945 strike crippled the __________ economy.",
+      "options": {
+        "A": "Nigerian",
+        "B": "colonial",
+        "C": "regional",
+        "D": "local"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "The NLC and oil workers' unions organized strikes during the __________ crisis.",
+      "options": {
+        "A": "June 12",
+        "B": "#EndSARS",
+        "C": "Ali Must Go",
+        "D": "Operation Wetie"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "The NLC constantly fights for an increase in the __________.",
+      "options": {
+        "A": "school fees",
+        "B": "minimum wage",
+        "C": "electricity tariff",
+        "D": "fuel price"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "The 'Occupy Nigeria' protests of 2012 were against the removal of __________.",
+      "options": {
+        "A": "school fees",
+        "B": "fuel subsidy",
+        "C": "electricity subsidy",
+        "D": "workers' salaries"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "Education is the process of acquiring knowledge, skills, values and __________.",
+      "options": {
+        "A": "wealth",
+        "B": "morals",
+        "C": "power",
+        "D": "property"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "National development is the growth of a country's economy, politics and __________.",
+      "options": {
+        "A": "military",
+        "B": "society",
+        "C": "religion",
+        "D": "culture"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "Education is the __________ to national development.",
+      "options": {
+        "A": "obstacle",
+        "B": "key",
+        "C": "barrier",
+        "D": "threat"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 41,
+      "question": "UPE stands for __________.",
+      "options": {
+        "A": "Universal Primary Education",
+        "B": "Unity and Progress Education",
+        "C": "United Primary Education",
+        "D": "Universal Public Education"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 42,
+      "question": "UPE was launched nationwide by the __________ regime in 1976.",
+      "options": {
+        "A": "Gowon",
+        "B": "Obasanjo",
+        "C": "Buhari",
+        "D": "Babangida"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 43,
+      "question": "UPE was funded by the wealth from the __________.",
+      "options": {
+        "A": "agricultural boom",
+        "B": "oil boom",
+        "C": "manufacturing sector",
+        "D": "foreign aid"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 44,
+      "question": "UBE stands for __________.",
+      "options": {
+        "A": "Universal Basic Education",
+        "B": "Unity and Basic Education",
+        "C": "Universal Board of Education",
+        "D": "United Basic Education"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 45,
+      "question": "UBE was launched in __________ by the Obasanjo government.",
+      "options": {
+        "A": "1976",
+        "B": "1999",
+        "C": "2007",
+        "D": "2015"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 46,
+      "question": "UBE provides __________ years of free, compulsory basic education.",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "12",
+        "D": "15"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 47,
+      "question": "UBE covers 6 years of primary school and __________ years of junior secondary school.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 48,
+      "question": "UBEC stands for __________.",
+      "options": {
+        "A": "Universal Basic Education Commission",
+        "B": "Unity Board of Education Council",
+        "C": "United Basic Education Committee",
+        "D": "Universal Board of Educational Control"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 49,
+      "question": "Tertiary education is education that comes __________ secondary school.",
+      "options": {
+        "A": "before",
+        "B": "after",
+        "C": "during",
+        "D": "instead of"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 50,
+      "question": "Universities award degrees such as __________.",
+      "options": {
+        "A": "ND",
+        "B": "HND",
+        "C": "B.Sc.",
+        "D": "NCE"
+      },
+      "answer": "C",
+      "image": null
+    }
 ];
 
 
         const staticTheoryQuestions = [
                                      {
-                                    id: 1,
-                                    question: "Simplify \na. (i) 2⅔ + 1¾\n(ii) 3½ ÷ 1¼ \n b. A farmer has 5½ hectares of land. He plants maize on ⅔ of it. How many hectares are left for other crops? \n c. Round 6.4783 to\n (i) 2 decimal places\n(ii) 3 significant figures",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 2,
-                                    question: "Convert \n a. (i) 29₁₀ to base two\n(ii) 11011₂ to base ten \n b.Perform The Followiong Binary Operation\n (i) 111₂ + 101₂\n(ii) 1001₂ – 110₂ \n c. Multiply 1011₂ by 101₂.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 3,
-                                    question: "Simplify\n a. (i) 4x + 3y – 2x + 5y\n(ii) 2(3a – 4b) + 5(a + b) \n b. If p = 5 and q = 2, evaluate:\n (i) 3p² – 2q\n(ii) (p + q)(p – q) \n c.solve\n (i) 2x – 7 = 15\n(ii) ¾ y = 12",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 4,
-                                    question: "a. In a class of 48 students, ¼ are boys. How many are girls? \n b. Mr. Ojo bought 8.5 kg of rice at ₦320 per kg. How much change did he get from ₦3,000? \n c. Find the mean and median of: 12, 8, 15, 10, 13, 11, 14.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 5,
-                                    question: "a. Calculate the perimeter of a rectangular garden of length 15 m and width 9 m. \n b. Find the area of a triangle with base 14 cm and height 6 cm. \n c. An angle is 25° more than its complement. Find the angle.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 6,
-                                    question: "a. Estimate the product of 47 and 32 by rounding each to the nearest ten. \n b. A bag contains 12 red balls, 8 blue balls, and 5 green balls. What fraction of the balls are blue? \n c. Simplify: ⅗ of (2½ + 1¼)",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 7,
-                                    question: "a. If 5 books cost ₦2,500, how much will 9 of the same books cost? \n b. The sum of three consecutive numbers is 63. Find the numbers. \n c. Find the value of: 0.2 × 0.3 ÷ 0.02",
-                                    marks: 10,
-                                    image: null
-                                  }
+      "id": 1,
+      "question": "a. Who was Queen Amina of Zaria? State two of her achievements. (4 marks)\nb. Identify Funmilayo Ransome-Kuti and list three of her major achievements. (4 marks)\nc. Who was Margaret Ekpo and what was her contribution to Nigerian politics? (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "a. What is student unionism? (2 marks)\nb. Explain the role of student unions in the fight for Nigerian independence. (3 marks)\nc. Describe two examples of youth-led protests in Nigerian history (one during military rule and one in the Fourth Republic). (5 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "a. Define a trade union and state its main purpose. (3 marks)\nb. What was the 1945 General Strike and why was it significant? (4 marks)\nc. Identify the Nigerian Labour Congress (NLC) and explain one way it fights for workers' rights. (3 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "a. Distinguish between UPE (1976) and UBE (1999) in terms of years covered and when they were launched. (4 marks)\nb. What is tertiary education? Name three types of tertiary institutions in Nigeria and give one example of each. (6 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "a. Describe the Nigerian economy before the 1970s (the Agricultural Economy). Name one major export from each region. (5 marks)\nb. Explain what is meant by a \"monoculture economy\" and how Nigeria became one after the oil boom. (3 marks)\nc. State two challenges facing the manufacturing sector in Nigeria. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "a. Differentiate between science and technology. (2 marks)\nb. Identify two areas of technological growth in Nigeria (e.g., Telecoms, FinTech) and explain their impact. (4 marks)\nc. List four challenges to scientific and technological development in Nigeria. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "a. Explain how sports can act as a tool for national unity in a diverse country like Nigeria. (3 marks)\nb. List three notable Nigerian sports achievements and state their significance. (5 marks)\nc. Name two Nigerian sports heroes from the lesson notes. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "a. Define culture and cultural heritage. Distinguish between tangible and intangible heritage with examples. (5 marks)\nb. Name three tourist attractions in Nigeria and state where they are located. (3 marks)\nc. Explain two challenges facing tourism development in Nigeria. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Compare and contrast the contributions of Funmilayo Ransome-Kuti and Margaret Ekpo to the struggle for women's rights and national development in Nigeria. (10 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Examine the view that \"the neglect of agriculture and over-dependence on oil has been the greatest curse to Nigeria's economic development.\" Justify your answer with evidence from the lesson notes. (10 marks)",
+      "marks": 10,
+      "image": null
+    }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];

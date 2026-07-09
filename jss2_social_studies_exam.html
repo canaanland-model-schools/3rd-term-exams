@@ -624,652 +624,670 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-     {
-          "id": 1,
-          "question": "What is the sum of ¾ and ⅔?",
-          "options": {
-            "A": "1 5/12",
-            "B": "1 ¼",
-            "C": "1 ⅓",
-            "D": "1 ½"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 2,
-          "question": "Subtract 5/8 from 1 ½.",
-          "options": {
-            "A": "1 ⅛",
-            "B": "1 ⅜",
-            "C": "⅞",
-            "D": "1"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 3,
-          "question": "The product of 2/5 and 3/4 is ______.",
-          "options": {
-            "A": "3/10",
-            "B": "5/9",
-            "C": "6/20",
-            "D": "8/15"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 4,
-          "question": "Divide ¾ by ½.",
-          "options": {
-            "A": "1 ½",
-            "B": "1 ¼",
-            "C": "2",
-            "D": "3/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 5,
-          "question": "Round 567.389 to the nearest whole number.",
-          "options": {
-            "A": "567",
-            "B": "568",
-            "C": "567.4",
-            "D": "567.39"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 6,
-          "question": "How many significant figures are in 0.0405?",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 7,
-          "question": "The binary number 1011₂ is equal to ______ in base ten.",
-          "options": {
-            "A": "9",
-            "B": "10",
-            "C": "11",
-            "D": "12"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 8,
-          "question": "Add 101₂ and 110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1011₂",
-            "C": "1101₂",
-            "D": "1111₂"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 9,
-          "question": "Subtract 101₂ from 1110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1101₂",
-            "C": "1011₂",
-            "D": "111₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 10,
-          "question": "Multiply 101₂ by 11₂.",
-          "options": {
-            "A": "1111₂",
-            "B": "1101₂",
-            "C": "1010₂",
-            "D": "1001₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 11,
-          "question": "In the expression 5x + 3y, the coefficient of y is ______.",
-          "options": {
-            "A": "5",
-            "B": "3",
-            "C": "x",
-            "D": "y"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 12,
-          "question": "Simplify: 2a + 3b + a – b.",
-          "options": {
-            "A": "3a + 2b",
-            "B": "3a + 4b",
-            "C": "a + 2b",
-            "D": "5ab"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 13,
-          "question": "Expand: 3(x + 4).",
-          "options": {
-            "A": "3x + 4",
-            "B": "3x + 12",
-            "C": "x + 12",
-            "D": "7x"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 14,
-          "question": "Collect like terms: 5p – 2q + p + 4q.",
-          "options": {
-            "A": "6p + 2q",
-            "B": "6p – 2q",
-            "C": "4p + 2q",
-            "D": "5p + 6q"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 15,
-          "question": "Solve: x + 7 = 15.",
-          "options": {
-            "A": "8",
-            "B": "22",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 16,
-          "question": "If 3y = 27, then y = ______.",
-          "options": {
-            "A": "9",
-            "B": "24",
-            "C": "30",
-            "D": "81"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 17,
-          "question": "An angle less than 90° is called ______.",
-          "options": {
-            "A": "obtuse",
-            "B": "reflex",
-            "C": "acute",
-            "D": "right"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 18,
-          "question": "The sum of angles on a straight line is ______.",
-          "options": {
-            "A": "90°",
-            "B": "180°",
-            "C": "360°",
-            "D": "270°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 19,
-          "question": "Calculate the perimeter of a rectangle of length 8 cm and width 5 cm.",
-          "options": {
-            "A": "13 cm",
-            "B": "26 cm",
-            "C": "40 cm",
-            "D": "30 cm"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 20,
-          "question": "The area of a square of side 6 m is ______.",
-          "options": {
-            "A": "12 m²",
-            "B": "24 m²",
-            "C": "36 m²",
-            "D": "30 m²"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 21,
-          "question": "The mean of 4, 6, 8, and 10 is ______.",
-          "options": {
-            "A": "7",
-            "B": "8",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 22,
-          "question": "The mode of 2, 3, 4, 3, 5, 3 is ______.",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 23,
-          "question": "Which is the smallest fraction?",
-          "options": {
-            "A": "2/3",
-            "B": "3/5",
-            "C": "5/8",
-            "D": "1/2"
-          },
-          "answer": "D",
-          "image": null
-        },
-        {
-          "id": 24,
-          "question": "0.25 as a fraction in its lowest terms is ______.",
-          "options": {
-            "A": "1/4",
-            "B": "25/100",
-            "C": "1/25",
-            "D": "5/20"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 25,
-          "question": "The place value of 7 in 3.076 is ______.",
-          "options": {
-            "A": "tenths",
-            "B": "hundredths",
-            "C": "thousandths",
-            "D": "tens"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 26,
-          "question": "3/8 × 4/9 = ______.",
-          "options": {
-            "A": "1/6",
-            "B": "12/72",
-            "C": "7/17",
-            "D": "1/3"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 27,
-          "question": "Express 0.375 as a fraction.",
-          "options": {
-            "A": "3/8",
-            "B": "375/1000",
-            "C": "3/4",
-            "D": "5/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 28,
-          "question": "Which of these is an algebraic expression?",
-          "options": {
-            "A": "5 + 3 = 8",
-            "B": "2x – 7",
-            "C": "9 > 5",
-            "D": "πr²"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 29,
-          "question": "Simplify: 4a × 3b.",
-          "options": {
-            "A": "7ab",
-            "B": "12ab",
-            "C": "12a",
-            "D": "12b"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 30,
-          "question": "If a = 3 and b = 2, find a² + b².",
-          "options": {
-            "A": "5",
-            "B": "13",
-            "C": "10",
-            "D": "25"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 31,
-          "question": "Convert 25₁₀ to base two.",
-          "options": {
-            "A": "11001₂",
-            "B": "11101₂",
-            "C": "10101₂",
-            "D": "10011₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 32,
-          "question": "The complement of 35° is ______.",
-          "options": {
-            "A": "145°",
-            "B": "55°",
-            "C": "65°",
-            "D": "45°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 33,
-          "question": "How many degrees are in a right angle?",
-          "options": {
-            "A": "45°",
-            "B": "90°",
-            "C": "180°",
-            "D": "360°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 34,
-          "question": "A triangle with all sides equal is called ______.",
-          "options": {
-            "A": "isosceles",
-            "B": "scalene",
-            "C": "equilateral",
-            "D": "right-angled"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 35,
-          "question": "Find the area of a triangle with base 10 cm and height 4 cm.",
-          "options": {
-            "A": "20 cm²",
-            "B": "40 cm²",
-            "C": "14 cm²",
-            "D": "25 cm²"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 36,
-          "question": "The perimeter of a square of side 9 cm is ______.",
-          "options": {
-            "A": "18 cm",
-            "B": "27 cm",
-            "C": "36 cm",
-            "D": "81 cm"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 37,
-          "question": "The median of 5, 8, 3, 9, 2 is ______.",
-          "options": {
-            "A": "5",
-            "B": "8",
-            "C": "3",
-            "D": "9"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 38,
-          "question": "A pie chart represents data in ______.",
-          "options": {
-            "A": "bars",
-            "B": "sectors",
-            "C": "lines",
-            "D": "columns"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 39,
-          "question": "Which is the largest 3-digit number?",
-          "options": {
-            "A": "999",
-            "B": "100",
-            "C": "990",
-            "D": "109"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 40,
-          "question": "Estimate 148 + 63 by rounding to the nearest ten.",
-          "options": {
-            "A": "200",
-            "B": "210",
-            "C": "220",
-            "D": "230"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 41,
-          "question": "7.2 ÷ 0.6 = ______.",
-          "options": {
-            "A": "1.2",
-            "B": "12",
-            "C": "0.12",
-            "D": "120"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 42,
-          "question": "The next number in the sequence 3, 6, 9, 12, … is ______.",
-          "options": {
-            "A": "15",
-            "B": "18",
-            "C": "21",
-            "D": "24"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 43,
-          "question": "5² – 3² = ______.",
-          "options": {
-            "A": "4",
-            "B": "16",
-            "C": "34",
-            "D": "8"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 44,
-          "question": "Find the value of 2x + 5 when x = 4.",
-          "options": {
-            "A": "9",
-            "B": "13",
-            "C": "18",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 45,
-          "question": "A prime number between 10 and 20 is ______.",
-          "options": {
-            "A": "14",
-            "B": "15",
-            "C": "17",
-            "D": "21"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 46,
-          "question": "The HCF of 12 and 18 is ______.",
-          "options": {
-            "A": "3",
-            "B": "6",
-            "C": "9",
-            "D": "12"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 47,
-          "question": "The LCM of 4 and 5 is ______.",
-          "options": {
-            "A": "10",
-            "B": "20",
-            "C": "30",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 48,
-          "question": "If ¼ of a number is 7, the number is ______.",
-          "options": {
-            "A": "21",
-            "B": "24",
-            "C": "28",
-            "D": "35"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 49,
-          "question": "30% of ₦500 is ______.",
-          "options": {
-            "A": "₦100",
-            "B": "₦150",
-            "C": "₦200",
-            "D": "₦250"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 50,
-          "question": "Which is a measure of central tendency?",
-          "options": {
-            "A": "Range",
-            "B": "Median",
-            "C": "Sum",
-            "D": "Product"
-          },
-          "answer": "B",
-          "image": null
-        }
+    {
+      "id": 1,
+      "question": "The principles, habits, and beliefs that guide a person's behaviour in earning, managing, and spending money are called\u2026",
+      "options": {
+        "A": "civic virtues.",
+        "B": "economic values.",
+        "C": "fundamental rights.",
+        "D": "social norms."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "The quality of being careful and wise with money and resources, avoiding waste, is known as\u2026",
+      "options": {
+        "A": "saving.",
+        "B": "thrift.",
+        "C": "investment.",
+        "D": "entrepreneurship."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "A thrifty person is one who\u2026",
+      "options": {
+        "A": "spends money on every whim.",
+        "B": "buys the cheapest item regardless of quality.",
+        "C": "avoids waste and manages resources prudently.",
+        "D": "never spends money at all."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "The act of setting aside a portion of current income for future use is called\u2026",
+      "options": {
+        "A": "thrift.",
+        "B": "investment.",
+        "C": "saving.",
+        "D": "budgeting."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "The main purpose of saving is to\u2026",
+      "options": {
+        "A": "get rich quickly.",
+        "B": "have money for future use or emergencies.",
+        "C": "pay taxes.",
+        "D": "start a business immediately."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Using saved money to buy something with the expectation that it will generate more money in the future is known as\u2026",
+      "options": {
+        "A": "saving.",
+        "B": "thrift.",
+        "C": "investment.",
+        "D": "consumption."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "The main difference between saving and investment is that saving is for ________ while investment is for ________.",
+      "options": {
+        "A": "growth, protection.",
+        "B": "protection, growth.",
+        "C": "spending, protecting.",
+        "D": "the rich, the poor."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is an example of an investment?",
+      "options": {
+        "A": "Keeping money in a piggy bank.",
+        "B": "Buying shares in a company.",
+        "C": "Putting money in a savings account at home.",
+        "D": "Storing money under your mattress."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "The process of identifying a business opportunity and taking the risk to start a new business is called\u2026",
+      "options": {
+        "A": "saving.",
+        "B": "investment.",
+        "C": "entrepreneurship.",
+        "D": "thrift."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "An entrepreneur is primarily a\u2026",
+      "options": {
+        "A": "risk-avoider.",
+        "B": "risk-taker.",
+        "C": "government worker.",
+        "D": "salary earner."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "A person who saves money in a bank is primarily focused on\u2026",
+      "options": {
+        "A": "growing their money quickly.",
+        "B": "protecting their money.",
+        "C": "starting a business.",
+        "D": "buying luxury items."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Which economic value is considered the foundation of wealth?",
+      "options": {
+        "A": "Investment",
+        "B": "Entrepreneurship",
+        "C": "Saving",
+        "D": "Thrift"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "A cheap person buys the lowest quality item that spoils quickly, while a thrifty person\u2026",
+      "options": {
+        "A": "buys the most expensive item.",
+        "B": "buys a good quality item that lasts longer.",
+        "C": "never buys anything.",
+        "D": "only borrows items."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "When money is in a savings account, it is often described as\u2026",
+      "options": {
+        "A": "working hard.",
+        "B": "idle money.",
+        "C": "profit.",
+        "D": "capital gain."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Entrepreneurship helps national development by\u2026",
+      "options": {
+        "A": "increasing unemployment.",
+        "B": "creating new wealth and jobs.",
+        "C": "reducing the number of businesses.",
+        "D": "encouraging people to depend on the government."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "A compulsory financial payment that citizens and businesses are required to pay to the government is called a\u2026",
+      "options": {
+        "A": "fine.",
+        "B": "tax.",
+        "C": "fee.",
+        "D": "bill."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "The system or process by which the government collects taxes is known as\u2026",
+      "options": {
+        "A": "taxation.",
+        "B": "budgeting.",
+        "C": "accounting.",
+        "D": "auditing."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "A tax that is paid directly by the person or company to the government is a\u2026",
+      "options": {
+        "A": "direct tax.",
+        "B": "indirect tax.",
+        "C": "hidden tax.",
+        "D": "luxury tax."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "PAYE (Pay As You Earn) is an example of a ________ tax.",
+      "options": {
+        "A": "direct",
+        "B": "indirect",
+        "C": "hidden",
+        "D": "consumption"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "A tax that is hidden in the price of goods and services is called a(n) ________ tax.",
+      "options": {
+        "A": "direct",
+        "B": "indirect",
+        "C": "income",
+        "D": "property"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "Value Added Tax (VAT) in Nigeria is currently set at\u2026",
+      "options": {
+        "A": "5%.",
+        "B": "7.5%.",
+        "C": "10%.",
+        "D": "12.5%."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "The main federal agency responsible for collecting taxes in Nigeria is the\u2026",
+      "options": {
+        "A": "NAPTIP.",
+        "B": "EFCC.",
+        "C": "FIRS.",
+        "D": "INEC."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Taxes paid on goods imported into the country are called\u2026",
+      "options": {
+        "A": "income tax.",
+        "B": "customs duty or tariffs.",
+        "C": "value-added tax.",
+        "D": "tenement rate."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "Which of the following is a direct tax?",
+      "options": {
+        "A": "VAT",
+        "B": "Customs duty",
+        "C": "Company Income Tax",
+        "D": "Excise duty"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "Tax money is used by the government to\u2026",
+      "options": {
+        "A": "pay the salaries of private sector workers.",
+        "B": "build and maintain public schools and hospitals.",
+        "C": "fund personal businesses.",
+        "D": "give loans to citizens."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "The illegal act of not paying one's taxes is called\u2026",
+      "options": {
+        "A": "tax avoidance.",
+        "B": "tax evasion.",
+        "C": "tax planning.",
+        "D": "tax relief."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "A consequence of widespread tax evasion is\u2026",
+      "options": {
+        "A": "improved public services.",
+        "B": "increased government revenue.",
+        "C": "lack of development and poor infrastructure.",
+        "D": "lower national debt."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "The tax paid by property owners to the local government is called\u2026",
+      "options": {
+        "A": "income tax.",
+        "B": "VAT.",
+        "C": "tenement rate.",
+        "D": "customs duty."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "When citizens pay their taxes honestly, it allows the government to\u2026",
+      "options": {
+        "A": "increase its foreign debt.",
+        "B": "provide better social services.",
+        "C": "reduce the number of schools.",
+        "D": "stop paying public servants."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "Paying tax is considered a crucial ________ for every citizen.",
+      "options": {
+        "A": "right",
+        "B": "privilege",
+        "C": "civic duty",
+        "D": "option"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "Our total surroundings, including living and non-living things, is called the\u2026",
+      "options": {
+        "A": "community.",
+        "B": "environment.",
+        "C": "society.",
+        "D": "habitat."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "The responsibility of every citizen to protect and improve their surroundings is known as\u2026",
+      "options": {
+        "A": "environmental citizenship.",
+        "B": "national security.",
+        "C": "civic duty.",
+        "D": "social responsibility."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Public health practices related to providing clean and safe living conditions are referred to as\u2026",
+      "options": {
+        "A": "sanitation.",
+        "B": "waste management.",
+        "C": "pollution.",
+        "D": "hygiene."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Which of the following is a good sanitation practice?",
+      "options": {
+        "A": "Open defecation",
+        "B": "Washing hands with soap after using the toilet",
+        "C": "Dumping refuse in the gutter",
+        "D": "Burning waste in the open"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "Poor sanitation is a major cause of diseases like\u2026",
+      "options": {
+        "A": "malaria and typhoid.",
+        "B": "cholera and dysentery.",
+        "C": "HIV/AIDS and cancer.",
+        "D": "diabetes and high blood pressure."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "The process of collecting, transporting, and disposing of waste is called\u2026",
+      "options": {
+        "A": "sanitation.",
+        "B": "waste management.",
+        "C": "recycling.",
+        "D": "environmental protection."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "Dumping refuse in gutters can lead to\u2026",
+      "options": {
+        "A": "clean water.",
+        "B": "flooding.",
+        "C": "good sanitation.",
+        "D": "beautiful surroundings."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "The '3 Rs' of waste management are Reduce, Reuse, and\u2026",
+      "options": {
+        "A": "Remove.",
+        "B": "Recycle.",
+        "C": "Repay.",
+        "D": "Return."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "Using a reusable water bottle instead of buying many 'pure water' sachets is an example of\u2026",
+      "options": {
+        "A": "reducing.",
+        "B": "reusing.",
+        "C": "recycling.",
+        "D": "refusing."
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "Converting waste materials into new products is known as\u2026",
+      "options": {
+        "A": "reducing.",
+        "B": "reusing.",
+        "C": "recycling.",
+        "D": "refusing."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 41,
+      "question": "Which of the following is NOT a role of an environmental citizen?",
+      "options": {
+        "A": "Disposing of waste properly",
+        "B": "Littering the streets",
+        "C": "Planting trees",
+        "D": "Clearing drainages"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 42,
+      "question": "The act of planting trees is called\u2026",
+      "options": {
+        "A": "deforestation.",
+        "B": "afforestation.",
+        "C": "reforestation.",
+        "D": "cultivation."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 43,
+      "question": "The cutting down of trees without replacing them is known as\u2026",
+      "options": {
+        "A": "afforestation.",
+        "B": "deforestation.",
+        "C": "conservation.",
+        "D": "preservation."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 44,
+      "question": "A government agency responsible for waste management in Lagos is\u2026",
+      "options": {
+        "A": "NESREA.",
+        "B": "LAWMA.",
+        "C": "NOSDRA.",
+        "D": "FEMA."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 45,
+      "question": "An environmental citizen should report activities like\u2026",
+      "options": {
+        "A": "community cleaning.",
+        "B": "oil spills into rivers.",
+        "C": "tree planting.",
+        "D": "recycling."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 46,
+      "question": "Places a citizen can go to seek help and justice when their rights are abused are called\u2026",
+      "options": {
+        "A": "social institutions.",
+        "B": "human rights institutions.",
+        "C": "government ministries.",
+        "D": "private companies."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 47,
+      "question": "The government institution established by law to investigate complaints of human rights abuses is the\u2026",
+      "options": {
+        "A": "Legal Aid Council.",
+        "B": "National Human Rights Commission (NHRC).",
+        "C": "EFCC.",
+        "D": "INEC."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 48,
+      "question": "The NHRC has the power to\u2026",
+      "options": {
+        "A": "make laws.",
+        "B": "arrest and prosecute criminals.",
+        "C": "investigate complaints and order compensation.",
+        "D": "conduct elections."
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 49,
+      "question": "The government agency that provides free legal services to poor Nigerian citizens is the\u2026",
+      "options": {
+        "A": "NHRC.",
+        "B": "Legal Aid Council.",
+        "C": "FIDA.",
+        "D": "Ministry of Justice."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 50,
+      "question": "The Legal Aid Council is important because it ensures that poverty does not deny a person the right to\u2026",
+      "options": {
+        "A": "vote.",
+        "B": "a fair hearing.",
+        "C": "education.",
+        "D": "work."
+      },
+      "answer": "B",
+      "image": null
+    }
 ];
 
 
         const staticTheoryQuestions = [
-                                     {
-                                    id: 1,
-                                    question: "Simplify \na. (i) 2⅔ + 1¾\n(ii) 3½ ÷ 1¼ \n b. A farmer has 5½ hectares of land. He plants maize on ⅔ of it. How many hectares are left for other crops? \n c. Round 6.4783 to\n (i) 2 decimal places\n(ii) 3 significant figures",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 2,
-                                    question: "Convert \n a. (i) 29₁₀ to base two\n(ii) 11011₂ to base ten \n b.Perform The Followiong Binary Operation\n (i) 111₂ + 101₂\n(ii) 1001₂ – 110₂ \n c. Multiply 1011₂ by 101₂.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 3,
-                                    question: "Simplify\n a. (i) 4x + 3y – 2x + 5y\n(ii) 2(3a – 4b) + 5(a + b) \n b. If p = 5 and q = 2, evaluate:\n (i) 3p² – 2q\n(ii) (p + q)(p – q) \n c.solve\n (i) 2x – 7 = 15\n(ii) ¾ y = 12",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 4,
-                                    question: "a. In a class of 48 students, ¼ are boys. How many are girls? \n b. Mr. Ojo bought 8.5 kg of rice at ₦320 per kg. How much change did he get from ₦3,000? \n c. Find the mean and median of: 12, 8, 15, 10, 13, 11, 14.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 5,
-                                    question: "a. Calculate the perimeter of a rectangular garden of length 15 m and width 9 m. \n b. Find the area of a triangle with base 14 cm and height 6 cm. \n c. An angle is 25° more than its complement. Find the angle.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 6,
-                                    question: "a. Estimate the product of 47 and 32 by rounding each to the nearest ten. \n b. A bag contains 12 red balls, 8 blue balls, and 5 green balls. What fraction of the balls are blue? \n c. Simplify: ⅗ of (2½ + 1¼)",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 7,
-                                    question: "a. If 5 books cost ₦2,500, how much will 9 of the same books cost? \n b. The sum of three consecutive numbers is 63. Find the numbers. \n c. Find the value of: 0.2 × 0.3 ÷ 0.02",
-                                    marks: 10,
-                                    image: null
-                                  }
+                                    {
+      "id": 1,
+      "question": "a) Define the following economic values: (i) Thrift (ii) Saving (iii) Investment. (6 marks)\nb) Differentiate between saving and investment, giving one example of each. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "a) What is tax? (2 marks)\nb) Differentiate between direct tax and indirect tax, giving two examples of each. (6 marks)\nc) State two reasons why paying tax is an important civic duty. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "a) Define \"Environmental Citizenship\". (2 marks)\nb) Explain the \"3 Rs\" of waste management and give a practical example for each. (6 marks)\nc) List two dangers of poor waste management. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "a) Mention two (2) government institutions in Nigeria that protect human rights. (2 marks)\nb) Explain the primary roles of the National Human Rights Commission (NHRC). (4 marks)\nc) What is an NGO? State the role of human rights NGOs with one example. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "a) Define \"corruption\" and give two examples. (4 marks)\nb) Explain the terms \"accountability\" and \"transparency\". (4 marks)\nc) What is a whistleblower, and why are they important in fighting corruption? (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "a) Write the full meaning of EFCC and ICPC. (2 marks)\nb) Differentiate between the main focus of the EFCC and the ICPC. (4 marks)\nc) State two (2) effects of corruption on national development. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "a) What is \"National Development\"? (2 marks)\nb) List four (4) indicators (signs) of a developed nation. (4 marks)\nc) Explain three (3) roles a citizen must play to promote national development. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "a) What is a social institution? (2 marks)\nb) Identify three (3) social institutions and state one civic function of each. (6 marks)\nc) Why is the family considered the most basic social institution? (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "a) Define the following civic challenges: (i) Poverty (ii) Illiteracy (iii) Unemployment. (6 marks)\nb) Explain how these three challenges are interconnected, forming a \"vicious triangle\". (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Read the scenario and answer the questions that follow:\n\nChinedu is a young man in a rural community. His parents are poor farmers who cannot afford to send him to secondary school. Without an education, Chinedu finds it difficult to get a good job in the city. He remains in the village, struggling to survive. Some of his friends who moved to the city turned to internet fraud to make money.\n\na) From the story, identify and explain the three civic challenges (Poverty, Illiteracy, Unemployment) that are affecting Chinedu. (6 marks)\nb) According to the cycle of poverty, why will Chinedu's children likely also be poor? (2 marks)\nc) Suggest one way the government and one way Chinedu himself could break this cycle. (2 marks)",
+      "marks": 10,
+      "image": null
+    }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];

@@ -624,652 +624,670 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-     {
-          "id": 1,
-          "question": "What is the sum of ¾ and ⅔?",
-          "options": {
-            "A": "1 5/12",
-            "B": "1 ¼",
-            "C": "1 ⅓",
-            "D": "1 ½"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 2,
-          "question": "Subtract 5/8 from 1 ½.",
-          "options": {
-            "A": "1 ⅛",
-            "B": "1 ⅜",
-            "C": "⅞",
-            "D": "1"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 3,
-          "question": "The product of 2/5 and 3/4 is ______.",
-          "options": {
-            "A": "3/10",
-            "B": "5/9",
-            "C": "6/20",
-            "D": "8/15"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 4,
-          "question": "Divide ¾ by ½.",
-          "options": {
-            "A": "1 ½",
-            "B": "1 ¼",
-            "C": "2",
-            "D": "3/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 5,
-          "question": "Round 567.389 to the nearest whole number.",
-          "options": {
-            "A": "567",
-            "B": "568",
-            "C": "567.4",
-            "D": "567.39"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 6,
-          "question": "How many significant figures are in 0.0405?",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 7,
-          "question": "The binary number 1011₂ is equal to ______ in base ten.",
-          "options": {
-            "A": "9",
-            "B": "10",
-            "C": "11",
-            "D": "12"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 8,
-          "question": "Add 101₂ and 110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1011₂",
-            "C": "1101₂",
-            "D": "1111₂"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 9,
-          "question": "Subtract 101₂ from 1110₂.",
-          "options": {
-            "A": "1001₂",
-            "B": "1101₂",
-            "C": "1011₂",
-            "D": "111₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 10,
-          "question": "Multiply 101₂ by 11₂.",
-          "options": {
-            "A": "1111₂",
-            "B": "1101₂",
-            "C": "1010₂",
-            "D": "1001₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 11,
-          "question": "In the expression 5x + 3y, the coefficient of y is ______.",
-          "options": {
-            "A": "5",
-            "B": "3",
-            "C": "x",
-            "D": "y"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 12,
-          "question": "Simplify: 2a + 3b + a – b.",
-          "options": {
-            "A": "3a + 2b",
-            "B": "3a + 4b",
-            "C": "a + 2b",
-            "D": "5ab"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 13,
-          "question": "Expand: 3(x + 4).",
-          "options": {
-            "A": "3x + 4",
-            "B": "3x + 12",
-            "C": "x + 12",
-            "D": "7x"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 14,
-          "question": "Collect like terms: 5p – 2q + p + 4q.",
-          "options": {
-            "A": "6p + 2q",
-            "B": "6p – 2q",
-            "C": "4p + 2q",
-            "D": "5p + 6q"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 15,
-          "question": "Solve: x + 7 = 15.",
-          "options": {
-            "A": "8",
-            "B": "22",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 16,
-          "question": "If 3y = 27, then y = ______.",
-          "options": {
-            "A": "9",
-            "B": "24",
-            "C": "30",
-            "D": "81"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 17,
-          "question": "An angle less than 90° is called ______.",
-          "options": {
-            "A": "obtuse",
-            "B": "reflex",
-            "C": "acute",
-            "D": "right"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 18,
-          "question": "The sum of angles on a straight line is ______.",
-          "options": {
-            "A": "90°",
-            "B": "180°",
-            "C": "360°",
-            "D": "270°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 19,
-          "question": "Calculate the perimeter of a rectangle of length 8 cm and width 5 cm.",
-          "options": {
-            "A": "13 cm",
-            "B": "26 cm",
-            "C": "40 cm",
-            "D": "30 cm"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 20,
-          "question": "The area of a square of side 6 m is ______.",
-          "options": {
-            "A": "12 m²",
-            "B": "24 m²",
-            "C": "36 m²",
-            "D": "30 m²"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 21,
-          "question": "The mean of 4, 6, 8, and 10 is ______.",
-          "options": {
-            "A": "7",
-            "B": "8",
-            "C": "9",
-            "D": "10"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 22,
-          "question": "The mode of 2, 3, 4, 3, 5, 3 is ______.",
-          "options": {
-            "A": "2",
-            "B": "3",
-            "C": "4",
-            "D": "5"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 23,
-          "question": "Which is the smallest fraction?",
-          "options": {
-            "A": "2/3",
-            "B": "3/5",
-            "C": "5/8",
-            "D": "1/2"
-          },
-          "answer": "D",
-          "image": null
-        },
-        {
-          "id": 24,
-          "question": "0.25 as a fraction in its lowest terms is ______.",
-          "options": {
-            "A": "1/4",
-            "B": "25/100",
-            "C": "1/25",
-            "D": "5/20"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 25,
-          "question": "The place value of 7 in 3.076 is ______.",
-          "options": {
-            "A": "tenths",
-            "B": "hundredths",
-            "C": "thousandths",
-            "D": "tens"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 26,
-          "question": "3/8 × 4/9 = ______.",
-          "options": {
-            "A": "1/6",
-            "B": "12/72",
-            "C": "7/17",
-            "D": "1/3"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 27,
-          "question": "Express 0.375 as a fraction.",
-          "options": {
-            "A": "3/8",
-            "B": "375/1000",
-            "C": "3/4",
-            "D": "5/8"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 28,
-          "question": "Which of these is an algebraic expression?",
-          "options": {
-            "A": "5 + 3 = 8",
-            "B": "2x – 7",
-            "C": "9 > 5",
-            "D": "πr²"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 29,
-          "question": "Simplify: 4a × 3b.",
-          "options": {
-            "A": "7ab",
-            "B": "12ab",
-            "C": "12a",
-            "D": "12b"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 30,
-          "question": "If a = 3 and b = 2, find a² + b².",
-          "options": {
-            "A": "5",
-            "B": "13",
-            "C": "10",
-            "D": "25"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 31,
-          "question": "Convert 25₁₀ to base two.",
-          "options": {
-            "A": "11001₂",
-            "B": "11101₂",
-            "C": "10101₂",
-            "D": "10011₂"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 32,
-          "question": "The complement of 35° is ______.",
-          "options": {
-            "A": "145°",
-            "B": "55°",
-            "C": "65°",
-            "D": "45°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 33,
-          "question": "How many degrees are in a right angle?",
-          "options": {
-            "A": "45°",
-            "B": "90°",
-            "C": "180°",
-            "D": "360°"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 34,
-          "question": "A triangle with all sides equal is called ______.",
-          "options": {
-            "A": "isosceles",
-            "B": "scalene",
-            "C": "equilateral",
-            "D": "right-angled"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 35,
-          "question": "Find the area of a triangle with base 10 cm and height 4 cm.",
-          "options": {
-            "A": "20 cm²",
-            "B": "40 cm²",
-            "C": "14 cm²",
-            "D": "25 cm²"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 36,
-          "question": "The perimeter of a square of side 9 cm is ______.",
-          "options": {
-            "A": "18 cm",
-            "B": "27 cm",
-            "C": "36 cm",
-            "D": "81 cm"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 37,
-          "question": "The median of 5, 8, 3, 9, 2 is ______.",
-          "options": {
-            "A": "5",
-            "B": "8",
-            "C": "3",
-            "D": "9"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 38,
-          "question": "A pie chart represents data in ______.",
-          "options": {
-            "A": "bars",
-            "B": "sectors",
-            "C": "lines",
-            "D": "columns"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 39,
-          "question": "Which is the largest 3-digit number?",
-          "options": {
-            "A": "999",
-            "B": "100",
-            "C": "990",
-            "D": "109"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 40,
-          "question": "Estimate 148 + 63 by rounding to the nearest ten.",
-          "options": {
-            "A": "200",
-            "B": "210",
-            "C": "220",
-            "D": "230"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 41,
-          "question": "7.2 ÷ 0.6 = ______.",
-          "options": {
-            "A": "1.2",
-            "B": "12",
-            "C": "0.12",
-            "D": "120"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 42,
-          "question": "The next number in the sequence 3, 6, 9, 12, … is ______.",
-          "options": {
-            "A": "15",
-            "B": "18",
-            "C": "21",
-            "D": "24"
-          },
-          "answer": "A",
-          "image": null
-        },
-        {
-          "id": 43,
-          "question": "5² – 3² = ______.",
-          "options": {
-            "A": "4",
-            "B": "16",
-            "C": "34",
-            "D": "8"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 44,
-          "question": "Find the value of 2x + 5 when x = 4.",
-          "options": {
-            "A": "9",
-            "B": "13",
-            "C": "18",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 45,
-          "question": "A prime number between 10 and 20 is ______.",
-          "options": {
-            "A": "14",
-            "B": "15",
-            "C": "17",
-            "D": "21"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 46,
-          "question": "The HCF of 12 and 18 is ______.",
-          "options": {
-            "A": "3",
-            "B": "6",
-            "C": "9",
-            "D": "12"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 47,
-          "question": "The LCM of 4 and 5 is ______.",
-          "options": {
-            "A": "10",
-            "B": "20",
-            "C": "30",
-            "D": "40"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 48,
-          "question": "If ¼ of a number is 7, the number is ______.",
-          "options": {
-            "A": "21",
-            "B": "24",
-            "C": "28",
-            "D": "35"
-          },
-          "answer": "C",
-          "image": null
-        },
-        {
-          "id": 49,
-          "question": "30% of ₦500 is ______.",
-          "options": {
-            "A": "₦100",
-            "B": "₦150",
-            "C": "₦200",
-            "D": "₦250"
-          },
-          "answer": "B",
-          "image": null
-        },
-        {
-          "id": 50,
-          "question": "Which is a measure of central tendency?",
-          "options": {
-            "A": "Range",
-            "B": "Median",
-            "C": "Sum",
-            "D": "Product"
-          },
-          "answer": "B",
-          "image": null
-        }
+ {
+      "id": 1,
+      "question": "One of the main advantages of using a graph is that it provides a ____.",
+      "options": {
+        "A": "numerical summary",
+        "B": "visual representation",
+        "C": "complex calculation",
+        "D": "written description"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "On a distance-time graph, a horizontal line indicates that the object is ____.",
+      "options": {
+        "A": "moving at a constant speed",
+        "B": "accelerating",
+        "C": "stationary",
+        "D": "returning to the start"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "The slope of a distance-time graph represents ____.",
+      "options": {
+        "A": "distance",
+        "B": "time",
+        "C": "acceleration",
+        "D": "speed"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "On a distance-time graph, a steeper slope indicates a ____.",
+      "options": {
+        "A": "lower speed",
+        "B": "higher speed",
+        "C": "longer time",
+        "D": "shorter distance"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "In a cost graph for a taxi (C = 300 + 50d), the fixed charge of \u20a6300 is shown where the line meets the ____.",
+      "options": {
+        "A": "x-axis",
+        "B": "y-axis",
+        "C": "origin",
+        "D": "point (300, 0)"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "The point where the revenue line crosses the cost line on a business graph is called the ____.",
+      "options": {
+        "A": "profit point",
+        "B": "loss point",
+        "C": "break-even point",
+        "D": "starting point"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "An angle that measures 85\u00b0 is called a(n) ____ angle.",
+      "options": {
+        "A": "acute",
+        "B": "right",
+        "C": "obtuse",
+        "D": "reflex"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "An angle of 180\u00b0 is called a ____ angle.",
+      "options": {
+        "A": "right",
+        "B": "acute",
+        "C": "straight",
+        "D": "reflex"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Two angles that add up to 90\u00b0 are called ____ angles.",
+      "options": {
+        "A": "supplementary",
+        "B": "complementary",
+        "C": "vertically opposite",
+        "D": "adjacent"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "The complement of 42\u00b0 is ____.",
+      "options": {
+        "A": "48\u00b0",
+        "B": "138\u00b0",
+        "C": "58\u00b0",
+        "D": "42\u00b0"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "The supplement of 115\u00b0 is ____.",
+      "options": {
+        "A": "25\u00b0",
+        "B": "65\u00b0",
+        "C": "75\u00b0",
+        "D": "245\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "When two straight lines cross, the angles opposite each other are called ____ and they are ____.",
+      "options": {
+        "A": "adjacent, equal",
+        "B": "vertically opposite, equal",
+        "C": "supplementary, unequal",
+        "D": "complementary, equal"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "A polygon with 8 sides is called a(n) ____.",
+      "options": {
+        "A": "pentagon",
+        "B": "hexagon",
+        "C": "octagon",
+        "D": "decagon"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "The sum of interior angles of a pentagon (5 sides) is ____.",
+      "options": {
+        "A": "360\u00b0",
+        "B": "540\u00b0",
+        "C": "720\u00b0",
+        "D": "900\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "The sum of interior angles of any polygon with n sides is given by the formula ____.",
+      "options": {
+        "A": "(n + 2) \u00d7 180\u00b0",
+        "B": "(n - 2) \u00d7 180\u00b0",
+        "C": "(n - 2) \u00d7 90\u00b0",
+        "D": "n \u00d7 180\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Each interior angle of a regular hexagon is ____.",
+      "options": {
+        "A": "108\u00b0",
+        "B": "120\u00b0",
+        "C": "135\u00b0",
+        "D": "60\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Each exterior angle of a regular polygon is 40\u00b0. The polygon has ____ sides.",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "A regular polygon has 12 sides. Each of its exterior angles is ____.",
+      "options": {
+        "A": "30\u00b0",
+        "B": "36\u00b0",
+        "C": "45\u00b0",
+        "D": "60\u00b0"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "In a regular polygon, if each interior angle is 150\u00b0, the number of sides is ____.",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "18"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "If four angles of a pentagon are 100\u00b0, 110\u00b0, 120\u00b0, and 130\u00b0, the fifth angle is ____.",
+      "options": {
+        "A": "80\u00b0",
+        "B": "90\u00b0",
+        "C": "100\u00b0",
+        "D": "540\u00b0"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "The angle of elevation is the angle between the ____ and the line of sight when looking ____ at an object.",
+      "options": {
+        "A": "vertical line, down",
+        "B": "horizontal line, up",
+        "C": "vertical line, up",
+        "D": "horizontal line, down"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "The angle of depression is measured from the ____.",
+      "options": {
+        "A": "vertical upward",
+        "B": "horizontal upward",
+        "C": "horizontal downward",
+        "D": "line of sight"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "The angle of elevation from point A to point B is 35\u00b0. The angle of depression from point B to point A is ____.",
+      "options": {
+        "A": "55\u00b0",
+        "B": "35\u00b0",
+        "C": "145\u00b0",
+        "D": "90\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "A man standing 20 m from a tree looks up at an angle of 45\u00b0 to see the top. The height of the tree forms the ____ side of the right-angled triangle.",
+      "options": {
+        "A": "adjacent",
+        "B": "hypotenuse",
+        "C": "opposite",
+        "D": "base"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "From the top of a 50 m tower, the angle of depression to a car is 30\u00b0. To find the distance of the car from the tower, you would use the given height as the ____ side and the unknown distance as the ____ side.",
+      "options": {
+        "A": "opposite, adjacent",
+        "B": "adjacent, opposite",
+        "C": "hypotenuse, opposite",
+        "D": "adjacent, hypotenuse"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "The bearing of due North is ____.",
+      "options": {
+        "A": "090\u00b0",
+        "B": "000\u00b0",
+        "C": "180\u00b0",
+        "D": "270\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "The bearing of Southeast is ____.",
+      "options": {
+        "A": "045\u00b0",
+        "B": "135\u00b0",
+        "C": "225\u00b0",
+        "D": "315\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "The compass bearing N60\u00b0W is equivalent to the three-figure bearing ____.",
+      "options": {
+        "A": "060\u00b0",
+        "B": "120\u00b0",
+        "C": "300\u00b0",
+        "D": "60\u00b0"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "The three-figure bearing 210\u00b0 is equivalent to the compass bearing ____.",
+      "options": {
+        "A": "S30\u00b0W",
+        "B": "S60\u00b0W",
+        "C": "N30\u00b0W",
+        "D": "S30\u00b0E"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "If the bearing from P to Q is 135\u00b0, what is the bearing from Q to P?",
+      "options": {
+        "A": "045\u00b0",
+        "B": "225\u00b0",
+        "C": "315\u00b0",
+        "D": "135\u00b0"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "A back bearing is calculated by ____.",
+      "options": {
+        "A": "adding 90\u00b0 to the bearing",
+        "B": "subtracting 90\u00b0 from the bearing",
+        "C": "adding or subtracting 180\u00b0 from the bearing",
+        "D": "finding the complement of the bearing"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "To locate a point from a reference point, you need to know the ____ and the ____.",
+      "options": {
+        "A": "bearing and distance",
+        "B": "direction and time",
+        "C": "latitude and longitude",
+        "D": "angle and time"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Constructing a triangle when all three sides are given is known as ____.",
+      "options": {
+        "A": "ASA construction",
+        "B": "SAS construction",
+        "C": "SSS construction",
+        "D": "AAA construction"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "In an SAS construction, the angle given must be the angle ____.",
+      "options": {
+        "A": "opposite the longest side",
+        "B": "included between the two given sides",
+        "C": "at the base of the triangle",
+        "D": "at the apex of the triangle"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "To construct a triangle with sides 5 cm, 6 cm, and 7 cm, you would first draw the side of length ____.",
+      "options": {
+        "A": "5 cm",
+        "B": "6 cm",
+        "C": "7 cm",
+        "D": "any side"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "The triangle inequality states that the sum of any two sides must be ____ the third side.",
+      "options": {
+        "A": "equal to",
+        "B": "less than",
+        "C": "greater than",
+        "D": "half of"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "Is a triangle with sides 2 cm, 3 cm, and 6 cm possible?",
+      "options": {
+        "A": "Yes, because 2+3 > 6",
+        "B": "No, because 2+3 < 6",
+        "C": "Yes, because 2+6 > 3",
+        "D": "No, because 3+6 < 2"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "Bisecting a 60\u00b0 angle gives an angle of ____.",
+      "options": {
+        "A": "15\u00b0",
+        "B": "30\u00b0",
+        "C": "45\u00b0",
+        "D": "120\u00b0"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "The perpendicular bisector of a line segment does which of the following?",
+      "options": {
+        "A": "Divides the angle into two equal parts.",
+        "B": "Divides the line into two equal parts at 90\u00b0.",
+        "C": "Divides the line into three equal parts.",
+        "D": "Creates a line parallel to the original."
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "Data collected for the first time by a researcher is called ____ data.",
+      "options": {
+        "A": "secondary",
+        "B": "grouped",
+        "C": "primary",
+        "D": "raw"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 41,
+      "question": "An example of primary data is ____.",
+      "options": {
+        "A": "data from a textbook",
+        "B": "information from the internet",
+        "C": "results from a class survey",
+        "D": "government census figures"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 42,
+      "question": "Data that can be measured and can take any value within a range (e.g., height, weight) is called ____ data.",
+      "options": {
+        "A": "discrete",
+        "B": "continuous",
+        "C": "qualitative",
+        "D": "primary"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 43,
+      "question": "The number of students in a class is an example of ____ data.",
+      "options": {
+        "A": "continuous",
+        "B": "discrete",
+        "C": "qualitative",
+        "D": "secondary"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 44,
+      "question": "The tally mark ~~||||~~ represents the number ____.",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 45,
+      "question": "In a frequency table, the sum of all frequencies is equal to the ____.",
+      "options": {
+        "A": "range",
+        "B": "mean",
+        "C": "mode",
+        "D": "total number of observations"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 46,
+      "question": "The range of the data set {3, 8, 6, 5, 12} is ____.",
+      "options": {
+        "A": "12",
+        "B": "9",
+        "C": "8",
+        "D": "5"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 47,
+      "question": "When creating grouped data, a class interval of 10-19 has a class width of ____.",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "19",
+        "D": "29"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 48,
+      "question": "The first step in drawing a pie chart is to ____.",
+      "options": {
+        "A": "draw a circle",
+        "B": "calculate the angles",
+        "C": "find the total frequency",
+        "D": "label the sectors"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 49,
+      "question": "The total angle at the center of a pie chart is ____.",
+      "options": {
+        "A": "180\u00b0",
+        "B": "270\u00b0",
+        "C": "360\u00b0",
+        "D": "100\u00b0"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 50,
+      "question": "In a pie chart, the angle for a sector representing 25% of the data is ____.",
+      "options": {
+        "A": "25\u00b0",
+        "B": "45\u00b0",
+        "C": "90\u00b0",
+        "D": "100\u00b0"
+      },
+      "answer": "C",
+      "image": null
+    }
 ];
 
 
         const staticTheoryQuestions = [
-                                     {
-                                    id: 1,
-                                    question: "Simplify \na. (i) 2⅔ + 1¾\n(ii) 3½ ÷ 1¼ \n b. A farmer has 5½ hectares of land. He plants maize on ⅔ of it. How many hectares are left for other crops? \n c. Round 6.4783 to\n (i) 2 decimal places\n(ii) 3 significant figures",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 2,
-                                    question: "Convert \n a. (i) 29₁₀ to base two\n(ii) 11011₂ to base ten \n b.Perform The Followiong Binary Operation\n (i) 111₂ + 101₂\n(ii) 1001₂ – 110₂ \n c. Multiply 1011₂ by 101₂.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 3,
-                                    question: "Simplify\n a. (i) 4x + 3y – 2x + 5y\n(ii) 2(3a – 4b) + 5(a + b) \n b. If p = 5 and q = 2, evaluate:\n (i) 3p² – 2q\n(ii) (p + q)(p – q) \n c.solve\n (i) 2x – 7 = 15\n(ii) ¾ y = 12",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 4,
-                                    question: "a. In a class of 48 students, ¼ are boys. How many are girls? \n b. Mr. Ojo bought 8.5 kg of rice at ₦320 per kg. How much change did he get from ₦3,000? \n c. Find the mean and median of: 12, 8, 15, 10, 13, 11, 14.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 5,
-                                    question: "a. Calculate the perimeter of a rectangular garden of length 15 m and width 9 m. \n b. Find the area of a triangle with base 14 cm and height 6 cm. \n c. An angle is 25° more than its complement. Find the angle.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 6,
-                                    question: "a. Estimate the product of 47 and 32 by rounding each to the nearest ten. \n b. A bag contains 12 red balls, 8 blue balls, and 5 green balls. What fraction of the balls are blue? \n c. Simplify: ⅗ of (2½ + 1¼)",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 7,
-                                    question: "a. If 5 books cost ₦2,500, how much will 9 of the same books cost? \n b. The sum of three consecutive numbers is 63. Find the numbers. \n c. Find the value of: 0.2 × 0.3 ÷ 0.02",
-                                    marks: 10,
-                                    image: null
-                                  }
+                                    {
+      "id": 1,
+      "question": "(a) Define the sum of interior angles of a polygon and state the formula for finding it. [2 marks]\n(b) A regular polygon has each exterior angle equal to 24\u00b0. Find:\n(i) The number of sides of the polygon.\n(ii) The measure of each interior angle.\n(iii) The sum of its interior angles. [6 marks]\n(c) If three angles of a pentagon are 110\u00b0, 120\u00b0, and 130\u00b0, and the remaining two angles are equal, find the measure of each of the equal angles. [2 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "(a) A man stands 40 m away from the base of a building. He looks up at the top of the building at an angle of elevation of 35\u00b0. Using a scale of 1 cm to 5 m, draw an accurate scale drawing to find the height of the building. (Describe the steps you would take or draw the diagram if required). [5 marks]\n(b) From the top of a lighthouse 60 m high, the angle of depression of a ship is 28\u00b0. Calculate, using a scale drawing (scale of your choice), the distance of the ship from the foot of the lighthouse. [5 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "(a) Express the following compass bearings as three-figure bearings:\n(i) N45\u00b0E\n(ii) S30\u00b0W [2 marks]\n(b) A ship sails from port P to a buoy Q. Q is 80 km from P on a bearing of 060\u00b0.\n(i) Using a scale of 1 cm to 20 km, make an accurate scale drawing to show the position of P and Q. [3 marks]\n(ii) From Q, the ship sails to a port R which is 100 km away on a bearing of 140\u00b0. Locate R on the same diagram. [2 marks]\n(iii) Measure and find the distance and bearing of R from P. [3 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "(a) Using a ruler and a pair of compasses only, construct a triangle ABC with AB = 8 cm, AC = 7 cm, and \u2220CAB = 60\u00b0. (Describe the steps or draw the diagram accurately if required). [5 marks]\n(b) On the same diagram, construct the perpendicular bisector of side AB. [3 marks]\n(c) Using a ruler and compass only, construct an angle of 30\u00b0. [2 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "(a) The ages of 20 people at a community meeting are given below:\n25, 45, 32, 18, 52, 28, 41, 19, 56, 33, 47, 22, 38, 29, 51, 24, 43, 20, 49, 35\n(i) Arrange the data in ascending order. [2 marks]\n(ii) Create a grouped frequency table for the data using the class intervals 15-24, 25-34, 35-44, 45-54, 55-64. [4 marks]\n(iii) How many people are 45 years old or older? [2 marks]\n(iv) What is the range of the ages? [2 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "(a) The pie chart below shows how 180 students travel to school.\n[Diagram of a pie chart with sectors: Walk 120\u00b0, Bus 100\u00b0, Bicycle 80\u00b0, Car 60\u00b0]\nCalculate the number of students who use each mode of transport. [5 marks]\n(b) What is the most common mode of transport? [1 mark]\n(c) Express the number of students who walk as a fraction of the total and as a percentage. [4 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "(a) A bag contains 12 marbles: 4 red, 5 blue, and 3 green. A marble is picked at random from the bag. Find the probability of picking:\n(i) a red marble.\n(ii) a blue marble.\n(iii) a yellow marble.\n(iv) a red or blue marble. [6 marks]\n(b) Two fair coins are tossed together. Draw a table to show the sample space and find the probability of getting:\n(i) exactly one head.\n(ii) at least one tail. [4 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "(a) A ladder 10 m long leans against a vertical wall. The foot of the ladder is 4 m from the wall. Using a suitable scale, draw a scale diagram to find how far up the wall the ladder reaches. [5 marks]\n(b) What is the angle the ladder makes with the ground? (Measure from your diagram). [2 marks]\n(c) From a point on the ground, the angle of elevation to the top of a tree is 42\u00b0. If the tree is 18 m high, draw a scale diagram (scale of your choice) to find the distance from the point to the foot of the tree. [3 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "(a) A rectangular field is 120 m long and 80 m wide. Draw a scale plan of the field using a scale of 1 cm to 20 m. (Show the dimensions on your drawing). [3 marks]\n(b) On the same plan, show a rectangular farmhouse of dimensions 40 m by 30 m situated in one corner of the field. [2 marks]\n(c) Calculate the actual area of:\n(i) the entire field.\n(ii) the farmhouse.\n(iii) the remaining part of the field. [5 marks]",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "(a) The marks scored by 30 students in a mathematics test are:\n45, 67, 52, 78, 56, 67, 89, 45, 72, 56, 61, 78, 67, 53, 89, 72, 56, 45, 67, 78, 55, 82, 48, 63, 71, 85, 59, 74, 68, 51\n(i) Using the class intervals 40-49, 50-59, 60-69, 70-79, 80-89, construct a frequency table for this data. [4 marks]\n(ii) Draw a pie chart to represent this information. (Show all necessary angle calculations). [6 marks]",
+      "marks": 10,
+      "image": null
+    }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];

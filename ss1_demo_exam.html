@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - INTERMEDIATE SCIENCE Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - DEMO Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color: red;
+            color:blue;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: white;/* #f9f9f9;*/
+            background-color: lime;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: purple;/*#2e7d32;*/
-            color: red;
+            background: #2e7d32;
+            color: white;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -468,22 +468,18 @@
             100% { opacity: 1; }
         }
 
-
-
-
-
          .marquee-container {
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: deepskyblue;
+            background: aqua;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: red;
+            color: fuchsia;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -500,6 +496,84 @@
         }
 
 
+        /* Logo container - makes it a flex container for horizontal layout */
+#logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Style for the center/main logo */
+#logo img:not(.logo-left img):not(.logo-right img) {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Left logo container */
+.logo-left {
+    flex: 0 0 auto;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+/* Right logo container */
+.logo-right {
+    flex: 0 0 auto;
+    z-index: 1;
+    margin-right: 20px;
+}
+
+/* Logo images inside left and right containers */
+.logo-left img,
+.logo-right img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for left and right logos */
+.logo-left img:hover,
+.logo-right img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    #logo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+    
+    #logo img:not(.logo-left img):not(.logo-right img) {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+    }
+    
+    .logo-left, .logo-right {
+        margin: 5px 0;
+    }
+    
+    .logo-left img,
+    .logo-right img {
+        max-width: 80px;
+    }
+}
+
+
+
     </style>
 </head>
 <body oncontextmenu="return false">
@@ -507,12 +581,19 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
 
+               <div class="logo-left">
+                <img src="img/9ja1.png" alt="Nigeria Logo" >
+            </div>
+
+            <div class="logo-right">
+                <img src="img/nappps1.png" alt="NAPPS Logo" >
+            </div>
         </div>
 
            
@@ -534,7 +615,7 @@
 
     
         <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
-        <center><h3>THIRD TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
+        <center><h3>SECOND TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
        
         <!-- SECTION TOGGLE BUTTONS -->
         <div class="section-toggle">
@@ -543,7 +624,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  INTERMEDIATE SCIENCE - JSS2 (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  DEMO - SS1 (SECOND TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -609,13 +690,12 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text"> DEMO PRACTICE FOR 2ND TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
         <p> &copy; cbt.<span style="color: red;">canaanlandmodelgroupof</span><span style="color: green;">schools</span>.org</p>
     </div>
-
 
     <script>
            // Get stored username and image from sessionStorage
@@ -624,670 +704,110 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-      {
-      "id": 1,
-      "question": "Energy is defined as the __________.",
-      "options": {
-        "A": "weight of an object",
-        "B": "ability to do work or cause change",
-        "C": "temperature of a substance",
-        "D": "speed of light"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "Energy is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "kilograms"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "The energy of motion is called __________.",
-      "options": {
-        "A": "potential energy",
-        "B": "kinetic energy",
-        "C": "chemical energy",
-        "D": "nuclear energy"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "Stored energy is called __________.",
-      "options": {
-        "A": "kinetic energy",
-        "B": "mechanical energy",
-        "C": "potential energy",
-        "D": "electrical energy"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "Which of the following is an example of potential energy?",
-      "options": {
-        "A": "A moving car",
-        "B": "A rolling ball",
-        "C": "A stretched rubber band",
-        "D": "Flowing water"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "A television converts electrical energy into __________.",
-      "options": {
-        "A": "light and sound energy only",
-        "B": "chemical energy only",
-        "C": "mechanical energy only",
-        "D": "nuclear energy only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "The Law of Conservation of Energy states that energy __________.",
-      "options": {
-        "A": "can be created but not destroyed",
-        "B": "can be destroyed but not created",
-        "C": "can neither be created nor destroyed, but can be converted",
-        "D": "can only be used once"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "Renewable energy sources can be __________.",
-      "options": {
-        "A": "used up completely",
-        "B": "replaced or regenerated naturally",
-        "C": "found only once",
-        "D": "destroyed easily"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "Which of the following is a renewable energy source?",
-      "options": {
-        "A": "Crude oil",
-        "B": "Coal",
-        "C": "Solar energy",
-        "D": "Natural gas"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Non-renewable energy sources will one day __________.",
-      "options": {
-        "A": "increase",
-        "B": "run out",
-        "C": "regenerate",
-        "D": "multiply"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 11,
-      "question": "Which of the following is a non-renewable energy source?",
-      "options": {
-        "A": "Wind",
-        "B": "Sunlight",
-        "C": "Natural gas",
-        "D": "Hydropower"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 12,
-      "question": "Energy transformation is the process of energy __________ from one form to another.",
-      "options": {
-        "A": "changing",
-        "B": "disappearing",
-        "C": "being created",
-        "D": "being destroyed"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 13,
-      "question": "When you strike a match, chemical energy converts to __________.",
-      "options": {
-        "A": "heat and light",
-        "B": "sound only",
-        "C": "electrical only",
-        "D": "mechanical only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 14,
-      "question": "Heat is a form of __________.",
-      "options": {
-        "A": "energy",
-        "B": "temperature",
-        "C": "matter",
-        "D": "force"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 15,
-      "question": "Temperature is the degree of __________ of a substance.",
-      "options": {
-        "A": "hotness or coldness",
-        "B": "weight",
-        "C": "size",
-        "D": "volume"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 16,
-      "question": "The instrument used to measure temperature is a __________.",
-      "options": {
-        "A": "thermometer",
-        "B": "barometer",
-        "C": "hydrometer",
-        "D": "calorimeter"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 17,
-      "question": "Heat is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "grams"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 18,
-      "question": "Temperature is measured in __________.",
-      "options": {
-        "A": "Joules",
-        "B": "degrees Celsius",
-        "C": "Newtons",
-        "D": "Watts"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 19,
-      "question": "The main difference between heat and temperature is that heat is __________ energy while temperature is __________ energy.",
-      "options": {
-        "A": "total, average",
-        "B": "average, total",
-        "C": "small, large",
-        "D": "large, small"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 20,
-      "question": "When a substance is heated, its particles __________.",
-      "options": {
-        "A": "move slower",
-        "B": "move faster and further apart",
-        "C": "stop moving",
-        "D": "become heavier"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 21,
-      "question": "Expansion is the increase in the __________ of a substance when heated.",
-      "options": {
-        "A": "mass",
-        "B": "volume or size",
-        "C": "weight",
-        "D": "density"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 22,
-      "question": "Gaps are left in railway tracks to allow for __________.",
-      "options": {
-        "A": "contraction",
-        "B": "expansion",
-        "C": "rusting",
-        "D": "bending"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 23,
-      "question": "Which state of matter expands the most when heated?",
-      "options": {
-        "A": "Solid",
-        "B": "Liquid",
-        "C": "Gas",
-        "D": "Plasma"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 24,
-      "question": "The process of a solid changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 25,
-      "question": "The process of a liquid changing to a gas is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation or boiling",
-        "D": "condensation"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 26,
-      "question": "The process of a gas changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 27,
-      "question": "The process of a liquid changing to a solid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "sublimation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 28,
-      "question": "Sublimation is when a solid changes directly to a __________.",
-      "options": {
-        "A": "liquid",
-        "B": "gas",
-        "C": "plasma",
-        "D": "another solid"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 29,
-      "question": "Camphor (naphthalene balls) undergo __________.",
-      "options": {
-        "A": "melting",
-        "B": "boiling",
-        "C": "sublimation",
-        "D": "freezing"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 30,
-      "question": "The main property of light is that it travels in __________.",
-      "options": {
-        "A": "curves",
-        "B": "straight lines",
-        "C": "circles",
-        "D": "zigzags"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 31,
-      "question": "Reflection is the __________ of light when it strikes a surface.",
-      "options": {
-        "A": "bending",
-        "B": "bouncing back",
-        "C": "absorption",
-        "D": "creation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 32,
-      "question": "A mirror gives a clear image because of light __________.",
-      "options": {
-        "A": "refraction",
-        "B": "reflection",
-        "C": "absorption",
-        "D": "dispersion"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 33,
-      "question": "Refraction is the __________ of light as it passes from one medium to another.",
-      "options": {
-        "A": "bouncing back",
-        "B": "bending",
-        "C": "stopping",
-        "D": "speeding up"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 34,
-      "question": "A pencil placed in a glass of water appears bent due to light __________.",
-      "options": {
-        "A": "reflection",
-        "B": "refraction",
-        "C": "absorption",
-        "D": "diffraction"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 35,
-      "question": "Transparent objects allow __________ light to pass through.",
-      "options": {
-        "A": "no",
-        "B": "some",
-        "C": "all or most",
-        "D": "very little"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 36,
-      "question": "Translucent objects allow __________ light to pass through but scatter it.",
-      "options": {
-        "A": "no",
-        "B": "all",
-        "C": "some",
-        "D": "most"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 37,
-      "question": "Opaque objects allow __________ light to pass through.",
-      "options": {
-        "A": "all",
-        "B": "most",
-        "C": "no",
-        "D": "some"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 38,
-      "question": "Which of the following is an example of a transparent object?",
-      "options": {
-        "A": "Wood",
-        "B": "Clear glass",
-        "C": "Frosted glass",
-        "D": "Stone"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 39,
-      "question": "A shadow is formed because light travels in straight lines and is blocked by an __________ object.",
-      "options": {
-        "A": "transparent",
-        "B": "translucent",
-        "C": "opaque",
-        "D": "shiny"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 40,
-      "question": "The darkest part of a shadow is called the __________.",
-      "options": {
-        "A": "penumbra",
-        "B": "umbra",
-        "C": "eclipse",
-        "D": "reflection"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 41,
-      "question": "A solar eclipse occurs when the __________ passes between the Sun and the Earth.",
-      "options": {
-        "A": "Earth",
-        "B": "Moon",
-        "C": "Mars",
-        "D": "Venus"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 42,
-      "question": "A lunar eclipse occurs when the __________ passes between the Sun and the Moon.",
-      "options": {
-        "A": "Moon",
-        "B": "Earth",
-        "C": "Mars",
-        "D": "Jupiter"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 43,
-      "question": "Sound is produced by __________.",
-      "options": {
-        "A": "light",
-        "B": "vibrations",
-        "C": "heat",
-        "D": "electricity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 44,
-      "question": "When you touch your throat and say 'Ahhh,' you feel __________.",
-      "options": {
-        "A": "heat",
-        "B": "vibration",
-        "C": "pain",
-        "D": "nothing"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 45,
-      "question": "Sound needs a __________ to travel through.",
-      "options": {
-        "A": "vacuum",
-        "B": "medium",
-        "C": "empty space",
-        "D": "darkness"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 46,
-      "question": "Sound travels fastest through __________.",
-      "options": {
-        "A": "gases",
-        "B": "liquids",
-        "C": "solids",
-        "D": "vacuum"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 47,
-      "question": "Sound CANNOT travel through a __________.",
-      "options": {
-        "A": "solid",
-        "B": "liquid",
-        "C": "gas",
-        "D": "vacuum"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 48,
-      "question": "The loudness of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "frequency",
-        "B": "amplitude (size)",
-        "C": "speed",
-        "D": "pitch"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 49,
-      "question": "The pitch of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "amplitude",
-        "B": "frequency (speed)",
-        "C": "loudness",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 50,
-      "question": "A mosquito's buzz has a high __________.",
-      "options": {
-        "A": "loudness",
-        "B": "pitch",
-        "C": "volume",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    }
+        {
+          "id": 1,
+          "question": "Simplify: 2/3 + 3/4",
+          "options": { "A": "1 5/12", "B": "1 1/2", "C": "1 1/3", "D": "1 1/4" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "Solve for x: 2x + 5 = 13",
+          "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "Convert 1011₂ to base ten",
+          "options": { "A": "11", "B": "10", "C": "12", "D": "13" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "Find the gradient of the line passing through (1,2) and (3,6)",
+          "options": { "A": "2", "B": "3", "C": "4", "D": "1" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "The area of a triangle with base 10cm and height 6cm is?",
+          "options": { "A": "30 cm²", "B": "60 cm²", "C": "15 cm²", "D": "20 cm²" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 6,
+          "question": "Simplify: 3a + 2b - a + 3b",
+          "options": { "A": "2a + 5b", "B": "4a + 5b", "C": "2a + b", "D": "4a + b" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 7,
+          "question": "Solve the inequality: 3x - 4 < 5",
+          "options": { "A": "x < 3", "B": "x > 3", "C": "x < 2", "D": "x > 2" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 8,
+          "question": "Express 0.75 as a fraction in simplest form",
+          "options": { "A": "3/4", "B": "1/2", "C": "2/3", "D": "5/8" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 9,
+          "question": "The mean of 4, 8, 6, 10 is?",
+          "options": { "A": "7", "B": "8", "C": "9", "D": "6" },
+          "answer": "A",
+          "image": null
+        },
+        {
+          "id": 10,
+          "question": "If y = 2x - 3, find y when x = 4",
+          "options": { "A": "5", "B": "6", "C": "7", "D": "8" },
+          "answer": "A",
+          "image": null
+        }
 ];
 
 
         const staticTheoryQuestions = [
-                            {
-      "id": 1,
-      "question": "a. Define energy and state its SI unit. (2 marks)\nb. List six different forms of energy. (3 marks)\nc. Differentiate between renewable and non-renewable energy sources. Give two examples of each. (3 marks)\nd. State the Law of Conservation of Energy and give one example of energy transformation. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "a. Define heat and temperature. (2 marks)\nb. State three differences between heat and temperature in a table. (3 marks)\nc. Explain the two main effects of heat on matter, giving one example of each. (3 marks)\nd. Define melting, boiling, condensation, and freezing. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "a. State the main property of light. (1 mark)\nb. Define reflection and refraction, giving one example of each. (4 marks)\nc. Differentiate between transparent, translucent, and opaque objects. Give two examples of each. (3 marks)\nd. Explain how a shadow is formed and differentiate between umbra and penumbra. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "a. How is sound produced? Give two examples. (2 marks)\nb. Explain why sound cannot travel in a vacuum. (2 marks)\nc. Differentiate between loudness and pitch. What causes each? (3 marks)\nd. List three sources of noise pollution and three sound safety measures. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "a. Define electricity and differentiate between a conductor and an insulator. Give two examples of each. (4 marks)\nb. Draw and label a simple closed electric circuit showing the four main components. (3 marks)\nc. What is the difference between a closed circuit and an open circuit? (1 mark)\nd. State the Law of Magnetism. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "a. What is a machine? State three ways machines make work easier. (3 marks)\nb. List the six types of simple machines. (3 marks)\nc. Explain the three classes of levers with their arrangements and give one example of each class. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "a. Define mechanical advantage (M.A.) and write its formula. (2 marks)\nb. If a machine has a load of 200N and an effort of 50N, calculate the mechanical advantage. (2 marks)\nc. Define efficiency. Why is no machine 100% efficient? (2 marks)\nd. Explain how an inclined plane makes work easier. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "a. Differentiate between science and technology. (2 marks)\nb. Explain the relationship between science and technology. (2 marks)\nc. List three positive effects and three negative effects of technology. (3 marks)\nd. List five careers in science and technology. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "a. Define skill acquisition and entrepreneurship. (2 marks)\nb. State three reasons why skill acquisition is important for self-reliance. (3 marks)\nc. List five examples of vocational/technological skills. (2 marks)\nd. Explain how skill acquisition and entrepreneurship can help solve the problem of unemployment in Nigeria. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Examine the relationship between energy, heat, light, sound, and electricity. Choose any two of these concepts and explain how they are connected, giving one practical example of how they work together in a device or natural phenomenon. (10 marks)",
-      "marks": 10,
-      "image": null
-    }
+     {
+          "id": 1,
+          "question": "\n(a) Simplify: 3/5 + 2/3 - 1/2. \n\n(b) Solve for x: 2x/3 - 5 = 7. (c) Find the L.C.M of 12 and 18.",
+          "marks": 10,
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "\n(a) Convert 345₁₀ to binary. \n\n(b) Add 1011₂ and 1101₂. (c) Subtract 101₂ from 1110₂.",
+          "marks": 10,
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "\n(a) Find the equation of a line with gradient 3 passing through (2,1). \n\n(b) Find the distance between points (1,2) and (4,6).",
+          "marks": 10,
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "\n(a) Calculate the perimeter of a rectangle with length 12cm and width 5cm. \n\n(b) Find the area of a circle radius 7cm (take π=22/7).",
+          "marks": 10,
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "\n(a) Solve the simultaneous equations: 2x + y = 7, x - y = 2. \n\n(b) If x = 3 and y = 2, evaluate x² + y².",
+          "marks": 10,
+          "image": null
+        }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];
@@ -1310,30 +830,7 @@
                 localStorage.setItem('examClass', 'RESULT');
             }
             localStorage.setItem('examTerm', 'SECOND TERM 2025/2026');
-             /*let username = sessionStorage.getItem('username');
-             const userImage = sessionStorage.getItem('image');
-            document.getElementById("usernameDisplay").innerText = "WELCOME:" + " " + username;
-            document.getElementById('userImage').src = "img/student.png";
-            document.getElementById('userName').innerText = username;
-            document.getElementById('userImage').src = userImage;
-
-
-            const username = sessionStorage.getItem('username') || 'Student';
-            const userImageFile = sessionStorage.getItem('image');
-            const userImagePath = userImageFile ? `img/${userImageFile}` : 'img/default_user.jpg';
-
-            // Set username
-            const usernameElements = [document.getElementById('userName'), document.getElementById('usernameDisplay')];
-            usernameElements.forEach(el => { if(el) el.innerText = username; });
-
-            // Set user image
-            const userImageElement = document.getElementById('userImage');
-            if(userImageElement){
-                userImageElement.src = userImagePath;
-                userImageElement.onerror = function(){
-                    this.src = 'img/default_user.jpg'; // fallback if image not found
-                };
-            }*/
+      
              const username = sessionStorage.getItem('username');
                 const image = sessionStorage.getItem('image');
 
@@ -1343,11 +840,10 @@
                   document.getElementById('username').innerText = username;
                   
               
-                //document.getElementById('userImage').src =
-              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
-
-              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
+                /*document.getElementById('userImage').src =
+              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');*/
                 }
+            document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
            
             // Load static questions
             questions = staticObjectivesQuestions;
@@ -1366,7 +862,7 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 90; // 60 minutes
+        let timeLeft = 60 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
@@ -1650,132 +1146,147 @@
                     window.location.href = "results.html";
         }*/
 
-            /*function showResult() {
-				    clearInterval(timerInterval);
-				    let score = 0;
-				    questions.forEach((q, i) => {
-				        if (userAnswers[i] === q.answer) score++;
-				    });
-				    
-				    const username = sessionStorage.getItem('username') || "Guest";
-				    const cls = sessionStorage.getItem('class');
-				    const sub = sessionStorage.getItem('subject');
-				    
-				    localStorage.setItem("examUser", username);
-				    localStorage.setItem("examScore", score);
-				    localStorage.setItem("totalQuestions", questions.length);
-				    localStorage.setItem("pendingClass", cls);
-				    localStorage.setItem("pendingSubject", sub);
-				    localStorage.setItem("pendingUsername", username);
-				    
-				    // ✅ Get exam info from sessionStorage or use default
-				    const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-				    localStorage.setItem("examInfo", examInfo);
-				    
-				    // ✅ Secretly download score details to downloads folder
-				    const scoreDetails = {
-				        username: username,
-				        class: cls,
-				        subject: sub,
-				        score: score,
-				        totalQuestions: questions.length,
-				        percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-				        examInfo: examInfo,
-				        timestamp: new Date().toISOString(),
-				        userAnswers: userAnswers,
-				        correctAnswers: questions.map(q => q.answer)
-				    };
-				    
-				    // Create a blob with the data
-				    const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-				    const url = URL.createObjectURL(blob);
-				    
-				    // Create a hidden anchor element and trigger download
-				    const a = document.createElement('a');
-				    a.href = url;
-				    a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-				    a.style.display = 'none';
-				    document.body.appendChild(a);
-				    a.click();
-				    
-				    // Clean up
-				    document.body.removeChild(a);
-				    URL.revokeObjectURL(url);
-				    
-				    // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-				    console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-				    
-				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-				    window.location.href = "results.html";
-				}*/
-                function showResult() {
-                        clearInterval(timerInterval);
-                        let score = 0;
-                        questions.forEach((q, i) => {
-                            if (userAnswers[i] === q.answer) score++;
-                        });
-                        
-                        const username = sessionStorage.getItem('username') || "Guest";
-                        const cls = sessionStorage.getItem('class');
-                        const sub = sessionStorage.getItem('subject');
-                        
-                        localStorage.setItem("examUser", username);
-                        localStorage.setItem("examScore", score);
-                        localStorage.setItem("totalQuestions", questions.length);
-                        localStorage.setItem("pendingClass", cls);
-                        localStorage.setItem("pendingSubject", sub);
-                        localStorage.setItem("pendingUsername", username);
-                        
-                        // Get exam info from sessionStorage or use default
-                        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-                        localStorage.setItem("examInfo", examInfo);
-                        
-                        // ✅ Build a clean record for history (to be used by records.html)
-                        const record = {
-                            username: username,
-                            class: cls,
-                            subject: sub,
-                            score: score,
-                            totalQuestions: questions.length,
-                            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-                            examInfo: examInfo,
-                            timestamp: new Date().toISOString()
-                        };
-                        
-                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
-                        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
-                        records.push(record);
-                        localStorage.setItem('examRecords', JSON.stringify(records));
-                        
-                        // ✅ Secretly download score details to downloads folder
-                        const scoreDetails = {
-                            ...record,
-                            userAnswers: userAnswers,
-                            correctAnswers: questions.map(q => q.answer)
-                        };
-                        
-                        // Create a blob with the data
-                        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        
-                        // Create a hidden anchor element and trigger download
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        
-                        // Clean up
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        
-                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-                        
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-                        window.location.href = "results.html";
-                    }
+    /*function showResult() {
+        clearInterval(timerInterval);
+        let score = 0;
+        questions.forEach((q, i) => {
+            if (userAnswers[i] === q.answer) score++;
+        });
+        
+        const username = sessionStorage.getItem('username') || "Guest";
+        const cls = sessionStorage.getItem('class');
+        const sub = sessionStorage.getItem('subject');
+        
+        localStorage.setItem("examUser", username);
+        localStorage.setItem("examScore", score);
+        localStorage.setItem("totalQuestions", questions.length);
+        localStorage.setItem("pendingClass", cls);
+        localStorage.setItem("pendingSubject", sub);
+        localStorage.setItem("pendingUsername", username);
+        
+        // Get exam info from sessionStorage or use default
+        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
+        localStorage.setItem("examInfo", examInfo);
+        
+        // ✅ Build a clean record for history (to be used by records.html)
+        const record = {
+            username: username,
+            class: cls,
+            subject: sub,
+            score: score,
+            totalQuestions: questions.length,
+            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
+            examInfo: examInfo,
+            timestamp: new Date().toISOString()
+        };
+        
+        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
+        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
+        records.push(record);
+        localStorage.setItem('examRecords', JSON.stringify(records));
+        
+        // ✅ Secretly download score details to downloads folder
+        const scoreDetails = {
+            ...record,
+            userAnswers: userAnswers,
+            correctAnswers: questions.map(q => q.answer)
+        };
+        
+        // Create a blob with the data
+        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        
+        // Create a hidden anchor element and trigger download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        
+        // Clean up
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+        
+        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
+        window.location.href = "results.html";
+     }*/
+
+        function showResult() {
+            clearInterval(timerInterval);
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+            
+            const username = sessionStorage.getItem('username') || "Guest";
+            const cls = sessionStorage.getItem('class');
+            const sub = sessionStorage.getItem('subject');
+            
+            localStorage.setItem("examUser", username);
+            localStorage.setItem("examScore", score);
+            localStorage.setItem("totalQuestions", questions.length);
+            localStorage.setItem("pendingClass", cls);
+            localStorage.setItem("pendingSubject", sub);
+            localStorage.setItem("pendingUsername", username);
+            
+            const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
+            localStorage.setItem("examInfo", examInfo);
+            
+            // Build the record
+            const record = {
+                username: username,
+                class: cls,
+                subject: sub,
+                score: score,
+                totalQuestions: questions.length,
+                percentage: ((score / questions.length) * 100).toFixed(2) + '%',
+                examInfo: examInfo,
+                timestamp: new Date().toISOString()
+            };
+            
+            // ------------------ 🌐 SEND TO GOOGLE SHEETS ------------------
+            const API_URL = 'https://script.google.com/macros/s/AKfycbzW4zlbuW16fAFRcwg4ow8b6IAQEp4e2zIqLjL7zhdkkHvEDrDwwxT0PX46dwBIiXgm/exec'; // ← paste your web app URL here
+            
+            fetch(API_URL, {
+                method: 'POST',
+                mode: 'no-cors',        // required because Apps Script doesn't send CORS headers
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(record)
+            }).catch(err => console.error('Failed to send to cloud:', err));
+            // ---------------------------------------------------------------
+            
+            // (Optional) Keep local backup
+            let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
+            records.push(record);
+            localStorage.setItem('examRecords', JSON.stringify(records));
+            
+            // Download JSON (your existing code)
+            const scoreDetails = {
+                ...record,
+                userAnswers: userAnswers,
+                correctAnswers: questions.map(q => q.answer)
+            };
+            
+            const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `exam_results_${username}_${new Date().getTime()}.json`;
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            console.log(`Exam completed. Waiting for confirmation.`);
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results.`);
+            window.location.href = "results.html";
+        }
+
 
 
 

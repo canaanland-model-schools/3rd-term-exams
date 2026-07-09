@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - INTERMEDIATE SCIENCE Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - COMPUTER HARDWARE  Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color: red;
+            color:blue;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: white;/* #f9f9f9;*/
+            background-color: lime;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: purple;/*#2e7d32;*/
-            color: red;
+            background: #2e7d32;
+            color: white;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -476,14 +476,14 @@
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: deepskyblue;
+            background: aqua;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: red;
+            color: fuchsia;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -507,17 +507,12 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
-
         </div>
-
-           
-            
-
         <div id="student-info">
             <center><strong>ATTENTION! CLICK ON SUBMIT BUTTON BEFORE YOUR TIME IS UP TO SAVE YOUR SCORE</strong></center>
             <center><p id="datetime"></p></center>
@@ -530,11 +525,16 @@
           <h2 id="username">Student Name</h2>
            </div>
 
-     
+        <!--<img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+            <center><img id="userImage"><br><br></center>
+             <img id="userImage" src="img/default_user.jpg" alt="Student Image">
+            <center>Hello: <span id="userName"></span></center>
+        </div>-->
 
     
         <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
-        <center><h3>THIRD TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
+        <center><h3>SECOND TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
        
         <!-- SECTION TOGGLE BUTTONS -->
         <div class="section-toggle">
@@ -543,7 +543,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  INTERMEDIATE SCIENCE - JSS2 (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  COMPUTER HARDWARE  - SS1 (SECOND TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -609,7 +609,7 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text">2ND TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
@@ -624,670 +624,653 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-      {
-      "id": 1,
-      "question": "Energy is defined as the __________.",
-      "options": {
-        "A": "weight of an object",
-        "B": "ability to do work or cause change",
-        "C": "temperature of a substance",
-        "D": "speed of light"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "Energy is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "kilograms"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "The energy of motion is called __________.",
-      "options": {
-        "A": "potential energy",
-        "B": "kinetic energy",
-        "C": "chemical energy",
-        "D": "nuclear energy"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "Stored energy is called __________.",
-      "options": {
-        "A": "kinetic energy",
-        "B": "mechanical energy",
-        "C": "potential energy",
-        "D": "electrical energy"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "Which of the following is an example of potential energy?",
-      "options": {
-        "A": "A moving car",
-        "B": "A rolling ball",
-        "C": "A stretched rubber band",
-        "D": "Flowing water"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "A television converts electrical energy into __________.",
-      "options": {
-        "A": "light and sound energy only",
-        "B": "chemical energy only",
-        "C": "mechanical energy only",
-        "D": "nuclear energy only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "The Law of Conservation of Energy states that energy __________.",
-      "options": {
-        "A": "can be created but not destroyed",
-        "B": "can be destroyed but not created",
-        "C": "can neither be created nor destroyed, but can be converted",
-        "D": "can only be used once"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "Renewable energy sources can be __________.",
-      "options": {
-        "A": "used up completely",
-        "B": "replaced or regenerated naturally",
-        "C": "found only once",
-        "D": "destroyed easily"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "Which of the following is a renewable energy source?",
-      "options": {
-        "A": "Crude oil",
-        "B": "Coal",
-        "C": "Solar energy",
-        "D": "Natural gas"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Non-renewable energy sources will one day __________.",
-      "options": {
-        "A": "increase",
-        "B": "run out",
-        "C": "regenerate",
-        "D": "multiply"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 11,
-      "question": "Which of the following is a non-renewable energy source?",
-      "options": {
-        "A": "Wind",
-        "B": "Sunlight",
-        "C": "Natural gas",
-        "D": "Hydropower"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 12,
-      "question": "Energy transformation is the process of energy __________ from one form to another.",
-      "options": {
-        "A": "changing",
-        "B": "disappearing",
-        "C": "being created",
-        "D": "being destroyed"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 13,
-      "question": "When you strike a match, chemical energy converts to __________.",
-      "options": {
-        "A": "heat and light",
-        "B": "sound only",
-        "C": "electrical only",
-        "D": "mechanical only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 14,
-      "question": "Heat is a form of __________.",
-      "options": {
-        "A": "energy",
-        "B": "temperature",
-        "C": "matter",
-        "D": "force"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 15,
-      "question": "Temperature is the degree of __________ of a substance.",
-      "options": {
-        "A": "hotness or coldness",
-        "B": "weight",
-        "C": "size",
-        "D": "volume"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 16,
-      "question": "The instrument used to measure temperature is a __________.",
-      "options": {
-        "A": "thermometer",
-        "B": "barometer",
-        "C": "hydrometer",
-        "D": "calorimeter"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 17,
-      "question": "Heat is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "grams"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 18,
-      "question": "Temperature is measured in __________.",
-      "options": {
-        "A": "Joules",
-        "B": "degrees Celsius",
-        "C": "Newtons",
-        "D": "Watts"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 19,
-      "question": "The main difference between heat and temperature is that heat is __________ energy while temperature is __________ energy.",
-      "options": {
-        "A": "total, average",
-        "B": "average, total",
-        "C": "small, large",
-        "D": "large, small"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 20,
-      "question": "When a substance is heated, its particles __________.",
-      "options": {
-        "A": "move slower",
-        "B": "move faster and further apart",
-        "C": "stop moving",
-        "D": "become heavier"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 21,
-      "question": "Expansion is the increase in the __________ of a substance when heated.",
-      "options": {
-        "A": "mass",
-        "B": "volume or size",
-        "C": "weight",
-        "D": "density"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 22,
-      "question": "Gaps are left in railway tracks to allow for __________.",
-      "options": {
-        "A": "contraction",
-        "B": "expansion",
-        "C": "rusting",
-        "D": "bending"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 23,
-      "question": "Which state of matter expands the most when heated?",
-      "options": {
-        "A": "Solid",
-        "B": "Liquid",
-        "C": "Gas",
-        "D": "Plasma"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 24,
-      "question": "The process of a solid changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 25,
-      "question": "The process of a liquid changing to a gas is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation or boiling",
-        "D": "condensation"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 26,
-      "question": "The process of a gas changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 27,
-      "question": "The process of a liquid changing to a solid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "sublimation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 28,
-      "question": "Sublimation is when a solid changes directly to a __________.",
-      "options": {
-        "A": "liquid",
-        "B": "gas",
-        "C": "plasma",
-        "D": "another solid"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 29,
-      "question": "Camphor (naphthalene balls) undergo __________.",
-      "options": {
-        "A": "melting",
-        "B": "boiling",
-        "C": "sublimation",
-        "D": "freezing"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 30,
-      "question": "The main property of light is that it travels in __________.",
-      "options": {
-        "A": "curves",
-        "B": "straight lines",
-        "C": "circles",
-        "D": "zigzags"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 31,
-      "question": "Reflection is the __________ of light when it strikes a surface.",
-      "options": {
-        "A": "bending",
-        "B": "bouncing back",
-        "C": "absorption",
-        "D": "creation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 32,
-      "question": "A mirror gives a clear image because of light __________.",
-      "options": {
-        "A": "refraction",
-        "B": "reflection",
-        "C": "absorption",
-        "D": "dispersion"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 33,
-      "question": "Refraction is the __________ of light as it passes from one medium to another.",
-      "options": {
-        "A": "bouncing back",
-        "B": "bending",
-        "C": "stopping",
-        "D": "speeding up"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 34,
-      "question": "A pencil placed in a glass of water appears bent due to light __________.",
-      "options": {
-        "A": "reflection",
-        "B": "refraction",
-        "C": "absorption",
-        "D": "diffraction"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 35,
-      "question": "Transparent objects allow __________ light to pass through.",
-      "options": {
-        "A": "no",
-        "B": "some",
-        "C": "all or most",
-        "D": "very little"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 36,
-      "question": "Translucent objects allow __________ light to pass through but scatter it.",
-      "options": {
-        "A": "no",
-        "B": "all",
-        "C": "some",
-        "D": "most"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 37,
-      "question": "Opaque objects allow __________ light to pass through.",
-      "options": {
-        "A": "all",
-        "B": "most",
-        "C": "no",
-        "D": "some"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 38,
-      "question": "Which of the following is an example of a transparent object?",
-      "options": {
-        "A": "Wood",
-        "B": "Clear glass",
-        "C": "Frosted glass",
-        "D": "Stone"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 39,
-      "question": "A shadow is formed because light travels in straight lines and is blocked by an __________ object.",
-      "options": {
-        "A": "transparent",
-        "B": "translucent",
-        "C": "opaque",
-        "D": "shiny"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 40,
-      "question": "The darkest part of a shadow is called the __________.",
-      "options": {
-        "A": "penumbra",
-        "B": "umbra",
-        "C": "eclipse",
-        "D": "reflection"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 41,
-      "question": "A solar eclipse occurs when the __________ passes between the Sun and the Earth.",
-      "options": {
-        "A": "Earth",
-        "B": "Moon",
-        "C": "Mars",
-        "D": "Venus"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 42,
-      "question": "A lunar eclipse occurs when the __________ passes between the Sun and the Moon.",
-      "options": {
-        "A": "Moon",
-        "B": "Earth",
-        "C": "Mars",
-        "D": "Jupiter"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 43,
-      "question": "Sound is produced by __________.",
-      "options": {
-        "A": "light",
-        "B": "vibrations",
-        "C": "heat",
-        "D": "electricity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 44,
-      "question": "When you touch your throat and say 'Ahhh,' you feel __________.",
-      "options": {
-        "A": "heat",
-        "B": "vibration",
-        "C": "pain",
-        "D": "nothing"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 45,
-      "question": "Sound needs a __________ to travel through.",
-      "options": {
-        "A": "vacuum",
-        "B": "medium",
-        "C": "empty space",
-        "D": "darkness"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 46,
-      "question": "Sound travels fastest through __________.",
-      "options": {
-        "A": "gases",
-        "B": "liquids",
-        "C": "solids",
-        "D": "vacuum"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 47,
-      "question": "Sound CANNOT travel through a __________.",
-      "options": {
-        "A": "solid",
-        "B": "liquid",
-        "C": "gas",
-        "D": "vacuum"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 48,
-      "question": "The loudness of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "frequency",
-        "B": "amplitude (size)",
-        "C": "speed",
-        "D": "pitch"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 49,
-      "question": "The pitch of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "amplitude",
-        "B": "frequency (speed)",
-        "C": "loudness",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 50,
-      "question": "A mosquito's buzz has a high __________.",
-      "options": {
-        "A": "loudness",
-        "B": "pitch",
-        "C": "volume",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    }
+        {
+                                  "id": 1,
+                                  "question": "GSM stands for...",
+                                  "options": {
+                                    "A": "Global System for Mobile communication.",
+                                    "B": "General System for Mobiles.",
+                                    "C": "Global Service Mobile.",
+                                    "D": "General Service for Mobiles."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 2,
+                                  "question": "The first generation (1G) of mobile phones was primarily for...",
+                                  "options": {
+                                    "A": "Video calls.",
+                                    "B": "Analog voice calls.",
+                                    "C": "Internet browsing.",
+                                    "D": "Text messaging."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 3,
+                                  "question": "Which generation of mobile networks introduced digital voice and SMS?",
+                                  "options": {
+                                    "A": "1G.",
+                                    "B": "2G.",
+                                    "C": "3G.",
+                                    "D": "4G."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 4,
+                                  "question": "In GSM architecture, the component that manages communication between mobile phones and the network is the...",
+                                  "options": {
+                                    "A": "SIM card.",
+                                    "B": "Base Station Controller (BSC).",
+                                    "C": "Mobile Switching Center (MSC).",
+                                    "D": "Battery."
+                                  },
+                                  "answer": "C",
+                                  "image": null
+                                },
+                                {
+                                  "id": 5,
+                                  "question": "The primary function of a SIM card is to...",
+                                  "options": {
+                                    "A": "Provide power to the phone.",
+                                    "B": "Store subscriber identity and network information.",
+                                    "C": "Display images on the screen.",
+                                    "D": "Amplify sound."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 6,
+                                  "question": "Which of these is NOT a hardware component of a GSM phone?",
+                                  "options": {
+                                    "A": "Screen/Display.",
+                                    "B": "Operating System.",
+                                    "C": "Keypad.",
+                                    "D": "Battery."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 7,
+                                  "question": "The component that allows a phone to connect to a charger is the...",
+                                  "options": {
+                                    "A": "SIM slot.",
+                                    "B": "Charging port.",
+                                    "C": "Speaker.",
+                                    "D": "Antenna."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 8,
+                                  "question": "A damaged phone keypad would primarily affect...",
+                                  "options": {
+                                    "A": "The phone's ability to turn on.",
+                                    "B": "Inputting numbers and text.",
+                                    "C": "Receiving calls.",
+                                    "D": "Network signal."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 9,
+                                  "question": "The software that is permanently programmed into a phone's hardware is called...",
+                                  "options": {
+                                    "A": "Operating System.",
+                                    "B": "Application Software.",
+                                    "C": "Firmware.",
+                                    "D": "Antivirus."
+                                  },
+                                  "answer": "C",
+                                  "image": null
+                                },
+                                {
+                                  "id": 10,
+                                  "question": "IMEI stands for...",
+                                  "options": {
+                                    "A": "International Mobile Equipment Identity.",
+                                    "B": "Internal Mobile Equipment Indicator.",
+                                    "C": "International Mobile Encoding Identity.",
+                                    "D": "Internal Mobile Encoding Indicator."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 11,
+                                  "question": "The IMEI number is used to...",
+                                  "options": {
+                                    "A": "Identify a specific mobile device globally.",
+                                    "B": "Increase battery life.",
+                                    "C": "Improve screen brightness.",
+                                    "D": "Store contacts."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 12,
+                                  "question": "Which operating system is commonly used in smartphones?",
+                                  "options": {
+                                    "A": "Windows XP.",
+                                    "B": "Android.",
+                                    "C": "MS-DOS.",
+                                    "D": "Linux (though Android is based on Linux, Android is the specific OS)."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 13,
+                                  "question": "A soldering iron is used in GSM repair to...",
+                                  "options": {
+                                    "A": "Remove viruses.",
+                                    "B": "Join or repair electronic components on a circuit board.",
+                                    "C": "Clean the screen.",
+                                    "D": "Test network signal."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 14,
+                                  "question": "A hot air gun in phone repair is primarily used for...",
+                                  "options": {
+                                    "A": "Drying wet phones.",
+                                    "B": "Reheating food.",
+                                    "C": "Removing and replacing surface-mounted components (SMD).",
+                                    "D": "Charging the battery."
+                                  },
+                                  "answer": "C",
+                                  "image": null
+                                },
+                                {
+                                  "id": 15,
+                                  "question": "Which tool is used to write or restore software on a phone?",
+                                  "options": {
+                                    "A": "Multimeter.",
+                                    "B": "Flashing box/software.",
+                                    "C": "Screwdriver set.",
+                                    "D": "Tweezers."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 16,
+                                  "question": "The first step in disassembling a mobile phone is usually to...",
+                                  "options": {
+                                    "A": "Remove the battery.",
+                                    "B": "Use a soldering iron.",
+                                    "C": "Flash the software.",
+                                    "D": "Remove the screen."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 17,
+                                  "question": "When reassembling a phone, it is important to...",
+                                  "options": {
+                                    "A": "Force components into place.",
+                                    "B": "Follow the reverse order of disassembly and ensure all connections are secure.",
+                                    "C": "Leave some screws out.",
+                                    "D": "Not test the phone until fully assembled."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 18,
+                                  "question": "Which tool is essential for opening the phone casing?",
+                                  "options": {
+                                    "A": "Hot air gun.",
+                                    "B": "Precision screwdriver set.",
+                                    "C": "Multimeter.",
+                                    "D": "Soldering iron."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 19,
+                                  "question": "A phone that does not charge could have a fault in the...",
+                                  "options": {
+                                    "A": "Speaker.",
+                                    "B": "Charging port, battery, or charging circuit.",
+                                    "C": "Camera.",
+                                    "D": "Microphone."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 20,
+                                  "question": "A swollen battery is dangerous because it may...",
+                                  "options": {
+                                    "A": "Improve performance.",
+                                    "B": "Leak or explode.",
+                                    "C": "Increase signal strength.",
+                                    "D": "Make the phone waterproof."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 21,
+                                  "question": "If a phone powers on but immediately goes off, a likely cause is a...",
+                                  "options": {
+                                    "A": "Faulty battery or power management IC.",
+                                    "B": "Good network signal.",
+                                    "C": "Working speaker.",
+                                    "D": "Clean charging port."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 22,
+                                  "question": "\"No service\" or \"Emergency calls only\" on a phone usually indicates a...",
+                                  "options": {
+                                    "A": "Software issue only.",
+                                    "B": "Network or antenna-related problem.",
+                                    "C": "Fully charged battery.",
+                                    "D": "Perfectly working microphone."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 23,
+                                  "question": "A common cause of poor call quality or people not hearing you is a faulty...",
+                                  "options": {
+                                    "A": "Screen.",
+                                    "B": "Microphone.",
+                                    "C": "Battery.",
+                                    "D": "Charging port."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 24,
+                                  "question": "If the earpiece speaker is not working during calls, you should check...",
+                                  "options": {
+                                    "A": "The network settings.",
+                                    "B": "The earpiece speaker and its connections.",
+                                    "C": "The camera lens.",
+                                    "D": "The brightness settings."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 25,
+                                  "question": "Flashing a phone means...",
+                                  "options": {
+                                    "A": "Cleaning the screen.",
+                                    "B": "Reinstalling or updating the device's firmware/software.",
+                                    "C": "Changing the battery.",
+                                    "D": "Soldering a new component."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 26,
+                                  "question": "Unlocking a GSM phone allows it to...",
+                                  "options": {
+                                    "A": "Work with any network provider.",
+                                    "B": "Charge faster.",
+                                    "C": "Have a better camera.",
+                                    "D": "Become waterproof."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 27,
+                                  "question": "A phone virus can cause...",
+                                  "options": {
+                                    "A": "Improved battery life.",
+                                    "B": "Unusual behavior, data theft, or damage to software.",
+                                    "C": "Better signal reception.",
+                                    "D": "Increased storage space."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 28,
+                                  "question": "Which software issue might require a factory reset?",
+                                  "options": {
+                                    "A": "Broken screen.",
+                                    "B": "Severe software glitches or forgotten password.",
+                                    "C": "Dead battery.",
+                                    "D": "Loose keypad."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 29,
+                                  "question": "A multimeter in GSM repair is used to...",
+                                  "options": {
+                                    "A": "Measure voltage, current, and resistance in circuits.",
+                                    "B": "Flash software.",
+                                    "C": "Tighten screws.",
+                                    "D": "Clean components."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 30,
+                                  "question": "ESD stands for Electrostatic Discharge, which can damage phone components. To prevent it, a technician should use...",
+                                  "options": {
+                                    "A": "A wooden table.",
+                                    "B": "An anti-static wrist strap or mat.",
+                                    "C": "Bare hands.",
+                                    "D": "A metal table."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 31,
+                                  "question": "The part of a phone that displays images and text is the...",
+                                  "options": {
+                                    "A": "Logic board.",
+                                    "B": "Display screen (LCD/LED).",
+                                    "C": "Antenna.",
+                                    "D": "Vibrator motor."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 32,
+                                  "question": "The small board that connects the keypad to the main board is called the...",
+                                  "options": {
+                                    "A": "Power board.",
+                                    "B": "Flex cable or keypad interface.",
+                                    "C": "SIM tray.",
+                                    "D": "Back cover."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 33,
+                                  "question": "Which component is responsible for converting sound waves to electrical signals?",
+                                  "options": {
+                                    "A": "Speaker.",
+                                    "B": "Microphone.",
+                                    "C": "Antenna.",
+                                    "D": "Receiver."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 34,
+                                  "question": "The process of identifying and fixing faults in a mobile phone is called...",
+                                  "options": {
+                                    "A": "Programming.",
+                                    "B": "Troubleshooting.",
+                                    "C": "Surfing.",
+                                    "D": "Networking."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 35,
+                                  "question": "A phone that is \"water-damaged\" should first be...",
+                                  "options": {
+                                    "A": "Turned on to check if it works.",
+                                    "B": "Dismantled, cleaned with isopropyl alcohol, and dried thoroughly.",
+                                    "C": "Charged immediately.",
+                                    "D": "Placed in a refrigerator."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 36,
+                                  "question": "Which network technology is used in 2G GSM for data transmission?",
+                                  "options": {
+                                    "A": "LTE.",
+                                    "B": "GPRS/EDGE.",
+                                    "C": "Wi-Fi.",
+                                    "D": "Bluetooth."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 37,
+                                  "question": "The part of the phone that stores the user's data and apps in a smartphone is the...",
+                                  "options": {
+                                    "A": "RAM.",
+                                    "B": "Internal storage (Flash memory).",
+                                    "C": "CPU.",
+                                    "D": "ROM (for firmware)."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 38,
+                                  "question": "A \"bootloop\" is a software problem where the phone...",
+                                  "options": {
+                                    "A": "Charges normally.",
+                                    "B": "Repeatedly restarts without reaching the home screen.",
+                                    "C": "Has no sound.",
+                                    "D": "Cannot make calls."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 39,
+                                  "question": "Before replacing any component on a phone's logic board, you should...",
+                                  "options": {
+                                    "A": "Wash the board with water.",
+                                    "B": "Power on the phone.",
+                                    "C": "Remove the battery and discharge any capacitors.",
+                                    "D": "Use excessive heat."
+                                  },
+                                  "answer": "C",
+                                  "image": null
+                                },
+                                {
+                                  "id": 40,
+                                  "question": "Which of these is a symptom of a faulty power button?",
+                                  "options": {
+                                    "A": "The phone cannot be turned on or off using the button.",
+                                    "B": "The screen is blank but phone is on.",
+                                    "C": "The camera doesn't work.",
+                                    "D": "The touch screen is unresponsive."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 41,
+                                  "question": "A \"dead\" phone that shows no sign of life when charged could have a problem with the...",
+                                  "options": {
+                                    "A": "Charging circuit, battery, or power IC.",
+                                    "B": "Speaker.",
+                                    "C": "Network antenna.",
+                                    "D": "Camera module."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 42,
+                                  "question": "To test if a battery is good, a technician can use a...",
+                                  "options": {
+                                    "A": "Screwdriver.",
+                                    "B": "Multimeter to check voltage.",
+                                    "C": "Hot air gun.",
+                                    "D": "Flashlight."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 43,
+                                  "question": "Which tool is used to hold small screws and components during repair?",
+                                  "options": {
+                                    "A": "Soldering iron.",
+                                    "B": "Tweezers.",
+                                    "C": "Hammer.",
+                                    "D": "Pliers."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 44,
+                                  "question": "The main printed circuit board in a phone is called the...",
+                                  "options": {
+                                    "A": "Motherboard or Logic Board.",
+                                    "B": "Battery board.",
+                                    "C": "SIM board.",
+                                    "D": "Display board."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 45,
+                                  "question": "When a phone falls and the screen cracks but still works, the damaged part is likely the...",
+                                  "options": {
+                                    "A": "Touch screen digitizer (and possibly LCD).",
+                                    "B": "Battery.",
+                                    "C": "Power IC.",
+                                    "D": "Antenna."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 46,
+                                  "question": "Cleaning the charging port with isopropyl alcohol can fix...",
+                                  "options": {
+                                    "A": "Software crashes.",
+                                    "B": "Loose connection or intermittent charging due to dirt.",
+                                    "C": "Virus infection.",
+                                    "D": "Network problems."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 47,
+                                  "question": "Which of these is a common software troubleshooting step?",
+                                  "options": {
+                                    "A": "Replacing the screen.",
+                                    "B": "Restarting the phone.",
+                                    "C": "Changing the antenna.",
+                                    "D": "Soldering the CPU."
+                                  },
+                                  "answer": "B",
+                                  "image": null
+                                },
+                                {
+                                  "id": 48,
+                                  "question": "A phone that is \"network locked\" is restricted to...",
+                                  "options": {
+                                    "A": "A specific network operator.",
+                                    "B": "Making only emergency calls.",
+                                    "C": "Using only Wi-Fi.",
+                                    "D": "A specific country."
+                                  },
+                                  "answer": "A",
+                                  "image": null
+                                },
+                                {
+                                  "id": 49,
+                                  "question": "Which of these is a safety precaution when repairing phones?",
+                                  "options": {
+                                    "A": "Working on a wet surface.",
+                                    "B": "Using damaged tools.",
+                                    "C": "Disconnecting power before repair.",
+                                    "D": "Wearing loose clothing."
+                                  },
+                                  "answer": "C",
+                                  "image": null
+                                },
+                                {
+                                  "id": 50,
+                                  "question": "Career opportunities in GSM repair include all EXCEPT...",
+                                  "options": {
+                                    "A": "Phone Technician.",
+                                    "B": "Network Engineer.",
+                                    "C": "Software Flashing Expert.",
+                                    "D": "Chef."
+                                  },
+                                  "answer": "D",
+                                  "image": null
+                                }
+    
 ];
 
 
         const staticTheoryQuestions = [
-                            {
-      "id": 1,
-      "question": "a. Define energy and state its SI unit. (2 marks)\nb. List six different forms of energy. (3 marks)\nc. Differentiate between renewable and non-renewable energy sources. Give two examples of each. (3 marks)\nd. State the Law of Conservation of Energy and give one example of energy transformation. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
     {
-      "id": 2,
-      "question": "a. Define heat and temperature. (2 marks)\nb. State three differences between heat and temperature in a table. (3 marks)\nc. Explain the two main effects of heat on matter, giving one example of each. (3 marks)\nd. Define melting, boiling, condensation, and freezing. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "a. State the main property of light. (1 mark)\nb. Define reflection and refraction, giving one example of each. (4 marks)\nc. Differentiate between transparent, translucent, and opaque objects. Give two examples of each. (3 marks)\nd. Explain how a shadow is formed and differentiate between umbra and penumbra. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "a. How is sound produced? Give two examples. (2 marks)\nb. Explain why sound cannot travel in a vacuum. (2 marks)\nc. Differentiate between loudness and pitch. What causes each? (3 marks)\nd. List three sources of noise pollution and three sound safety measures. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "a. Define electricity and differentiate between a conductor and an insulator. Give two examples of each. (4 marks)\nb. Draw and label a simple closed electric circuit showing the four main components. (3 marks)\nc. What is the difference between a closed circuit and an open circuit? (1 mark)\nd. State the Law of Magnetism. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "a. What is a machine? State three ways machines make work easier. (3 marks)\nb. List the six types of simple machines. (3 marks)\nc. Explain the three classes of levers with their arrangements and give one example of each class. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "a. Define mechanical advantage (M.A.) and write its formula. (2 marks)\nb. If a machine has a load of 200N and an effort of 50N, calculate the mechanical advantage. (2 marks)\nc. Define efficiency. Why is no machine 100% efficient? (2 marks)\nd. Explain how an inclined plane makes work easier. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "a. Differentiate between science and technology. (2 marks)\nb. Explain the relationship between science and technology. (2 marks)\nc. List three positive effects and three negative effects of technology. (3 marks)\nd. List five careers in science and technology. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "a. Define skill acquisition and entrepreneurship. (2 marks)\nb. State three reasons why skill acquisition is important for self-reliance. (3 marks)\nc. List five examples of vocational/technological skills. (2 marks)\nd. Explain how skill acquisition and entrepreneurship can help solve the problem of unemployment in Nigeria. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Examine the relationship between energy, heat, light, sound, and electricity. Choose any two of these concepts and explain how they are connected, giving one practical example of how they work together in a device or natural phenomenon. (10 marks)",
-      "marks": 10,
-      "image": null
-    }
+                "id": 1,
+                "question": "a. Explain the meaning of GSM and briefly describe its evolution from 1G to 4G. \n\n b. With the aid of a simple diagram, show the basic architecture of a GSM network and label three main components. \n\n c. State two advantages of digital mobile networks (2G/3G) over analog (1G) networks.",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 2,
+                "question": "a. List five major hardware components of a typical GSM phone. \n\n b. Explain the function of three of the components listed in (a). \n\n c. Differentiate between a SIM card and a memory card in a mobile phone.",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 3,
+                "question": "a. Define the following terms: (i) Firmware (ii) IMEI (iii) Operating System (OS). \n\n b. Explain two common software issues that can occur in smartphones and how they can be resolved. \n\n c. What is the importance of knowing a phone's IMEI number?",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 4,
+                "question": "a. Name five essential tools used in GSM phone repairs and state the use of each. \n\n b. Describe the proper use of a soldering iron when repairing a phone's circuit board. \n\n c. Why is an anti-static wrist strap important during phone repair?",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 5,
+                "question": "a. Outline five important steps to follow when disassembling a mobile phone. \n\n b. What precautions should be taken during the reassembly process? \n\n c. Why is it necessary to keep screws and components organized during disassembly?",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 6,
+                "question": "a. Identify three common charging faults in mobile phones and their possible causes. \n\n b. Discuss two common network-related faults and how to troubleshoot them. \n\n c. Explain what you would do if a customer brings a phone with a faulty microphone.",
+                "marks": 12.5,
+                "image": null
+              },
+              {
+                "id": 7,
+                "question": "a. What is meant by \"flashing\" a mobile phone? \n\n b. Explain the terms \"unlocking\" and \"virus removal\" in the context of GSM phones. \n\n c. Describe the process of performing a factory reset on an Android phone and state one precaution to take.",
+                "marks": 12.5,
+                "image": null
+              }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];
@@ -1343,10 +1326,8 @@
                   document.getElementById('username').innerText = username;
                   
               
-                //document.getElementById('userImage').src =
-              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
-
-              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
+                document.getElementById('userImage').src =
+              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
                 }
            
             // Load static questions
@@ -1366,7 +1347,7 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 90; // 60 minutes
+        let timeLeft = 60 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
@@ -1650,7 +1631,7 @@
                     window.location.href = "results.html";
         }*/
 
-            /*function showResult() {
+            function showResult() {
 				    clearInterval(timerInterval);
 				    let score = 0;
 				    questions.forEach((q, i) => {
@@ -1707,76 +1688,7 @@
 				    
 				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
 				    window.location.href = "results.html";
-				}*/
-                function showResult() {
-                        clearInterval(timerInterval);
-                        let score = 0;
-                        questions.forEach((q, i) => {
-                            if (userAnswers[i] === q.answer) score++;
-                        });
-                        
-                        const username = sessionStorage.getItem('username') || "Guest";
-                        const cls = sessionStorage.getItem('class');
-                        const sub = sessionStorage.getItem('subject');
-                        
-                        localStorage.setItem("examUser", username);
-                        localStorage.setItem("examScore", score);
-                        localStorage.setItem("totalQuestions", questions.length);
-                        localStorage.setItem("pendingClass", cls);
-                        localStorage.setItem("pendingSubject", sub);
-                        localStorage.setItem("pendingUsername", username);
-                        
-                        // Get exam info from sessionStorage or use default
-                        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-                        localStorage.setItem("examInfo", examInfo);
-                        
-                        // ✅ Build a clean record for history (to be used by records.html)
-                        const record = {
-                            username: username,
-                            class: cls,
-                            subject: sub,
-                            score: score,
-                            totalQuestions: questions.length,
-                            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-                            examInfo: examInfo,
-                            timestamp: new Date().toISOString()
-                        };
-                        
-                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
-                        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
-                        records.push(record);
-                        localStorage.setItem('examRecords', JSON.stringify(records));
-                        
-                        // ✅ Secretly download score details to downloads folder
-                        const scoreDetails = {
-                            ...record,
-                            userAnswers: userAnswers,
-                            correctAnswers: questions.map(q => q.answer)
-                        };
-                        
-                        // Create a blob with the data
-                        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        
-                        // Create a hidden anchor element and trigger download
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        
-                        // Clean up
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        
-                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-                        
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-                        window.location.href = "results.html";
-                    }
-
+				}
 
 
 

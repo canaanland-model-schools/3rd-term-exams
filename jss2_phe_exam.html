@@ -1228,48 +1228,66 @@
 
 
         const staticTheoryQuestions = [
-                                     {
-                                    id: 1,
-                                    question: "Simplify \na. (i) 2⅔ + 1¾\n(ii) 3½ ÷ 1¼ \n b. A farmer has 5½ hectares of land. He plants maize on ⅔ of it. How many hectares are left for other crops? \n c. Round 6.4783 to\n (i) 2 decimal places\n(ii) 3 significant figures",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 2,
-                                    question: "Convert \n a. (i) 29₁₀ to base two\n(ii) 11011₂ to base ten \n b.Perform The Followiong Binary Operation\n (i) 111₂ + 101₂\n(ii) 1001₂ – 110₂ \n c. Multiply 1011₂ by 101₂.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 3,
-                                    question: "Simplify\n a. (i) 4x + 3y – 2x + 5y\n(ii) 2(3a – 4b) + 5(a + b) \n b. If p = 5 and q = 2, evaluate:\n (i) 3p² – 2q\n(ii) (p + q)(p – q) \n c.solve\n (i) 2x – 7 = 15\n(ii) ¾ y = 12",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 4,
-                                    question: "a. In a class of 48 students, ¼ are boys. How many are girls? \n b. Mr. Ojo bought 8.5 kg of rice at ₦320 per kg. How much change did he get from ₦3,000? \n c. Find the mean and median of: 12, 8, 15, 10, 13, 11, 14.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 5,
-                                    question: "a. Calculate the perimeter of a rectangular garden of length 15 m and width 9 m. \n b. Find the area of a triangle with base 14 cm and height 6 cm. \n c. An angle is 25° more than its complement. Find the angle.",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 6,
-                                    question: "a. Estimate the product of 47 and 32 by rounding each to the nearest ten. \n b. A bag contains 12 red balls, 8 blue balls, and 5 green balls. What fraction of the balls are blue? \n c. Simplify: ⅗ of (2½ + 1¼)",
-                                    marks: 10,
-                                    image: null
-                                  },
-                                  {
-                                    id: 7,
-                                    question: "a. If 5 books cost ₦2,500, how much will 9 of the same books cost? \n b. The sum of three consecutive numbers is 63. Find the numbers. \n c. Find the value of: 0.2 × 0.3 ÷ 0.02",
-                                    marks: 10,
-                                    image: null
-                                  }
+                                      {
+      "id": 1,
+      "question": "a) Define an accident and give two examples. (3 marks)\nb) State three causes of road accidents. (3 marks)\nc) Outline four safety measures students should observe at school to prevent accidents. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "a) Differentiate between a 'sprain' and a 'strain'. (4 marks)\nb) Explain the R.I.C.E. method for treating a sprain. (4 marks)\nc) List two causes of sports injuries. (2 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "a) What is first aid? (2 marks)\nb) Describe the correct first aid procedure for a person suffering from a severe nosebleed. (4 marks)\nc) State four things you should NOT do when giving first aid to a victim of burns. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "a) What are preventive measures in sports? (2 marks)\nb) List and explain four preventive measures that can be taken to avoid sports injuries. (8 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "a) Define 'School Health Programme'. (2 marks)\nb) List three components of a School Health Programme and explain one of them. (5 marks)\nc) State three practices that promote personal health. (3 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "a) What does the acronym FRESH stand for in the FRESH Approach to school health? (5 marks)\nb) Briefly explain any two of the four main components of the FRESH Approach. (4 marks)\nc) Why is 'Safe Water and Sanitation' important in a school? (1 mark)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "a) Define environmental pollution. (2 marks)\nb) Name four types of environmental pollution. (4 marks)\nc) Suggest two preventive measures for each of the following: (i) Air pollution, (ii) Water pollution. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "a) List three sources of land/soil pollution. (3 marks)\nb) Explain two effects of noise pollution on human health. (4 marks)\nc) State three ways individuals can help prevent pollution in their community. (3 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "a) What are non-communicable diseases (NCDs)? (2 marks)\nb) List four examples of non-communicable diseases. (4 marks)\nc) State two characteristics of non-communicable diseases that make them different from communicable diseases. (4 marks)",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "a) Differentiate between 'personal health' and 'community health'. (4 marks)\nb) Explain briefly the nature of 'sickle cell anaemia'. (3 marks)\nc) State three reasons why a healthy population is important for national development. (3 marks)",
+      "marks": 10,
+      "image": null
+    }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];
@@ -1291,7 +1309,7 @@
                 localStorage.setItem('examSubject', 'EXAM');
                 localStorage.setItem('examClass', 'RESULT');
             }
-            localStorage.setItem('examTerm', 'SECOND TERM 2025/2026');
+            localStorage.setItem('examTerm', 'THIRD TERM 2025/2026');
              /*let username = sessionStorage.getItem('username');
              const userImage = sessionStorage.getItem('image');
             document.getElementById("usernameDisplay").innerText = "WELCOME:" + " " + username;

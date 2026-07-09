@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - INTERMEDIATE SCIENCE Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - DEMO Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color: red;
+            color:blue;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: white;/* #f9f9f9;*/
+            background-color: lime;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: purple;/*#2e7d32;*/
-            color: red;
+            background: #2e7d32;
+            color: white;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -476,14 +476,14 @@
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: deepskyblue;
+            background: aqua;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: red;
+            color: fuchsia;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -507,17 +507,12 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
-
         </div>
-
-           
-            
-
         <div id="student-info">
             <center><strong>ATTENTION! CLICK ON SUBMIT BUTTON BEFORE YOUR TIME IS UP TO SAVE YOUR SCORE</strong></center>
             <center><p id="datetime"></p></center>
@@ -530,11 +525,16 @@
           <h2 id="username">Student Name</h2>
            </div>
 
-     
+        <!--<img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+            <center><img id="userImage"><br><br></center>
+             <img id="userImage" src="img/default_user.jpg" alt="Student Image">
+            <center>Hello: <span id="userName"></span></center>
+        </div>-->
 
     
         <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
-        <center><h3>THIRD TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
+        <center><h3>SECOND TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
        
         <!-- SECTION TOGGLE BUTTONS -->
         <div class="section-toggle">
@@ -543,7 +543,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  INTERMEDIATE SCIENCE - JSS2 (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  DEMO - SS1 (SECOND TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -609,7 +609,7 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text">2ND TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
@@ -624,670 +624,181 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-      {
-      "id": 1,
-      "question": "Energy is defined as the __________.",
-      "options": {
-        "A": "weight of an object",
-        "B": "ability to do work or cause change",
-        "C": "temperature of a substance",
-        "D": "speed of light"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "Energy is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "kilograms"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "The energy of motion is called __________.",
-      "options": {
-        "A": "potential energy",
-        "B": "kinetic energy",
-        "C": "chemical energy",
-        "D": "nuclear energy"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "Stored energy is called __________.",
-      "options": {
-        "A": "kinetic energy",
-        "B": "mechanical energy",
-        "C": "potential energy",
-        "D": "electrical energy"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "Which of the following is an example of potential energy?",
-      "options": {
-        "A": "A moving car",
-        "B": "A rolling ball",
-        "C": "A stretched rubber band",
-        "D": "Flowing water"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "A television converts electrical energy into __________.",
-      "options": {
-        "A": "light and sound energy only",
-        "B": "chemical energy only",
-        "C": "mechanical energy only",
-        "D": "nuclear energy only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "The Law of Conservation of Energy states that energy __________.",
-      "options": {
-        "A": "can be created but not destroyed",
-        "B": "can be destroyed but not created",
-        "C": "can neither be created nor destroyed, but can be converted",
-        "D": "can only be used once"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "Renewable energy sources can be __________.",
-      "options": {
-        "A": "used up completely",
-        "B": "replaced or regenerated naturally",
-        "C": "found only once",
-        "D": "destroyed easily"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "Which of the following is a renewable energy source?",
-      "options": {
-        "A": "Crude oil",
-        "B": "Coal",
-        "C": "Solar energy",
-        "D": "Natural gas"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Non-renewable energy sources will one day __________.",
-      "options": {
-        "A": "increase",
-        "B": "run out",
-        "C": "regenerate",
-        "D": "multiply"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 11,
-      "question": "Which of the following is a non-renewable energy source?",
-      "options": {
-        "A": "Wind",
-        "B": "Sunlight",
-        "C": "Natural gas",
-        "D": "Hydropower"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 12,
-      "question": "Energy transformation is the process of energy __________ from one form to another.",
-      "options": {
-        "A": "changing",
-        "B": "disappearing",
-        "C": "being created",
-        "D": "being destroyed"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 13,
-      "question": "When you strike a match, chemical energy converts to __________.",
-      "options": {
-        "A": "heat and light",
-        "B": "sound only",
-        "C": "electrical only",
-        "D": "mechanical only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 14,
-      "question": "Heat is a form of __________.",
-      "options": {
-        "A": "energy",
-        "B": "temperature",
-        "C": "matter",
-        "D": "force"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 15,
-      "question": "Temperature is the degree of __________ of a substance.",
-      "options": {
-        "A": "hotness or coldness",
-        "B": "weight",
-        "C": "size",
-        "D": "volume"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 16,
-      "question": "The instrument used to measure temperature is a __________.",
-      "options": {
-        "A": "thermometer",
-        "B": "barometer",
-        "C": "hydrometer",
-        "D": "calorimeter"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 17,
-      "question": "Heat is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "grams"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 18,
-      "question": "Temperature is measured in __________.",
-      "options": {
-        "A": "Joules",
-        "B": "degrees Celsius",
-        "C": "Newtons",
-        "D": "Watts"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 19,
-      "question": "The main difference between heat and temperature is that heat is __________ energy while temperature is __________ energy.",
-      "options": {
-        "A": "total, average",
-        "B": "average, total",
-        "C": "small, large",
-        "D": "large, small"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 20,
-      "question": "When a substance is heated, its particles __________.",
-      "options": {
-        "A": "move slower",
-        "B": "move faster and further apart",
-        "C": "stop moving",
-        "D": "become heavier"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 21,
-      "question": "Expansion is the increase in the __________ of a substance when heated.",
-      "options": {
-        "A": "mass",
-        "B": "volume or size",
-        "C": "weight",
-        "D": "density"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 22,
-      "question": "Gaps are left in railway tracks to allow for __________.",
-      "options": {
-        "A": "contraction",
-        "B": "expansion",
-        "C": "rusting",
-        "D": "bending"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 23,
-      "question": "Which state of matter expands the most when heated?",
-      "options": {
-        "A": "Solid",
-        "B": "Liquid",
-        "C": "Gas",
-        "D": "Plasma"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 24,
-      "question": "The process of a solid changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 25,
-      "question": "The process of a liquid changing to a gas is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation or boiling",
-        "D": "condensation"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 26,
-      "question": "The process of a gas changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 27,
-      "question": "The process of a liquid changing to a solid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "sublimation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 28,
-      "question": "Sublimation is when a solid changes directly to a __________.",
-      "options": {
-        "A": "liquid",
-        "B": "gas",
-        "C": "plasma",
-        "D": "another solid"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 29,
-      "question": "Camphor (naphthalene balls) undergo __________.",
-      "options": {
-        "A": "melting",
-        "B": "boiling",
-        "C": "sublimation",
-        "D": "freezing"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 30,
-      "question": "The main property of light is that it travels in __________.",
-      "options": {
-        "A": "curves",
-        "B": "straight lines",
-        "C": "circles",
-        "D": "zigzags"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 31,
-      "question": "Reflection is the __________ of light when it strikes a surface.",
-      "options": {
-        "A": "bending",
-        "B": "bouncing back",
-        "C": "absorption",
-        "D": "creation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 32,
-      "question": "A mirror gives a clear image because of light __________.",
-      "options": {
-        "A": "refraction",
-        "B": "reflection",
-        "C": "absorption",
-        "D": "dispersion"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 33,
-      "question": "Refraction is the __________ of light as it passes from one medium to another.",
-      "options": {
-        "A": "bouncing back",
-        "B": "bending",
-        "C": "stopping",
-        "D": "speeding up"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 34,
-      "question": "A pencil placed in a glass of water appears bent due to light __________.",
-      "options": {
-        "A": "reflection",
-        "B": "refraction",
-        "C": "absorption",
-        "D": "diffraction"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 35,
-      "question": "Transparent objects allow __________ light to pass through.",
-      "options": {
-        "A": "no",
-        "B": "some",
-        "C": "all or most",
-        "D": "very little"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 36,
-      "question": "Translucent objects allow __________ light to pass through but scatter it.",
-      "options": {
-        "A": "no",
-        "B": "all",
-        "C": "some",
-        "D": "most"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 37,
-      "question": "Opaque objects allow __________ light to pass through.",
-      "options": {
-        "A": "all",
-        "B": "most",
-        "C": "no",
-        "D": "some"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 38,
-      "question": "Which of the following is an example of a transparent object?",
-      "options": {
-        "A": "Wood",
-        "B": "Clear glass",
-        "C": "Frosted glass",
-        "D": "Stone"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 39,
-      "question": "A shadow is formed because light travels in straight lines and is blocked by an __________ object.",
-      "options": {
-        "A": "transparent",
-        "B": "translucent",
-        "C": "opaque",
-        "D": "shiny"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 40,
-      "question": "The darkest part of a shadow is called the __________.",
-      "options": {
-        "A": "penumbra",
-        "B": "umbra",
-        "C": "eclipse",
-        "D": "reflection"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 41,
-      "question": "A solar eclipse occurs when the __________ passes between the Sun and the Earth.",
-      "options": {
-        "A": "Earth",
-        "B": "Moon",
-        "C": "Mars",
-        "D": "Venus"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 42,
-      "question": "A lunar eclipse occurs when the __________ passes between the Sun and the Moon.",
-      "options": {
-        "A": "Moon",
-        "B": "Earth",
-        "C": "Mars",
-        "D": "Jupiter"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 43,
-      "question": "Sound is produced by __________.",
-      "options": {
-        "A": "light",
-        "B": "vibrations",
-        "C": "heat",
-        "D": "electricity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 44,
-      "question": "When you touch your throat and say 'Ahhh,' you feel __________.",
-      "options": {
-        "A": "heat",
-        "B": "vibration",
-        "C": "pain",
-        "D": "nothing"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 45,
-      "question": "Sound needs a __________ to travel through.",
-      "options": {
-        "A": "vacuum",
-        "B": "medium",
-        "C": "empty space",
-        "D": "darkness"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 46,
-      "question": "Sound travels fastest through __________.",
-      "options": {
-        "A": "gases",
-        "B": "liquids",
-        "C": "solids",
-        "D": "vacuum"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 47,
-      "question": "Sound CANNOT travel through a __________.",
-      "options": {
-        "A": "solid",
-        "B": "liquid",
-        "C": "gas",
-        "D": "vacuum"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 48,
-      "question": "The loudness of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "frequency",
-        "B": "amplitude (size)",
-        "C": "speed",
-        "D": "pitch"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 49,
-      "question": "The pitch of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "amplitude",
-        "B": "frequency (speed)",
-        "C": "loudness",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 50,
-      "question": "A mosquito's buzz has a high __________.",
-      "options": {
-        "A": "loudness",
-        "B": "pitch",
-        "C": "volume",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    }
+        {
+          id: 1,
+          question: "Find the set of prime factors of 12",
+          options: { A: "3", B: "2, 3", C: "3, 4", D: "2, 6" },
+          answer: "B",
+          image: null
+        },
+        {
+          id: 2,
+          question: "Which of the following is not a prime number?",
+          options: { A: "3", B: "5", C: "7", D: "9" },
+          answer: "D",
+          image: null
+        },
+        {
+          id: 3,
+          question: "Find the highest common factor (H.C.F) of 20, 12 and 28.",
+          options: { A: "2", B: "4", C: "8", D: "12" },
+          answer: "A",
+          image: null
+        },
+        {
+          id: 4,
+          question: "Find the sum of 124.3, 0.275 and 74.06 (correct to one decimal place)",
+          options: { A: "198.6", B: "198.7", C: "892.0", D: "892.4" },
+          answer: "A",
+          image: null
+        },
+        {
+          id: 5,
+          question: "What is the place value of 9 in the number 624.93?",
+          options: { A: "hundred", B: "tens", C: "units", D: "tenths" },
+          answer: "D",
+          image: null
+        },
+        {
+          id: 6,
+          question: "Find the lowest common multiple (L.C.M) of 4, 5 and 6",
+          options: { A: "20", B: "24", C: "30", D: "60" },
+          answer: "D",
+          image: null
+        },
+        {
+          id: 7,
+          question: "Evaluate 0.25 × 0.06, correct to three decimal places.",
+          options: { A: "0.001", B: "0.02", C: "0.015", D: "0.075" },
+          answer: "C",
+          image: null
+        },
+        {
+          id: 8,
+          question: "Express 1/8 as a decimal fraction",
+          options: { A: "0.125", B: "0.375", C: "0.625", D: "0.750" },
+          answer: "C",
+          image: null
+        },
+        {
+          id: 9,
+          question: "Simplify 3/4 − 1/2 + 1/3",
+          options: { A: "11/12", B: "7/12", C: "5/6", D: "1" },
+          answer: "B",
+          image: null
+        },
+        {
+          id: 10,
+          question: "Express 2/5 as a decimal fraction",
+          options: { A: "0.4", B: "0.04", C: "0.004", D: "0.0004" },
+          answer: "B",
+          image: null
+        },
+        {
+          id: 11,
+          question: "Correct 0.003858 to three significant figures.",
+          options: { A: "0.00385", B: "0.00386", C: "0.0039", D: "386" },
+          answer: "B",
+          image: null
+        },
+        {
+          id: 12,
+          question: "Evaluate 0.37 × 7",
+          options: { A: "0.259", B: "2.590", C: "25.900", D: "259.000" },
+          answer: "A",
+          image: null
+        },
+        {
+          id: 13,
+          question: "Express 12/18 to its lowest term",
+          options: { A: "2", B: "2/3", C: "4/6", D: "1/3" },
+          answer: "C",
+          image: null
+        },
+        {
+          id: 14,
+          question: "HELP = _____ (using code A=1, B=2 ... Z=26)",
+          options: { A: "7, 4, 8, 9", B: "10, 5, 9, 11", C: "8, 5, 12, 16", D: "4, 5, 6, 15" },
+          answer: "C",
+          image: null
+        },
+        {
+          id: 15,
+          question: "SIT = _____",
+          options: { A: "16, 17, 19", B: "5, 22, 1", C: "20, 14, 25", D: "19, 9, 20" },
+          answer: "D",
+          image: null
+        },
+        {
+          id: 16,
+          question: "FAITH = _____",
+          options: { A: "6, 1, 9, 20, 8", B: "20, 9, 8, 1, 6", C: "10, 12, 14, 16, 18", D: "1, 2, 3, 4, 5" },
+          answer: "A",
+          image: null
+        },
+        {
+          id: 17,
+          question: "SAVE = _____",
+          options: { A: "19, 2, 20, 5", B: "19, 1, 22, 5", C: "26, 12, 3, 5", D: "7, 8, 10, 11" },
+          answer: "B",
+          image: null
+        },
+        {
+          id: 18,
+          question: "2, 5, 14, 9, 14 = ______",
+          options: { A: "BENIN", B: "BAMIM", C: "BENAN", D: "BEMAM" },
+          answer: "A",
+          image: null
+        },
+        {
+          id: 19,
+          question: "13, 1, 14 = _____",
+          options: { A: "NAM", B: "MAP", C: "MAN", D: "PAM" },
+          answer: "C",
+          image: null
+        },
+        {
+          id: 20,
+          question: "3, 18, 25 = _____",
+          options: { A: "CAP", B: "CRY", C: "CAN", D: "CAT" },
+          answer: "B",
+          image: null
+        }
 ];
 
 
         const staticTheoryQuestions = [
-                            {
-      "id": 1,
-      "question": "a. Define energy and state its SI unit. (2 marks)\nb. List six different forms of energy. (3 marks)\nc. Differentiate between renewable and non-renewable energy sources. Give two examples of each. (3 marks)\nd. State the Law of Conservation of Energy and give one example of energy transformation. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "a. Define heat and temperature. (2 marks)\nb. State three differences between heat and temperature in a table. (3 marks)\nc. Explain the two main effects of heat on matter, giving one example of each. (3 marks)\nd. Define melting, boiling, condensation, and freezing. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "a. State the main property of light. (1 mark)\nb. Define reflection and refraction, giving one example of each. (4 marks)\nc. Differentiate between transparent, translucent, and opaque objects. Give two examples of each. (3 marks)\nd. Explain how a shadow is formed and differentiate between umbra and penumbra. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "a. How is sound produced? Give two examples. (2 marks)\nb. Explain why sound cannot travel in a vacuum. (2 marks)\nc. Differentiate between loudness and pitch. What causes each? (3 marks)\nd. List three sources of noise pollution and three sound safety measures. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "a. Define electricity and differentiate between a conductor and an insulator. Give two examples of each. (4 marks)\nb. Draw and label a simple closed electric circuit showing the four main components. (3 marks)\nc. What is the difference between a closed circuit and an open circuit? (1 mark)\nd. State the Law of Magnetism. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "a. What is a machine? State three ways machines make work easier. (3 marks)\nb. List the six types of simple machines. (3 marks)\nc. Explain the three classes of levers with their arrangements and give one example of each class. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "a. Define mechanical advantage (M.A.) and write its formula. (2 marks)\nb. If a machine has a load of 200N and an effort of 50N, calculate the mechanical advantage. (2 marks)\nc. Define efficiency. Why is no machine 100% efficient? (2 marks)\nd. Explain how an inclined plane makes work easier. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "a. Differentiate between science and technology. (2 marks)\nb. Explain the relationship between science and technology. (2 marks)\nc. List three positive effects and three negative effects of technology. (3 marks)\nd. List five careers in science and technology. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "a. Define skill acquisition and entrepreneurship. (2 marks)\nb. State three reasons why skill acquisition is important for self-reliance. (3 marks)\nc. List five examples of vocational/technological skills. (2 marks)\nd. Explain how skill acquisition and entrepreneurship can help solve the problem of unemployment in Nigeria. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Examine the relationship between energy, heat, light, sound, and electricity. Choose any two of these concepts and explain how they are connected, giving one practical example of how they work together in a device or natural phenomenon. (10 marks)",
-      "marks": 10,
-      "image": null
-    }
+      {
+        id: 1,
+        question: "Express the following in words: (i): 40037 (ii): 208045 (iii): 1000009", 
+      
+        marks: 10,
+        image: null
+      },
+      {
+        id: 2,
+        question: "Use the number line to solve the following: (i): +2 + 5 = ___ (ii): +6 - 3 = ___ (iii): -5 + 3 = ___",
+        marks: 10,
+        image: null
+      },
+      {
+        id: 3,
+        question: "Answer the following: (i): Find the H.C.F of 9, 12, 18 (ii): Find the L.C.M of 10, 20, 30",  
+        marks: 10,
+        image: null
+      },
+      {
+        id: 4,
+        question: "Convert the following to base 10: (i): 11011₂ to base 10   (ii): 121₃ to base 10", 
+        marks: 10,
+        image: null
+      },
+      {
+        id: 5,
+        question: "Simplify the expression: i: ( 3/4 ÷ 1/2 ) + ( 5/6 + 1/3 )",    
+        marks: 10,
+        image: null
+      }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];
@@ -1343,10 +854,8 @@
                   document.getElementById('username').innerText = username;
                   
               
-                //document.getElementById('userImage').src =
-              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
-
-              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
+                document.getElementById('userImage').src =
+              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
                 }
            
             // Load static questions
@@ -1366,7 +875,7 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 90; // 60 minutes
+        let timeLeft = 60 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
@@ -1650,7 +1159,7 @@
                     window.location.href = "results.html";
         }*/
 
-            /*function showResult() {
+            function showResult() {
 				    clearInterval(timerInterval);
 				    let score = 0;
 				    questions.forEach((q, i) => {
@@ -1707,76 +1216,7 @@
 				    
 				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
 				    window.location.href = "results.html";
-				}*/
-                function showResult() {
-                        clearInterval(timerInterval);
-                        let score = 0;
-                        questions.forEach((q, i) => {
-                            if (userAnswers[i] === q.answer) score++;
-                        });
-                        
-                        const username = sessionStorage.getItem('username') || "Guest";
-                        const cls = sessionStorage.getItem('class');
-                        const sub = sessionStorage.getItem('subject');
-                        
-                        localStorage.setItem("examUser", username);
-                        localStorage.setItem("examScore", score);
-                        localStorage.setItem("totalQuestions", questions.length);
-                        localStorage.setItem("pendingClass", cls);
-                        localStorage.setItem("pendingSubject", sub);
-                        localStorage.setItem("pendingUsername", username);
-                        
-                        // Get exam info from sessionStorage or use default
-                        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-                        localStorage.setItem("examInfo", examInfo);
-                        
-                        // ✅ Build a clean record for history (to be used by records.html)
-                        const record = {
-                            username: username,
-                            class: cls,
-                            subject: sub,
-                            score: score,
-                            totalQuestions: questions.length,
-                            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-                            examInfo: examInfo,
-                            timestamp: new Date().toISOString()
-                        };
-                        
-                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
-                        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
-                        records.push(record);
-                        localStorage.setItem('examRecords', JSON.stringify(records));
-                        
-                        // ✅ Secretly download score details to downloads folder
-                        const scoreDetails = {
-                            ...record,
-                            userAnswers: userAnswers,
-                            correctAnswers: questions.map(q => q.answer)
-                        };
-                        
-                        // Create a blob with the data
-                        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        
-                        // Create a hidden anchor element and trigger download
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        
-                        // Clean up
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        
-                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-                        
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-                        window.location.href = "results.html";
-                    }
-
+				}
 
 
 

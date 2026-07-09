@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - INTERMEDIATE SCIENCE Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - FURTHER MATHEMATICS Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color: red;
+            color:blue;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: white;/* #f9f9f9;*/
+            background-color: lime;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: purple;/*#2e7d32;*/
-            color: red;
+            background: #2e7d32;
+            color: white;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -476,14 +476,14 @@
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: deepskyblue;
+            background: aqua;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: red;
+            color: fuchsia;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -507,17 +507,12 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
-
         </div>
-
-           
-            
-
         <div id="student-info">
             <center><strong>ATTENTION! CLICK ON SUBMIT BUTTON BEFORE YOUR TIME IS UP TO SAVE YOUR SCORE</strong></center>
             <center><p id="datetime"></p></center>
@@ -530,11 +525,16 @@
           <h2 id="username">Student Name</h2>
            </div>
 
-     
+        <!--<img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+            <center><img id="userImage"><br><br></center>
+             <img id="userImage" src="img/default_user.jpg" alt="Student Image">
+            <center>Hello: <span id="userName"></span></center>
+        </div>-->
 
     
         <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
-        <center><h3>THIRD TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
+        <center><h3>SECOND TERM EXAMINATION 2025/2026 ACADEMIC SESSION</h3></center>
        
         <!-- SECTION TOGGLE BUTTONS -->
         <div class="section-toggle">
@@ -543,7 +543,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  INTERMEDIATE SCIENCE - JSS2 (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  FURTHER MATHEMATICS - SS1 (SECOND TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -609,7 +609,7 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text">2ND TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
@@ -624,670 +624,652 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-      {
-      "id": 1,
-      "question": "Energy is defined as the __________.",
-      "options": {
-        "A": "weight of an object",
-        "B": "ability to do work or cause change",
-        "C": "temperature of a substance",
-        "D": "speed of light"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "Energy is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "kilograms"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "The energy of motion is called __________.",
-      "options": {
-        "A": "potential energy",
-        "B": "kinetic energy",
-        "C": "chemical energy",
-        "D": "nuclear energy"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "Stored energy is called __________.",
-      "options": {
-        "A": "kinetic energy",
-        "B": "mechanical energy",
-        "C": "potential energy",
-        "D": "electrical energy"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "Which of the following is an example of potential energy?",
-      "options": {
-        "A": "A moving car",
-        "B": "A rolling ball",
-        "C": "A stretched rubber band",
-        "D": "Flowing water"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "A television converts electrical energy into __________.",
-      "options": {
-        "A": "light and sound energy only",
-        "B": "chemical energy only",
-        "C": "mechanical energy only",
-        "D": "nuclear energy only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "The Law of Conservation of Energy states that energy __________.",
-      "options": {
-        "A": "can be created but not destroyed",
-        "B": "can be destroyed but not created",
-        "C": "can neither be created nor destroyed, but can be converted",
-        "D": "can only be used once"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "Renewable energy sources can be __________.",
-      "options": {
-        "A": "used up completely",
-        "B": "replaced or regenerated naturally",
-        "C": "found only once",
-        "D": "destroyed easily"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "Which of the following is a renewable energy source?",
-      "options": {
-        "A": "Crude oil",
-        "B": "Coal",
-        "C": "Solar energy",
-        "D": "Natural gas"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Non-renewable energy sources will one day __________.",
-      "options": {
-        "A": "increase",
-        "B": "run out",
-        "C": "regenerate",
-        "D": "multiply"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 11,
-      "question": "Which of the following is a non-renewable energy source?",
-      "options": {
-        "A": "Wind",
-        "B": "Sunlight",
-        "C": "Natural gas",
-        "D": "Hydropower"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 12,
-      "question": "Energy transformation is the process of energy __________ from one form to another.",
-      "options": {
-        "A": "changing",
-        "B": "disappearing",
-        "C": "being created",
-        "D": "being destroyed"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 13,
-      "question": "When you strike a match, chemical energy converts to __________.",
-      "options": {
-        "A": "heat and light",
-        "B": "sound only",
-        "C": "electrical only",
-        "D": "mechanical only"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 14,
-      "question": "Heat is a form of __________.",
-      "options": {
-        "A": "energy",
-        "B": "temperature",
-        "C": "matter",
-        "D": "force"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 15,
-      "question": "Temperature is the degree of __________ of a substance.",
-      "options": {
-        "A": "hotness or coldness",
-        "B": "weight",
-        "C": "size",
-        "D": "volume"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 16,
-      "question": "The instrument used to measure temperature is a __________.",
-      "options": {
-        "A": "thermometer",
-        "B": "barometer",
-        "C": "hydrometer",
-        "D": "calorimeter"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 17,
-      "question": "Heat is measured in __________.",
-      "options": {
-        "A": "degrees Celsius",
-        "B": "Joules",
-        "C": "metres",
-        "D": "grams"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 18,
-      "question": "Temperature is measured in __________.",
-      "options": {
-        "A": "Joules",
-        "B": "degrees Celsius",
-        "C": "Newtons",
-        "D": "Watts"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 19,
-      "question": "The main difference between heat and temperature is that heat is __________ energy while temperature is __________ energy.",
-      "options": {
-        "A": "total, average",
-        "B": "average, total",
-        "C": "small, large",
-        "D": "large, small"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 20,
-      "question": "When a substance is heated, its particles __________.",
-      "options": {
-        "A": "move slower",
-        "B": "move faster and further apart",
-        "C": "stop moving",
-        "D": "become heavier"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 21,
-      "question": "Expansion is the increase in the __________ of a substance when heated.",
-      "options": {
-        "A": "mass",
-        "B": "volume or size",
-        "C": "weight",
-        "D": "density"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 22,
-      "question": "Gaps are left in railway tracks to allow for __________.",
-      "options": {
-        "A": "contraction",
-        "B": "expansion",
-        "C": "rusting",
-        "D": "bending"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 23,
-      "question": "Which state of matter expands the most when heated?",
-      "options": {
-        "A": "Solid",
-        "B": "Liquid",
-        "C": "Gas",
-        "D": "Plasma"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 24,
-      "question": "The process of a solid changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "A",
-      "image": null
-    },
-    {
-      "id": 25,
-      "question": "The process of a liquid changing to a gas is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation or boiling",
-        "D": "condensation"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 26,
-      "question": "The process of a gas changing to a liquid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "condensation"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 27,
-      "question": "The process of a liquid changing to a solid is called __________.",
-      "options": {
-        "A": "melting",
-        "B": "freezing",
-        "C": "evaporation",
-        "D": "sublimation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 28,
-      "question": "Sublimation is when a solid changes directly to a __________.",
-      "options": {
-        "A": "liquid",
-        "B": "gas",
-        "C": "plasma",
-        "D": "another solid"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 29,
-      "question": "Camphor (naphthalene balls) undergo __________.",
-      "options": {
-        "A": "melting",
-        "B": "boiling",
-        "C": "sublimation",
-        "D": "freezing"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 30,
-      "question": "The main property of light is that it travels in __________.",
-      "options": {
-        "A": "curves",
-        "B": "straight lines",
-        "C": "circles",
-        "D": "zigzags"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 31,
-      "question": "Reflection is the __________ of light when it strikes a surface.",
-      "options": {
-        "A": "bending",
-        "B": "bouncing back",
-        "C": "absorption",
-        "D": "creation"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 32,
-      "question": "A mirror gives a clear image because of light __________.",
-      "options": {
-        "A": "refraction",
-        "B": "reflection",
-        "C": "absorption",
-        "D": "dispersion"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 33,
-      "question": "Refraction is the __________ of light as it passes from one medium to another.",
-      "options": {
-        "A": "bouncing back",
-        "B": "bending",
-        "C": "stopping",
-        "D": "speeding up"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 34,
-      "question": "A pencil placed in a glass of water appears bent due to light __________.",
-      "options": {
-        "A": "reflection",
-        "B": "refraction",
-        "C": "absorption",
-        "D": "diffraction"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 35,
-      "question": "Transparent objects allow __________ light to pass through.",
-      "options": {
-        "A": "no",
-        "B": "some",
-        "C": "all or most",
-        "D": "very little"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 36,
-      "question": "Translucent objects allow __________ light to pass through but scatter it.",
-      "options": {
-        "A": "no",
-        "B": "all",
-        "C": "some",
-        "D": "most"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 37,
-      "question": "Opaque objects allow __________ light to pass through.",
-      "options": {
-        "A": "all",
-        "B": "most",
-        "C": "no",
-        "D": "some"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 38,
-      "question": "Which of the following is an example of a transparent object?",
-      "options": {
-        "A": "Wood",
-        "B": "Clear glass",
-        "C": "Frosted glass",
-        "D": "Stone"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 39,
-      "question": "A shadow is formed because light travels in straight lines and is blocked by an __________ object.",
-      "options": {
-        "A": "transparent",
-        "B": "translucent",
-        "C": "opaque",
-        "D": "shiny"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 40,
-      "question": "The darkest part of a shadow is called the __________.",
-      "options": {
-        "A": "penumbra",
-        "B": "umbra",
-        "C": "eclipse",
-        "D": "reflection"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 41,
-      "question": "A solar eclipse occurs when the __________ passes between the Sun and the Earth.",
-      "options": {
-        "A": "Earth",
-        "B": "Moon",
-        "C": "Mars",
-        "D": "Venus"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 42,
-      "question": "A lunar eclipse occurs when the __________ passes between the Sun and the Moon.",
-      "options": {
-        "A": "Moon",
-        "B": "Earth",
-        "C": "Mars",
-        "D": "Jupiter"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 43,
-      "question": "Sound is produced by __________.",
-      "options": {
-        "A": "light",
-        "B": "vibrations",
-        "C": "heat",
-        "D": "electricity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 44,
-      "question": "When you touch your throat and say 'Ahhh,' you feel __________.",
-      "options": {
-        "A": "heat",
-        "B": "vibration",
-        "C": "pain",
-        "D": "nothing"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 45,
-      "question": "Sound needs a __________ to travel through.",
-      "options": {
-        "A": "vacuum",
-        "B": "medium",
-        "C": "empty space",
-        "D": "darkness"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 46,
-      "question": "Sound travels fastest through __________.",
-      "options": {
-        "A": "gases",
-        "B": "liquids",
-        "C": "solids",
-        "D": "vacuum"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 47,
-      "question": "Sound CANNOT travel through a __________.",
-      "options": {
-        "A": "solid",
-        "B": "liquid",
-        "C": "gas",
-        "D": "vacuum"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 48,
-      "question": "The loudness of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "frequency",
-        "B": "amplitude (size)",
-        "C": "speed",
-        "D": "pitch"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 49,
-      "question": "The pitch of a sound depends on the __________ of the vibration.",
-      "options": {
-        "A": "amplitude",
-        "B": "frequency (speed)",
-        "C": "loudness",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 50,
-      "question": "A mosquito's buzz has a high __________.",
-      "options": {
-        "A": "loudness",
-        "B": "pitch",
-        "C": "volume",
-        "D": "intensity"
-      },
-      "answer": "B",
-      "image": null
-    }
+          {
+                              "id": 1,
+                              "question": "The value of sin 45° is ______.",
+                              "options": {
+                                "A": "&#189;",
+                                "B": "&#8730;2/2",
+                                "C": "&#8730;3/2",
+                                "D": "1"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 2,
+                              "question": "tan 60° equals ______.",
+                              "options": {
+                                "A": "1",
+                                "B": "&#8730;3",
+                                "C": "1/&#8730;3",
+                                "D": "0"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 3,
+                              "question": "sin 30° + cos 60° = ______.",
+                              "options": {
+                                "A": "0",
+                                "B": "&#189;",
+                                "C": "1",
+                                "D": "2"
+                              },
+                              "answer": "C",
+                              "image": null
+                            },
+                            {
+                              "id": 4,
+                              "question": "If sin &theta; = &#189;, and &theta; is acute, then &theta; = ______.",
+                              "options": {
+                                "A": "30&deg;",
+                                "B": "45&deg;",
+                                "C": "60&deg;",
+                                "D": "90&deg;"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 5,
+                              "question": "The expression 2 sin 45° cos 45° simplifies to ______.",
+                              "options": {
+                                "A": "0",
+                                "B": "1",
+                                "C": "&#189;",
+                                "D": "&#8730;2"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 6,
+                              "question": "In logic, a statement that is either true or false is called a ______.",
+                              "options": {
+                                "A": "Proposition",
+                                "B": "Hypothesis",
+                                "C": "Conclusion",
+                                "D": "Argument"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 7,
+                              "question": "The negation of \"It is raining\" is ______.",
+                              "options": {
+                                "A": "It is not raining",
+                                "B": "It is sunny",
+                                "C": "Maybe raining",
+                                "D": "It is cold"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 8,
+                              "question": "If p is true and q is false, then p ∧ q (p and q) is ______.",
+                              "options": {
+                                "A": "True",
+                                "B": "False",
+                                "C": "Neither",
+                                "D": "Both"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 9,
+                              "question": "The logical connective \"∨\" represents ______.",
+                              "options": {
+                                "A": "And",
+                                "B": "Or",
+                                "C": "Not",
+                                "D": "Implies"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 10,
+                              "question": "A truth table shows all possible ______ of logical variables.",
+                              "options": {
+                                "A": "Values",
+                                "B": "Statements",
+                                "C": "Conclusions",
+                                "D": "Operations"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 11,
+                              "question": "The binary equivalent of decimal 5 is ______.",
+                              "options": {
+                                "A": "101",
+                                "B": "110",
+                                "C": "111",
+                                "D": "100"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 12,
+                              "question": "The decimal equivalent of binary 1101 is ______.",
+                              "options": {
+                                "A": "12",
+                                "B": "13",
+                                "C": "14",
+                                "D": "15"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 13,
+                              "question": "An abacus is a calculating device that uses ______.",
+                              "options": {
+                                "A": "Electricity",
+                                "B": "Beads",
+                                "C": "Buttons",
+                                "D": "Light"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 14,
+                              "question": "In a flowchart, a diamond shape represents ______.",
+                              "options": {
+                                "A": "Start/End",
+                                "B": "Process",
+                                "C": "Decision",
+                                "D": "Input/Output"
+                              },
+                              "answer": "C",
+                              "image": null
+                            },
+                            {
+                              "id": 15,
+                              "question": "Converting the decimal number 10 to binary gives ______.",
+                              "options": {
+                                "A": "1010",
+                                "B": "1001",
+                                "C": "1100",
+                                "D": "1110"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 16,
+                              "question": "The binary addition 101 + 011 equals ______.",
+                              "options": {
+                                "A": "1000",
+                                "B": "1001",
+                                "C": "1010",
+                                "D": "1100"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 17,
+                              "question": "A parallelogram law is used in ______.",
+                              "options": {
+                                "A": "Geometry only",
+                                "B": "Vector addition",
+                                "C": "Binary addition",
+                                "D": "Trigonometry"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 18,
+                              "question": "The midpoint of the line segment joining (2,3) and (4,7) is ______.",
+                              "options": {
+                                "A": "(3,5)",
+                                "B": "(6,10)",
+                                "C": "(1,2)",
+                                "D": "(2,4)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 19,
+                              "question": "The gradient of the line passing through (1,2) and (3,6) is ______.",
+                              "options": {
+                                "A": "1",
+                                "B": "2",
+                                "C": "3",
+                                "D": "4"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 20,
+                              "question": "The distance between points (0,0) and (3,4) is ______.",
+                              "options": {
+                                "A": "5",
+                                "B": "7",
+                                "C": "12",
+                                "D": "25"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 21,
+                              "question": "Two lines are parallel if their gradients are ______.",
+                              "options": {
+                                "A": "Equal",
+                                "B": "Negative reciprocals",
+                                "C": "Sum to zero",
+                                "D": "Different"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 22,
+                              "question": "Two lines are perpendicular if the product of their gradients is ______.",
+                              "options": {
+                                "A": "1",
+                                "B": "-1",
+                                "C": "0",
+                                "D": "2"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 23,
+                              "question": "The equation of a line with gradient 2 passing through (1,3) is ______.",
+                              "options": {
+                                "A": "y = 2x + 1",
+                                "B": "y = 2x + 5",
+                                "C": "y = 2x - 1",
+                                "D": "y = 2x + 3"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 24,
+                              "question": "The area of a triangle with vertices (0,0), (3,0), (0,4) is ______.",
+                              "options": {
+                                "A": "6",
+                                "B": "12",
+                                "C": "7.5",
+                                "D": "5"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 25,
+                              "question": "Transforming the relation y = kxⁿ into linear form by taking logs gives ______.",
+                              "options": {
+                                "A": "log y = log k + n log x",
+                                "B": "log y = k + n log x",
+                                "C": "log y = log k + x log n",
+                                "D": "log y = n log k + log x"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 26,
+                              "question": "A vector has both magnitude and ______.",
+                              "options": {
+                                "A": "Direction",
+                                "B": "Speed",
+                                "C": "Mass",
+                                "D": "Time"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 27,
+                              "question": "The magnitude of vector a = (3,4) is ______.",
+                              "options": {
+                                "A": "5",
+                                "B": "7",
+                                "C": "12",
+                                "D": "25"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 28,
+                              "question": "The unit vector in the direction of (3,4) is ______.",
+                              "options": {
+                                "A": "(0.6, 0.8)",
+                                "B": "(1, 1)",
+                                "C": "(3, 4)",
+                                "D": "(0.8, 0.6)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 29,
+                              "question": "If u = (2,1) and v = (1,3), then u + v = ______.",
+                              "options": {
+                                "A": "(3,4)",
+                                "B": "(1,-2)",
+                                "C": "(2,3)",
+                                "D": "(4,1)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 30,
+                              "question": "The zero vector has magnitude ______.",
+                              "options": {
+                                "A": "0",
+                                "B": "1",
+                                "C": "Undefined",
+                                "D": "Infinity"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 31,
+                              "question": "The negative of vector (5, -2) is ______.",
+                              "options": {
+                                "A": "(-5, 2)",
+                                "B": "(5, 2)",
+                                "C": "(-5, -2)",
+                                "D": "(2, 5)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 32,
+                              "question": "Scalar multiplication: 3*(1, 2) = ______.",
+                              "options": {
+                                "A": "(3, 6)",
+                                "B": "(1, 6)",
+                                "C": "(3, 2)",
+                                "D": "(1, 2)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 33,
+                              "question": "The triangle law of vector addition states that if two vectors are represented as two sides of a triangle, the resultant is the ______ side.",
+                              "options": {
+                                "A": "Opposite",
+                                "B": "Adjacent",
+                                "C": "Third",
+                                "D": "Equal"
+                              },
+                              "answer": "C",
+                              "image": null
+                            },
+                            {
+                              "id": 34,
+                              "question": "The scalar (dot) product of (2,3) and (4,1) is ______.",
+                              "options": {
+                                "A": "11",
+                                "B": "10",
+                                "C": "12",
+                                "D": "14"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 35,
+                              "question": "If a·b = 0, then the vectors are ______.",
+                              "options": {
+                                "A": "Parallel",
+                                "B": "Perpendicular",
+                                "C": "Equal",
+                                "D": "Opposite"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 36,
+                              "question": "Resolving a vector into components means expressing it as a ______ of two perpendicular vectors.",
+                              "options": {
+                                "A": "Sum",
+                                "B": "Product",
+                                "C": "Difference",
+                                "D": "Division"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 37,
+                              "question": "The direction of vector (1,1) measured from the x-axis is ______ degrees.",
+                              "options": {
+                                "A": "30",
+                                "B": "45",
+                                "C": "60",
+                                "D": "90"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 38,
+                              "question": "The magnitude of the resultant of two perpendicular vectors of magnitudes 3 and 4 is ______.",
+                              "options": {
+                                "A": "5",
+                                "B": "7",
+                                "C": "1",
+                                "D": "12"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 39,
+                              "question": "If p = 2i + 3j and q = i - j, then p - q = ______.",
+                              "options": {
+                                "A": "i + 4j",
+                                "B": "3i + 2j",
+                                "C": "i + 2j",
+                                "D": "3i + 4j"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 40,
+                              "question": "The gradient of the line 2x + 3y = 6 is ______.",
+                              "options": {
+                                "A": "2/3",
+                                "B": "-2/3",
+                                "C": "3/2",
+                                "D": "-3/2"
+                              },
+                              "answer": "B",
+                              "image": null
+                            },
+                            {
+                              "id": 41,
+                              "question": "The midpoint of (a, b) and (c, d) is ______.",
+                              "options": {
+                                "A": "((a+c)/2, (b+d)/2)",
+                                "B": "(a+c, b+d)",
+                                "C": "(a-c, b-d)",
+                                "D": "((a-c)/2, (b-d)/2)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 42,
+                              "question": "The distance formula between (x₁,y₁) and (x₂,y₂) is ______.",
+                              "options": {
+                                "A": "&radic;[(x₂-x₁)² + (y₂-y₁)²]",
+                                "B": "(x₂-x₁)+(y₂-y₁)",
+                                "C": "(x₂-x₁)²+(y₂-y₁)²",
+                                "D": "&radic;(x₂² + y₂²)"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 43,
+                              "question": "The line y = mx + c has gradient ______.",
+                              "options": {
+                                "A": "m",
+                                "B": "c",
+                                "C": "x",
+                                "D": "y"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 44,
+                              "question": "A line parallel to y = 3x + 2 could be ______.",
+                              "options": {
+                                "A": "y = 3x - 5",
+                                "B": "y = -3x + 2",
+                                "C": "y = &frac13; x + 2",
+                                "D": "y = -&frac13; x + 1"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 45,
+                              "question": "The area of a quadrilateral with vertices (0,0), (2,0), (2,3), (0,3) is ______.",
+                              "options": {
+                                "A": "6",
+                                "B": "5",
+                                "C": "10",
+                                "D": "12"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 46,
+                              "question": "In binary, the number 111 represents decimal ______.",
+                              "options": {
+                                "A": "7",
+                                "B": "6",
+                                "C": "5",
+                                "D": "4"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 47,
+                              "question": "Which is a scalar quantity?",
+                              "options": {
+                                "A": "Force",
+                                "B": "Velocity",
+                                "C": "Temperature",
+                                "D": "Displacement"
+                              },
+                              "answer": "C",
+                              "image": null
+                            },
+                            {
+                              "id": 48,
+                              "question": "The dot product of i and j (unit vectors along x and y axes) is ______.",
+                              "options": {
+                                "A": "0",
+                                "B": "1",
+                                "C": "-1",
+                                "D": "&radic;2"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 49,
+                              "question": "A flowchart start/end is represented by a ______ shape.",
+                              "options": {
+                                "A": "Oval",
+                                "B": "Rectangle",
+                                "C": "Diamond",
+                                "D": "Parallelogram"
+                              },
+                              "answer": "A",
+                              "image": null
+                            },
+                            {
+                              "id": 50,
+                              "question": "The negation of a true statement is ______.",
+                              "options": {
+                                "A": "False",
+                                "B": "True",
+                                "C": "Maybe true",
+                                "D": "Neither"
+                              },
+                              "answer": "A",
+                              "image": null
+                            }
 ];
 
 
         const staticTheoryQuestions = [
-                            {
-      "id": 1,
-      "question": "a. Define energy and state its SI unit. (2 marks)\nb. List six different forms of energy. (3 marks)\nc. Differentiate between renewable and non-renewable energy sources. Give two examples of each. (3 marks)\nd. State the Law of Conservation of Energy and give one example of energy transformation. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 2,
-      "question": "a. Define heat and temperature. (2 marks)\nb. State three differences between heat and temperature in a table. (3 marks)\nc. Explain the two main effects of heat on matter, giving one example of each. (3 marks)\nd. Define melting, boiling, condensation, and freezing. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 3,
-      "question": "a. State the main property of light. (1 mark)\nb. Define reflection and refraction, giving one example of each. (4 marks)\nc. Differentiate between transparent, translucent, and opaque objects. Give two examples of each. (3 marks)\nd. Explain how a shadow is formed and differentiate between umbra and penumbra. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 4,
-      "question": "a. How is sound produced? Give two examples. (2 marks)\nb. Explain why sound cannot travel in a vacuum. (2 marks)\nc. Differentiate between loudness and pitch. What causes each? (3 marks)\nd. List three sources of noise pollution and three sound safety measures. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "a. Define electricity and differentiate between a conductor and an insulator. Give two examples of each. (4 marks)\nb. Draw and label a simple closed electric circuit showing the four main components. (3 marks)\nc. What is the difference between a closed circuit and an open circuit? (1 mark)\nd. State the Law of Magnetism. (2 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 6,
-      "question": "a. What is a machine? State three ways machines make work easier. (3 marks)\nb. List the six types of simple machines. (3 marks)\nc. Explain the three classes of levers with their arrangements and give one example of each class. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 7,
-      "question": "a. Define mechanical advantage (M.A.) and write its formula. (2 marks)\nb. If a machine has a load of 200N and an effort of 50N, calculate the mechanical advantage. (2 marks)\nc. Define efficiency. Why is no machine 100% efficient? (2 marks)\nd. Explain how an inclined plane makes work easier. (4 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 8,
-      "question": "a. Differentiate between science and technology. (2 marks)\nb. Explain the relationship between science and technology. (2 marks)\nc. List three positive effects and three negative effects of technology. (3 marks)\nd. List five careers in science and technology. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 9,
-      "question": "a. Define skill acquisition and entrepreneurship. (2 marks)\nb. State three reasons why skill acquisition is important for self-reliance. (3 marks)\nc. List five examples of vocational/technological skills. (2 marks)\nd. Explain how skill acquisition and entrepreneurship can help solve the problem of unemployment in Nigeria. (3 marks)",
-      "marks": 10,
-      "image": null
-    },
-    {
-      "id": 10,
-      "question": "Examine the relationship between energy, heat, light, sound, and electricity. Choose any two of these concepts and explain how they are connected, giving one practical example of how they work together in a device or natural phenomenon. (10 marks)",
-      "marks": 10,
-      "image": null
-    }
+       {
+              id: 1,
+              question: "a. Evaluate without using tables:\n(i) sin 60° cos 30° + cos 60° sin 30°\n(ii) tan 45° / (sin 30° + cos 60°) \n b. Construct a truth table for the logical statement: p ∧ (¬q), where p and q are propositions. \n c. If sin θ = 0.6 and θ is acute, find cos θ and tan θ.",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 2,
+              question: "a. Convert the following:\n(i) Decimal 25 to binary\n(ii) Binary 10101 to decimal \n b. Describe the function of an abacus as a calculating device. \n c. Draw a simple flowchart to find the sum of two numbers.",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 3,
+              question: "a. Find:\n(i) The midpoint of the line segment joining A(2, 5) and B(6, 9).\n(ii) The gradient of the line through A and B.\n(iii) The distance between A and B. \n b. Determine the equation of the line that passes through (3, -2) and has a gradient of 4. \n c. State the condition for two lines to be perpendicular. If line L₁ has gradient 2, find the gradient of line L₂ perpendicular to L₁.",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 4,
+              question: "a. Find the area of the triangle with vertices P(1, 2), Q(4, 6), R(7, 2). \n b. Show that the points A(1, 1), B(4, 4), C(6, 2) form a right-angled triangle. \n c. Transform the relation y = 5x³ into linear form by taking logarithms.",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 5,
+              question: "a. Define:\n(i) A vector\n(ii) A scalar\nGive two examples of each. \n b. Given vectors a = (3, 1) and b = (-2, 4), find:\n(i) a + b\n(ii) 2a – b\n(iii) |a| (magnitude of a) \n c. Find the unit vector in the direction of a = (3, 4).",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 6,
+              question: "a. State the parallelogram law of vector addition. \n b. Two vectors p = 5i + 2j and q = i – 3j are given.\n(i) Calculate the scalar (dot) product p · q.\n(ii) Find the angle between p and q. \n c. Resolve the vector v = (10, 0) into two perpendicular components, one along the direction (1, 1) and the other perpendicular to it.",
+              marks: 12.5,
+              image: null
+            },
+            {
+              id: 7,
+              question: "a. A triangle has vertices at O(0,0), A(3,0), B(0,4). Express vectors OA and OB in component form. \n b. Using the vectors in (a), find the vector AB and its magnitude. \n c. A line L passes through (1, 2) and is perpendicular to the line 2x + 3y = 6. Find the equation of L.",
+              marks: 12.5,
+              image: null
+            }
 ];
         // ================== APPLICATION VARIABLES ==================
         let questions = [];
@@ -1343,10 +1325,8 @@
                   document.getElementById('username').innerText = username;
                   
               
-                //document.getElementById('userImage').src =
-              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
-
-              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
+                document.getElementById('userImage').src =
+              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
                 }
            
             // Load static questions
@@ -1366,7 +1346,7 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 90; // 60 minutes
+        let timeLeft = 60 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
@@ -1650,7 +1630,7 @@
                     window.location.href = "results.html";
         }*/
 
-            /*function showResult() {
+            function showResult() {
 				    clearInterval(timerInterval);
 				    let score = 0;
 				    questions.forEach((q, i) => {
@@ -1707,76 +1687,7 @@
 				    
 				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
 				    window.location.href = "results.html";
-				}*/
-                function showResult() {
-                        clearInterval(timerInterval);
-                        let score = 0;
-                        questions.forEach((q, i) => {
-                            if (userAnswers[i] === q.answer) score++;
-                        });
-                        
-                        const username = sessionStorage.getItem('username') || "Guest";
-                        const cls = sessionStorage.getItem('class');
-                        const sub = sessionStorage.getItem('subject');
-                        
-                        localStorage.setItem("examUser", username);
-                        localStorage.setItem("examScore", score);
-                        localStorage.setItem("totalQuestions", questions.length);
-                        localStorage.setItem("pendingClass", cls);
-                        localStorage.setItem("pendingSubject", sub);
-                        localStorage.setItem("pendingUsername", username);
-                        
-                        // Get exam info from sessionStorage or use default
-                        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-                        localStorage.setItem("examInfo", examInfo);
-                        
-                        // ✅ Build a clean record for history (to be used by records.html)
-                        const record = {
-                            username: username,
-                            class: cls,
-                            subject: sub,
-                            score: score,
-                            totalQuestions: questions.length,
-                            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-                            examInfo: examInfo,
-                            timestamp: new Date().toISOString()
-                        };
-                        
-                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
-                        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
-                        records.push(record);
-                        localStorage.setItem('examRecords', JSON.stringify(records));
-                        
-                        // ✅ Secretly download score details to downloads folder
-                        const scoreDetails = {
-                            ...record,
-                            userAnswers: userAnswers,
-                            correctAnswers: questions.map(q => q.answer)
-                        };
-                        
-                        // Create a blob with the data
-                        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        
-                        // Create a hidden anchor element and trigger download
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        
-                        // Clean up
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        
-                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-                        
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-                        window.location.href = "results.html";
-                    }
-
+				}
 
 
 
