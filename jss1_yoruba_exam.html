@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - SS1 YORUBA LANGUAGE Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - YORUBA LANGUAGE Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color:blue;
+            color: red;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: lime;/* #f9f9f9;*/
+            background-color: white;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: #2e7d32;
-            color: white;
+            background: purple;/*#2e7d32;*/
+            color: red;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -468,18 +468,22 @@
             100% { opacity: 1; }
         }
 
+
+
+
+
          .marquee-container {
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: aqua;
+            background: deepskyblue;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: fuchsia;
+            color: red;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -496,84 +500,6 @@
         }
 
 
-        /* Logo container - makes it a flex container for horizontal layout */
-#logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    padding: 20px 0;
-}
-
-/* Style for the center/main logo */
-#logo img:not(.logo-left img):not(.logo-right img) {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-/* Left logo container */
-.logo-left {
-    flex: 0 0 auto;
-    z-index: 1;
-    margin-left: 20px;
-}
-
-/* Right logo container */
-.logo-right {
-    flex: 0 0 auto;
-    z-index: 1;
-    margin-right: 20px;
-}
-
-/* Logo images inside left and right containers */
-.logo-left img,
-.logo-right img {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-/* Hover effect for left and right logos */
-.logo-left img:hover,
-.logo-right img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    #logo {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 0;
-    }
-    
-    #logo img:not(.logo-left img):not(.logo-right img) {
-        position: static;
-        transform: none;
-        margin: 10px auto;
-    }
-    
-    .logo-left, .logo-right {
-        margin: 5px 0;
-    }
-    
-    .logo-left img,
-    .logo-right img {
-        max-width: 80px;
-    }
-}
-
-
-
     </style>
 </head>
 <body oncontextmenu="return false">
@@ -581,19 +507,12 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
 
-               <div class="logo-left">
-                <img src="img/9ja1.png" alt="Nigeria Logo" >
-            </div>
-
-            <div class="logo-right">
-                <img src="img/nappps1.png" alt="NAPPS Logo" >
-            </div>
         </div>
 
            
@@ -624,7 +543,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  SS1 YORUBA LANGUAGE  (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  YORUBA LANGUAGE - JSS1 (THIRD TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -690,7 +609,7 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text"> SS1 YORUBA LANGUAGE  FOR 3RD TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
@@ -699,665 +618,522 @@
 
 
     <script>
-           
+           // Get stored username and image from sessionStorage
+       
             
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-               {
-                            "id": 1,
-                            "question": "Ka ayoka isale wonyi ki o si dahun awon ibeere ti o tele e.\nAago marun-un idaji ni seun ti ji jade nile lo wo oko ti o n lo si Idanre. Ibudoko ojota ni o lo ki o le tete ri oko wo. Aago mewaa ni oko tokun. Ki won to de sagamu ni oko ti bere sii yonu. Agbara kaka ni won fi de Ile-Ise atokose kan lebaa ogbolu.\nKi won to ri oko se tan, aago merin irole ti lu. Gere ti won de ijebu-ode irole ti lu. Gere ti won de Ijebu-ode tan ni oko ba tun denu kole. Oju ojo ti n po firi, aago meje ti feree lu ki won too de ore nibi ti awako ti so pe oun o le lo mo.\nSeun wa gba pe oun ti sir in ni ojo naa. Ojo ti ko nii gbagbe laelae ni ojo naa je fun-un. O ronu eni ti oun koko ji ri ni ojo yii, ko ranti, o fee mo bi yoo seyera fun onitohun. O to wakati kan ti o ti n wa oko miiran ti ko ri. Lojiji ni ojo bere sii ro. Ojo ohun ko tile fun enikankan lara ti o fi bere si ro. Abe orule ni o sa si titi di aago mesan-an abo ki won to ri Oko. Oko ti o ko meta ninu won lo. Dede aago mejila abo oru ni o to wo Idanre ni ojo ti a n wi yii.\n\nBi aago meloo ni awako to so pe oun ko le lo mo?",
-                            "options": {
-                              "A": "Mewaa",
-                              "B": "Meje",
-                              "C": "Marun-un",
-                              "D": "Merin"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 2,
-                            "question": "Seun fe yera fun eni ti o ji ri nitori",
-                            "options": {
-                              "A": "Ojo ro",
-                              "B": "Awako ko mo oko wa daadaa",
-                              "C": "O gba pe oun ni o ko osi ba oun",
-                              "D": "Ile su"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 3,
-                            "question": "Oju Ojo ti n po firi tumo sipe",
-                            "options": {
-                              "A": "Ile ti n su",
-                              "B": "Ojumo ti n mo",
-                              "C": "Aajin ti n mo",
-                              "D": "Oorun ti n kan Atari"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 4,
-                            "question": "Seun gba pe ohun ti si rin nitori pe",
-                            "options": {
-                              "A": "Oko ti baje ki won to de Sagamu",
-                              "B": "Oju ojo po firi ki o to de Idanre",
-                              "C": "O wa Oko fun odidi wakati kan",
-                              "D": "O ko opolopo Isoro ni oju ona re si Idanre"
-                            },
-                            "answer": "D",
-                            "image": null
-                          },
-                          {
-                            "id": 5,
-                            "question": "Akole ti o ba ayoka yii mu ju ni",
-                            "options": {
-                              "A": "Oko baje si oju ona Sagamu",
-                              "B": "Ojo ti o ro ni ore",
-                              "C": "Ojo kan ti n ko le gbagbe",
-                              "D": "Irinajo si ogbolohun"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 6,
-                            "question": "\"Owo legbon, Omo laburo , leje ori-oro fun aroko",
-                            "options": {
-                              "A": "Asapejuwe",
-                              "B": "Asariyanjiyan",
-                              "C": "Asotan",
-                              "D": "Ajemo Isipaya"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 7,
-                            "question": "\"Ijamba oko kan ti o soju mi\" le je ori-oro fun aroko",
-                            "options": {
-                              "A": "Asapejuwe",
-                              "B": "Asariyanjiyan",
-                              "C": "Asotan",
-                              "D": "Ajemo Isipaya"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 8,
-                            "question": "A n lo – lati seda oro oruko tuntun",
-                            "options": {
-                              "A": "Oro",
-                              "B": "Mofiimu gbolohun",
-                              "C": "Silebu",
-                              "D": "Gbolohun"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 9,
-                            "question": "Mofiimu Ipile naa ni a mo si Mofiimu",
-                            "options": {
-                              "A": "afarahe",
-                              "B": "adaduro",
-                              "C": "afomo",
-                              "D": "apetunpe"
-                            },
-                            "answer": null,
-                            "image": null
-                          },
-                          {
-                            "id": 10,
-                            "question": "Ninu ijeyopo faweli/e/ ko le jeyo saaju faweli",
-                            "options": {
-                              "A": "{i}",
-                              "B": "{a}",
-                              "C": "{e}",
-                              "D": "{u}"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 11,
-                            "question": "\"Olu alagidi lu omo pa\" Apola ise inu gbolohun yii ni",
-                            "options": {
-                              "A": "alagidi omo",
-                              "B": "lu omo pa",
-                              "C": "Olu lu omo pa",
-                              "D": "lu omo"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 12,
-                            "question": "Ninu \"Mo je e tan patapata\", a lo patapata gege bii",
-                            "options": {
-                              "A": "oro aponle",
-                              "B": "oro aropo oruko",
-                              "C": "oro apejuwe",
-                              "D": "oro ise"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 13,
-                            "question": "A seda oro yii nipa sise apetunpe kikun fun oro oruko",
-                            "options": {
-                              "A": "omokomo",
-                              "B": "odoodun",
-                              "C": "Ilu",
-                              "D": "Gbomogbomo"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 14,
-                            "question": "Ohun ti a le pe ni owe ni",
-                            "options": {
-                              "A": "oro ti a gbo",
-                              "B": "oro geere",
-                              "C": "oro ogbon ti o n fi iriri han",
-                              "D": "oro soki"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 15,
-                            "question": "Ogun omode",
-                            "options": {
-                              "A": "kii sere fogun odun",
-                              "B": "lagbaagba awo sare",
-                              "C": "Ni sere osupa",
-                              "D": "Nii jeun po lale"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 16,
-                            "question": "Ewo lo ni afomo ibere ninu awon wonyi?",
-                            "options": {
-                              "A": "Ayeraye",
-                              "B": "Agbara",
-                              "C": "Atije",
-                              "D": "Alaale"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 17,
-                            "question": "Oro Iseda ni",
-                            "options": {
-                              "A": "Penpe",
-                              "B": "dugbe",
-                              "C": "ijo",
-                              "D": "ara"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 18,
-                            "question": "Ninu \"Mo lo si ibi Igbeyawo\" ‘Si’ je",
-                            "options": {
-                              "A": "Oro atokun",
-                              "B": "oro oruko",
-                              "C": "Oro asopo",
-                              "D": "Oro apejuwe"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 19,
-                            "question": "Ewo ni a seda nipa sise apetunpe?",
-                            "options": {
-                              "A": "Atije",
-                              "B": "Omokunrin",
-                              "C": "Osoose",
-                              "D": "Aseju"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 20,
-                            "question": "[O] ninu ‘Ogbon’ je mofiimu",
-                            "options": {
-                              "A": "afibo",
-                              "B": "ipile",
-                              "C": "afarahe",
-                              "D": "adaduro"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 21,
-                            "question": "Isori oro ti o maa n tele apola oruko ninu apola aponle ni",
-                            "options": {
-                              "A": "oro atokun",
-                              "B": "oro ise",
-                              "C": "oro apejuwe",
-                              "D": "oro asopo"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 22,
-                            "question": "Faweli wo ni kii bere oro ninu ede Yoruba?",
-                            "options": {
-                              "A": "{e}",
-                              "B": "{u}",
-                              "C": "{e}",
-                              "D": "{o}"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 23,
-                            "question": "Ti faweli ‘a’ ba bere oro, faweli yii ko le ba a rin",
-                            "options": {
-                              "A": "{e}",
-                              "B": "{o}",
-                              "C": "{en}",
-                              "D": "{on}"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 24,
-                            "question": "Asoju ti oba ilu to segun maa n fi tedo si ilu ti a segun re ni",
-                            "options": {
-                              "A": "Balogun",
-                              "B": "Alore",
-                              "C": "Ajele",
-                              "D": "Ami"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 25,
-                            "question": "Koto ti a wa yi ilu po ni a mo si",
-                            "options": {
-                              "A": "Alore",
-                              "B": "Ami",
-                              "C": "Eso",
-                              "D": "Yara"
-                            },
-                            "answer": "D",
-                            "image": null
-                          },
-                          {
-                            "id": 26,
-                            "question": "Ami isegun ni",
-                            "options": {
-                              "A": "Ewe tutu",
-                              "B": "bata",
-                              "C": "owo",
-                              "D": "aso didu"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 27,
-                            "question": "Aleebu ogun jija ni",
-                            "options": {
-                              "A": "opo ounje",
-                              "B": "owo pupo",
-                              "C": "emi sisofo",
-                              "D": "aso pupo"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 28,
-                            "question": "Bawo ni a se le dena ogun jija?",
-                            "options": {
-                              "A": "Ninu suuru",
-                              "B": "ka maa binu",
-                              "C": "ka maa soro eniyan leyin",
-                              "D": "ka maaja"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 29,
-                            "question": "_________ ni ori oro fun apola atokun",
-                            "options": {
-                              "A": "oro oruko",
-                              "B": "oro ise",
-                              "C": "oro atokun",
-                              "D": "oro eyan"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 30,
-                            "question": "Ewo lo ni apeere apola atokun?",
-                            "options": {
-                              "A": "Olu wa ni ile eko",
-                              "B": "O n soro eyin",
-                              "C": "won jokoo jeje won",
-                              "D": "Ojo je isu"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 31,
-                            "question": "\"Won tan ina sinu ile, o mo roro\" ‘roro je’ oro",
-                            "options": {
-                              "A": "oruko",
-                              "B": "aponle",
-                              "C": "apejuwe",
-                              "D": "asopo"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 32,
-                            "question": "_______ ni iro to n ko ipa to poju ninu idije ere idaraya",
-                            "options": {
-                              "A": "majesin",
-                              "B": "omode",
-                              "C": "agunbaniro",
-                              "D": "igiripa"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 33,
-                            "question": "Ki agunbaniro meji maa ba ara won sise yipo oko ara won ni a n pe ni _______",
-                            "options": {
-                              "A": "aaro",
-                              "B": "owe",
-                              "C": "ebese",
-                              "D": "arokodoko"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 34,
-                            "question": "Iro wo lo ko ipa to poju nipa oro oselu laye atijo?",
-                            "options": {
-                              "A": "omode",
-                              "B": "agunbaniro",
-                              "C": "igiripa",
-                              "D": "agba"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 35,
-                            "question": "Ni aye atijo, iro agunbaniro, a maa fi _____ran ara won lowo ninu ise oko",
-                            "options": {
-                              "A": "owe",
-                              "B": "ebese",
-                              "C": "aaro",
-                              "D": "arokodoko"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 36,
-                            "question": "Ilana akanpo oro oruko meji ni a fi seda",
-                            "options": {
-                              "A": "wole wole",
-                              "B": "jije",
-                              "C": "jomijomi",
-                              "D": "eranko"
-                            },
-                            "answer": "D",
-                            "image": null
-                          },
-                          {
-                            "id": 37,
-                            "question": "Orisa wo ni yoruba gba pe o ti joba ri?",
-                            "options": {
-                              "A": "oya",
-                              "B": "egungun",
-                              "C": "sango",
-                              "D": "ogun"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 38,
-                            "question": "Ta ni olori awon olusin Sango?",
-                            "options": {
-                              "A": "Elegun",
-                              "B": "Baba Mogba",
-                              "C": "Babalawo",
-                              "D": "Aworo"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 39,
-                            "question": "Nibo ni ilu oya?",
-                            "options": {
-                              "A": "Ira",
-                              "B": "Ondo",
-                              "C": "Oyo",
-                              "D": "Ilesa"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 40,
-                            "question": "Orisa ile Yoruba to",
-                            "options": {
-                              "A": "Okanlelogun",
-                              "B": "Okanlelugba",
-                              "C": "Okanlenirinwo",
-                              "D": "Okanleloodunrun"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 41,
-                            "question": "Eewo orisa obatala ni",
-                            "options": {
-                              "A": "Emu",
-                              "B": "ejo",
-                              "C": "adi",
-                              "D": "iru"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 42,
-                            "question": "Orisa ti o lagbara lori ina ati ara ni a mo si",
-                            "options": {
-                              "A": "Sango",
-                              "B": "Ogun",
-                              "C": "Obatala",
-                              "D": "Esu"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 43,
-                            "question": "Gbogbo irumole Yoruba to meloo",
-                            "options": {
-                              "A": "340",
-                              "B": "401",
-                              "C": "104",
-                              "D": "240"
-                            },
-                            "answer": "B",
-                            "image": null
-                          },
-                          {
-                            "id": 44,
-                            "question": "Lara ohun elo ogun ni",
-                            "options": {
-                              "A": "Ibon",
-                              "B": "Oye",
-                              "C": "Igbale",
-                              "D": "Omi"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 45,
-                            "question": "Aleebu ogun jija ni",
-                            "options": {
-                              "A": "opo ounje",
-                              "B": "owo pupo",
-                              "C": "emi sisofo",
-                              "D": "aso pupo"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 46,
-                            "question": "Iyawo akoko ti ladepo fe ni",
-                            "options": {
-                              "A": "Asunle",
-                              "B": "Atoke",
-                              "C": "Mosun",
-                              "D": "Ejinike"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 47,
-                            "question": "Ta ni Delodun pe nigba ti afesona egbon ji egbon re gbe",
-                            "options": {
-                              "A": "fola",
-                              "B": "Akanmu",
-                              "C": "Dokun",
-                              "D": "Odusote"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 48,
-                            "question": "Ibudo itan ti won lo ninu iwe naa ni",
-                            "options": {
-                              "A": "Ikereku, Ibadan",
-                              "B": "Ido, Omuo",
-                              "C": "Ondo, Idanre",
-                              "D": "Ikereku, Ado"
-                            },
-                            "answer": "A",
-                            "image": null
-                          },
-                          {
-                            "id": 49,
-                            "question": "Kin ni oruko omo-oba naa?",
-                            "options": {
-                              "A": "Kike",
-                              "B": "Tola",
-                              "C": "Bola",
-                              "D": "Bolu"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 50,
-                            "question": "Omo meloo ni oba naa bi?",
-                            "options": {
-                              "A": "meji",
-                              "B": "meta",
-                              "C": "okan",
-                              "D": "marun-un"
-                            },
-                            "answer": "C",
-                            "image": null
-                          },
-                          {
-                            "id": 51,
-                            "question": "Kin ni adehun ti oba se fun eni ti o ba la ohun omo re? oun o fun un ni",
-                            "options": {
-                              "A": "Ilaji ohun ini oun",
-                              "B": "Ile oun",
-                              "C": "Eru",
-                              "D": "awon eranko"
-                            },
-                            "answer": "A",
-                            "image": null
-                          }
+  {
+      "id": 1,
+      "question": "_______ ni ohun ti a ro, ki a to se akoole re.",
+      "options": {
+        "A": "akole",
+        "B": "awoko",
+        "C": "Aroko",
+        "D": "aropo"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "Ise oluko dara ju ise agbe lo je apeere aroko___________",
+      "options": {
+        "A": "oniroyin",
+        "B": "alariyanjiyan",
+        "C": "alaye",
+        "D": "alapejuwe"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "_______ kii se orisirisi apeere aroko ti o wa.",
+      "options": {
+        "A": "aroko oniroyin",
+        "B": "aroko alariyanjiyan",
+        "C": "Aroko alalaye",
+        "D": "Aroko pipa"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "Leta kiko pin si ona _________",
+      "options": {
+        "A": "meji",
+        "B": "meta",
+        "C": "marun-un",
+        "D": "meje"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Ewo ni kii se apeere ise iseda ipese eran?",
+      "options": {
+        "A": "ise eja pipa",
+        "B": "ise ode igbo",
+        "C": "ise alapata",
+        "D": "ise irin wiwa ati sisun"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "A le pin awon ise isenbaye Yoruba si ona___________",
+      "options": {
+        "A": "marun-un",
+        "B": "mewaa",
+        "C": "meje",
+        "D": "meji"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Ise epo fifo je ise ipese___________",
+      "options": {
+        "A": "eran",
+        "B": "ohun elo",
+        "C": "Ounje",
+        "D": "fun ayeye"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "______ ni eni ti a bi, ti o si tun ara re bi pelu iwa rere.",
+      "options": {
+        "A": "omoluabi",
+        "B": "omode",
+        "C": "agbalagba",
+        "D": "aro"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Omoluabi a maa ki eniyan pelu_______",
+      "options": {
+        "A": "inu buburu",
+        "B": "oyaya",
+        "C": "ibanuje",
+        "D": "ija"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Ewo ni ko si lara abuda iwa omoluabi.?",
+      "options": {
+        "A": "iwa rere",
+        "B": "iberu olorun lokan",
+        "C": "iwa jegudujera",
+        "D": "ibowo fun agbalagba"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "Aini iwa omoluabi a maa mu ki eniyan ni opolopo_______",
+      "options": {
+        "A": "owo",
+        "B": "ile",
+        "C": "isoro",
+        "D": "ibukun"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "______ a maa ni oruko rere ni awujo awon eniyan.",
+      "options": {
+        "A": "omoluabi",
+        "B": "Gbewiri",
+        "C": "Eranko",
+        "D": "jaguda"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Ona ti Yoruba maa n gba ran ara won lowo ni aye atijo ni________",
+      "options": {
+        "A": "ole jija",
+        "B": "iwa igberaga",
+        "C": "arokodoko",
+        "D": "ija jija"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "_______kii se asa iran-ra-eni-lowo ni Ile Yoruba.",
+      "options": {
+        "A": "Ebese",
+        "B": "Aaro",
+        "C": "arokodoko",
+        "D": "ole jija"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Awon wo ni o maa n gba Aaro?",
+      "options": {
+        "A": "Tokunrin tobinrin",
+        "B": "oluko",
+        "C": "alakowe",
+        "D": "olowo"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Tani a maa n be ni owe sise ni Ile Yoruba?",
+      "options": {
+        "A": "Baba",
+        "B": "ore ati ebi",
+        "C": "ota",
+        "D": "omo"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Ewo ni kii se anfaani asa iran-ra-eni-lowo awon wonyii?",
+      "options": {
+        "A": "O n mu ki ise won ya",
+        "B": "O n din iwa ole ku",
+        "C": "O n mu ki ife gbile",
+        "D": "O n mu ki iwa ole po sii"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "_______ni ki a roko lati inu oko kan lo si oko keji.",
+      "options": {
+        "A": "Esusu",
+        "B": "Aaro",
+        "C": "arokodoko",
+        "D": "Ajo"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Asa iran-ra-eni-lowo ti ko wopo lode oni mo ni_________",
+      "options": {
+        "A": "Egbe Alasowopo",
+        "B": "Ajo",
+        "C": "Aaro",
+        "D": "Arokodoko"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Ile_________ eni ni a maa n be owe lo.",
+      "options": {
+        "A": "ana",
+        "B": "egbon",
+        "C": "eko",
+        "D": "iwe"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "______ ni ege oro ti eemi gbe jade leekan soso.",
+      "options": {
+        "A": "Ohun",
+        "B": "Ede",
+        "C": "Silebu",
+        "D": "Oro"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "________ni oro to sise koko gbolohun.",
+      "options": {
+        "A": "Oro-oruko",
+        "B": "Oro-ise",
+        "C": "Oro-aponle",
+        "D": "Oro-asopo"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Silebu meloo ni n be ninu oro ORONBO?",
+      "options": {
+        "A": "meta",
+        "B": "meji",
+        "C": "mefa",
+        "D": "merin"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "Silebu meloo ni n be ninu oro ALEJO?",
+      "options": {
+        "A": "meji",
+        "B": "meta",
+        "C": "marun-un",
+        "D": "mefa"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "Silebu meloo ni n be ninu oro OROGODOGANYIN?",
+      "options": {
+        "A": "mefa",
+        "B": "mejo",
+        "C": "mesan-an",
+        "D": "meji"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "Silebu meloo ni n be ninu oro AJOMOLE?",
+      "options": {
+        "A": "meta",
+        "B": "meji",
+        "C": "merin",
+        "D": "mewaa"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "Ewo ni Oro-ise ninu gbolohun: Olu ra aso tuntun.",
+      "options": {
+        "A": "ra",
+        "B": "olu",
+        "C": "aso",
+        "D": "tuntun"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "Ewo ni Oro-ise ninu gbolohun: Mo ri yin lanaa.",
+      "options": {
+        "A": "yin",
+        "B": "mo",
+        "C": "ri",
+        "D": "lanaa"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "Ewo ni Oro-ise ninu gbolohun: Akuko ko ni idaji.",
+      "options": {
+        "A": "idaji",
+        "B": "ni",
+        "C": "akuko",
+        "D": "ko"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "Ewo ni Oro-ise ninu gbolohun: Aafin oba tobi pupo.",
+      "options": {
+        "A": "tobi",
+        "B": "oba",
+        "C": "Aafin",
+        "D": "pupo"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "_________ ni iro ti a pe ti ko si idiwo fun afefe tabi eemi.",
+      "options": {
+        "A": "Silebu",
+        "B": "Faweli",
+        "C": "Gbolohun",
+        "D": "Konsonanti"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "Faweli ede Yoruba pin si ona _______",
+      "options": {
+        "A": "merin",
+        "B": "mejo",
+        "C": "meji",
+        "D": "meta"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Iro faweli airanmupe je__________",
+      "options": {
+        "A": "marun-un",
+        "B": "meje",
+        "C": "merin",
+        "D": "mejila"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Gbogbo iro faweli ede Yoruba lo je iro ________",
+      "options": {
+        "A": "akunyun",
+        "B": "konsonanti",
+        "C": "aikunyun",
+        "D": "ibon"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "Faweli oke ni________",
+      "options": {
+        "A": "i ati u",
+        "B": "a ati e",
+        "C": "O ati I",
+        "D": "r ati w"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "Faweli odo ni______",
+      "options": {
+        "A": "a",
+        "B": "I",
+        "C": "u",
+        "D": "o"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "Faweli airanmupe, oke, eyin, ahanupe roboto ni________",
+      "options": {
+        "A": "[u]",
+        "B": "[ i]",
+        "C": "[a]",
+        "D": "[o]"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "________ ni awon eya ara amupero to le gbera lo si oke tabi lo si isale ti a ba n pe iro.",
+      "options": {
+        "A": "afipe asunsi",
+        "B": "afipe akanmole",
+        "C": "afipe elebe",
+        "D": "Ihun gbolohun"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "Ewo ni kii se apeere eya ara afipe asunsi?",
+      "options": {
+        "A": "olele",
+        "B": "eyin ahon",
+        "C": "tan-an-na",
+        "D": "ete oke"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "Bawo ni a se n ki awon agbe ni Ile Yoruba?",
+      "options": {
+        "A": "igba a ro o",
+        "B": "aroko bodunde",
+        "C": "aredu o",
+        "D": "oko a refo o"
+      },
+      "answer": "A",
+      "image": null
+    }
 ];
 
 
         const staticTheoryQuestions = [
-                        {
-                          "id": 1,
-                          "question": "Ko aroko ti ko din ni 300 eyo oro kan soso ti o ba yan:\n(a) Yunisasiti ti mo fe lo\n(b) Anfaani ti o wa ninu iwe iroyin kika\n(c) Ko leta si ore re ni Ile-eko miiran lati se alaye fun un ohun ti o ro pe o fa aibowo fun oluko mo ni awon Ile-eko",
-                          "marks": 10,
-                          "image": null
-                        },
-                        {
-                          "id": 2,
-                          "question": "(a) Seda oro oruko mejimeji pelu awon afomo ibeere won yi:\n(i) i\n(ii) e\n(iii) a\n(iv) ai\n(v) oni\n(b) Lo oro kookan ti o seda labe isori 2a (i-v) ninu gbolohun lati fi itumo won han",
-                          "marks": 10,
-                          "image": null
-                        },
-                        {
-                          "id": 3,
-                          "question": "Soro lori Sango gege bi orisa ni Ile Yoruba",
-                          "marks": 10,
-                          "image": null
-                        },
-                        {
-                          "id": 4,
-                          "question": "(a) Kin ni oro aponle?\n(b) Daruko ise meta ti oro aponle n se pelu apeere meji meji",
-                          "marks": 10,
-                          "image": null
-                        },
-                        {
-                          "id": 5,
-                          "question": "(a) Salaye ohun ti ogun jija je\n(b) Salaye ona marun-un ti a le gba dena ogun jija",
-                          "marks": 10,
-                          "image": null
-                        },
-                        {
-                          "id": 6,
-                          "question": "Ninu alo Ijapa ati Ehoro sa ere Ije, salaye bi igberaga se pa Ehoro",
-                          "marks": 10,
-                          "image": null
-                        }
+                                  {
+      "id": 1,
+      "question": "Ya ate faweli Yoruba, ki o si se apejuwe won lekunrere.",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "2a. Daruko merin lara afipe asunsi\n2b. So merin lara afipe akanmole.",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "3a. kini faweli ede Yoruba?\n3b. Daruko ona meji ti faweli pin si.",
+      "marks": 10,
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "4a. Kini ohun mimo tumo si ninu esin ibile Yoruba?\n4b. Ko apeere marun-un lara awon ohun mimo ninu esin ibile Yoruba.",
+      "marks": 10,
+      "image": null
+    }
 ];
-          // ================== APPLICATION VARIABLES ==================
+        // ================== APPLICATION VARIABLES ==================
         let questions = [];
         let currentQuestion = 0;
         let userAnswers = [];
@@ -1378,7 +1154,30 @@
                 localStorage.setItem('examClass', 'RESULT');
             }
             localStorage.setItem('examTerm', 'SECOND TERM 2025/2026');
-      
+             /*let username = sessionStorage.getItem('username');
+             const userImage = sessionStorage.getItem('image');
+            document.getElementById("usernameDisplay").innerText = "WELCOME:" + " " + username;
+            document.getElementById('userImage').src = "img/student.png";
+            document.getElementById('userName').innerText = username;
+            document.getElementById('userImage').src = userImage;
+
+
+            const username = sessionStorage.getItem('username') || 'Student';
+            const userImageFile = sessionStorage.getItem('image');
+            const userImagePath = userImageFile ? `img/${userImageFile}` : 'img/default_user.jpg';
+
+            // Set username
+            const usernameElements = [document.getElementById('userName'), document.getElementById('usernameDisplay')];
+            usernameElements.forEach(el => { if(el) el.innerText = username; });
+
+            // Set user image
+            const userImageElement = document.getElementById('userImage');
+            if(userImageElement){
+                userImageElement.src = userImagePath;
+                userImageElement.onerror = function(){
+                    this.src = 'img/default_user.jpg'; // fallback if image not found
+                };
+            }*/
              const username = sessionStorage.getItem('username');
                 const image = sessionStorage.getItem('image');
 
@@ -1388,10 +1187,11 @@
                   document.getElementById('username').innerText = username;
                   
               
-                /*document.getElementById('userImage').src =
-              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');*/
+                //document.getElementById('userImage').src =
+              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
+
+              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
                 }
-            document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
            
             // Load static questions
             questions = staticObjectivesQuestions;
@@ -1409,39 +1209,27 @@
             updateTheoryStatus();
         };
        
-                    // ================== TIMER ==================
-                let timeLeft = 60 * 90; // 90 minutes in seconds
-                const timerEl = document.getElementById('timer');
-                const timerInterval = setInterval(() => {
-                    const hours = Math.floor(timeLeft / 3600);
-                    const minutes = Math.floor((timeLeft % 3600) / 60);
-                    const seconds = timeLeft % 60;
-                    
-                    // Build display string
-                    let display = '';
-                    if (hours > 0) {
-                        display += `${hours} Hr:`;
-                    }
-                    if (minutes > 0 || hours > 0) { // show minutes if any hour or minute >0
-                        display += `${minutes} Min: `;
-                    }
-                    display += `${seconds} Sec`;
-                    
-                    timerEl.textContent = `Time Remaining: ${display}`;
-                    timeLeft--;
-                   
-                    // Change color when time is running out (less than 5 minutes)
-                    if (timeLeft < 300) { // 5 minutes = 300 seconds
-                        timerEl.style.color = 'red';
-                        timerEl.style.animation = 'pulse 1s infinite';
-                    }
-                   
-                    if (timeLeft < 0) {
-                        clearInterval(timerInterval);
-                        alert("Time is up! Your exam will be submitted automatically.");
-                        submitExam();
-                    }
-                }, 1000);
+        // ================== TIMER ==================
+        let timeLeft = 60 * 90; // 60 minutes
+        const timerEl = document.getElementById('timer');
+        const timerInterval = setInterval(() => {
+            let min = Math.floor(timeLeft / 60);
+            let sec = timeLeft % 60;
+            timerEl.textContent = `Time Remaining: ${min}:${sec < 10 ? '0' + sec : sec}`;
+            timeLeft--;
+           
+            // Change color when time is running out
+            if (timeLeft < 300) { // 5 minutes
+                timerEl.style.color = 'red';
+                timerEl.style.animation = 'pulse 1s infinite';
+            }
+           
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                alert("Time is up! Your exam will be submitted automatically.");
+                submitExam();
+            }
+        }, 1000);
        
         // ================== SECTION TOGGLE ==================
         function showSection(section) {
@@ -1606,16 +1394,165 @@
             document.getElementById("unansweredLabel").innerText = `Unanswered: ${unansweredCount}`;
         }
        
-
-   
+        /*function submitExam() {
+            saveAnswer();
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            clearInterval(timerInterval);
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+        }*/
          function submitExam() {
             saveAnswer();
             showResult();
         }
        
+        /*function showResult() {
+            clearInterval(timerInterval);
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            const username = localStorage.getItem("username") || "Guest";
+            localStorage.setItem("examUser", username);
+            localStorage.setItem("examScore", score);
+            localStorage.setItem("totalQuestions", questions.length);
 
 
-                    function showResult() {
+            // Save exam data before going to result page
+            localStorage.setItem("student_name", username);
+            localStorage.setItem("student_class", selectedClass);
+            localStorage.setItem("exam_subject", selectedSubject);
+            localStorage.setItem("student_image", studentImageURL);
+            localStorage.setItem("exam_score", score);
+            localStorage.setItem("total_questions", totalQuestions);
+
+                // Redirect to results page
+                window.location.href = "results.html";
+           
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+            window.location.href = "results.html";
+        }*/
+        /*function showResult() {
+            clearInterval(timerInterval);
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (userAnswers[i] === q.answer) score++;
+            });
+           
+            const username = localStorage.getItem("username") || "Guest";
+            const cls = sessionStorage.getItem("class");
+            const sub = sessionStorage.getItem("subject");
+           
+            localStorage.setItem("examUser", username);
+            localStorage.setItem("examScore", score);
+            localStorage.setItem("totalQuestions", questions.length);
+            localStorage.setItem("examInfo", document.getElementById('examInfo').textContent.trim());
+           
+            // ✅ Mark exam as completed
+            if (cls && sub) {
+                const attempts = getExamAttempts(cls);
+                if (!attempts[username]) {
+                    attempts[username] = {};
+                }
+                attempts[username][sub] = true;
+                saveExamAttempts(cls, attempts);
+            }
+           
+            alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}`);
+            window.location.href = "results.html";
+    }*/
+       /*function showResult() {
+                    clearInterval(timerInterval);
+                    let score = 0;
+                    questions.forEach((q, i) => {
+                        if (userAnswers[i] === q.answer) score++;
+                    });
+                   
+                    const username = sessionStorage.getItem('username') || "Guest";
+                    const cls = sessionStorage.getItem('class');
+                    const sub = sessionStorage.getItem('subject');
+                   
+                    localStorage.setItem("examUser", username);
+                    localStorage.setItem("examScore", score);
+                    localStorage.setItem("totalQuestions", questions.length);
+                    localStorage.setItem("pendingClass", cls);
+                    localStorage.setItem("pendingSubject", sub);
+                    localStorage.setItem("pendingUsername", username);
+                   
+                    // ✅ Get exam info from sessionStorage or use default
+                    const examInfo = sessionStorage.getItem('examInfo') || 'EXAMINATION - RERSULT (2ND TERM)';
+                    localStorage.setItem("examInfo", examInfo);
+                   
+                    // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+                    console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+                   
+                    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
+                    window.location.href = "results.html";
+        }*/
+
+            /*function showResult() {
+				    clearInterval(timerInterval);
+				    let score = 0;
+				    questions.forEach((q, i) => {
+				        if (userAnswers[i] === q.answer) score++;
+				    });
+				    
+				    const username = sessionStorage.getItem('username') || "Guest";
+				    const cls = sessionStorage.getItem('class');
+				    const sub = sessionStorage.getItem('subject');
+				    
+				    localStorage.setItem("examUser", username);
+				    localStorage.setItem("examScore", score);
+				    localStorage.setItem("totalQuestions", questions.length);
+				    localStorage.setItem("pendingClass", cls);
+				    localStorage.setItem("pendingSubject", sub);
+				    localStorage.setItem("pendingUsername", username);
+				    
+				    // ✅ Get exam info from sessionStorage or use default
+				    const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
+				    localStorage.setItem("examInfo", examInfo);
+				    
+				    // ✅ Secretly download score details to downloads folder
+				    const scoreDetails = {
+				        username: username,
+				        class: cls,
+				        subject: sub,
+				        score: score,
+				        totalQuestions: questions.length,
+				        percentage: ((score / questions.length) * 100).toFixed(2) + '%',
+				        examInfo: examInfo,
+				        timestamp: new Date().toISOString(),
+				        userAnswers: userAnswers,
+				        correctAnswers: questions.map(q => q.answer)
+				    };
+				    
+				    // Create a blob with the data
+				    const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
+				    const url = URL.createObjectURL(blob);
+				    
+				    // Create a hidden anchor element and trigger download
+				    const a = document.createElement('a');
+				    a.href = url;
+				    a.download = `exam_results_${username}_${new Date().getTime()}.json`;
+				    a.style.display = 'none';
+				    document.body.appendChild(a);
+				    a.click();
+				    
+				    // Clean up
+				    document.body.removeChild(a);
+				    URL.revokeObjectURL(url);
+				    
+				    // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+				    console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+				    
+				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
+				    window.location.href = "results.html";
+				}*/
+                function showResult() {
                         clearInterval(timerInterval);
                         let score = 0;
                         questions.forEach((q, i) => {
@@ -1633,10 +1570,11 @@
                         localStorage.setItem("pendingSubject", sub);
                         localStorage.setItem("pendingUsername", username);
                         
+                        // Get exam info from sessionStorage or use default
                         const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
                         localStorage.setItem("examInfo", examInfo);
                         
-                        // Build the record
+                        // ✅ Build a clean record for history (to be used by records.html)
                         const record = {
                             username: username,
                             class: cls,
@@ -1648,44 +1586,41 @@
                             timestamp: new Date().toISOString()
                         };
                         
-                        // ------------------ 🌐 SEND TO GOOGLE SHEETS ------------------
-                        const API_URL = 'https://script.google.com/macros/s/AKfycbzW4zlbuW16fAFRcwg4ow8b6IAQEp4e2zIqLjL7zhdkkHvEDrDwwxT0PX46dwBIiXgm/exec'; // ← paste your web app URL here
-                        
-                        fetch(API_URL, {
-                            method: 'POST',
-                            mode: 'no-cors',        // required because Apps Script doesn't send CORS headers
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(record)
-                        }).catch(err => console.error('Failed to send to cloud:', err));
-                        // ---------------------------------------------------------------
-                        
-                        // (Optional) Keep local backup
+                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
                         let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
                         records.push(record);
                         localStorage.setItem('examRecords', JSON.stringify(records));
                         
-                        // Download JSON (your existing code)
+                        // ✅ Secretly download score details to downloads folder
                         const scoreDetails = {
                             ...record,
                             userAnswers: userAnswers,
                             correctAnswers: questions.map(q => q.answer)
                         };
                         
+                        // Create a blob with the data
                         const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
                         const url = URL.createObjectURL(blob);
+                        
+                        // Create a hidden anchor element and trigger download
                         const a = document.createElement('a');
                         a.href = url;
                         a.download = `exam_results_${username}_${new Date().getTime()}.json`;
                         a.style.display = 'none';
                         document.body.appendChild(a);
                         a.click();
+                        
+                        // Clean up
                         document.body.removeChild(a);
                         URL.revokeObjectURL(url);
                         
-                        console.log(`Exam completed. Waiting for confirmation.`);
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results.`);
+                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
+                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
+                        
+                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
                         window.location.href = "results.html";
                     }
+
 
 
 
