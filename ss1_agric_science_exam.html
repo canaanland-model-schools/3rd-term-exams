@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.canaanlandmodelgroupofschools.org - DIGITAL TECHNOLOGY Exam</title>
+    <title>cbt.canaanlandmodelgroupofschools.org - AGRICULTURAL SCIENCE Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -118,7 +118,7 @@
             background: #2c3e50;
         }
         #datetime {
-            color: red;
+            color:blue;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -205,7 +205,7 @@
             padding: 15px;
             font-size: 18px;
             color: red; /*#333;*/
-            background-color: white;/* #f9f9f9;*/
+            background-color: lime;/* #f9f9f9;*/
             border-radius: 5px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
@@ -244,8 +244,8 @@
             font-size: 16px;
             border: none;
             border-radius: 8px;
-            background: purple;/*#2e7d32;*/
-            color: red;
+            background: #2e7d32;
+            color: white;
             cursor: pointer;
             transition: background 0.3s;
             font-weight: bold;
@@ -476,14 +476,14 @@
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            background: deepskyblue;
+            background: aqua;
             padding: 10px 0;
         }
     
         /* Moving text animation */
         .marquee-text {
             display: inline-block;
-            color: red;
+            color: fuchsia;
             font-size: 24px;
             font-weight: bold;
             animation: marquee 10s linear infinite;
@@ -507,17 +507,12 @@
         <div id="logout-container">
             <button id="logout" onclick="logout()">Logout</button>
                  <div class="marquee-container">
-        <span class="marquee-text">3RD TERM PROMOTION EXAMINATION :CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
+        <span class="marquee-text">CANAANLAND  GROUP OF SCHOOLS :  GOD IS OUR STRENGTH</span>
     </div>
         </div>
         <div id="logo">
             <img src="img/Ctemplogo.png" alt="COLLEGE CBT PORTAL">
-
         </div>
-
-           
-            
-
         <div id="student-info">
             <center><strong>ATTENTION! CLICK ON SUBMIT BUTTON BEFORE YOUR TIME IS UP TO SAVE YOUR SCORE</strong></center>
             <center><p id="datetime"></p></center>
@@ -530,7 +525,12 @@
           <h2 id="username">Student Name</h2>
            </div>
 
-     
+        <!--<img id="userImage" src="img/default_user.jpg" alt="Student Image" style="width:120px; height:120px; border-radius:50%; border:3px solid #008000; display:block; margin:0 auto;">
+      
+            <center><img id="userImage"><br><br></center>
+             <img id="userImage" src="img/default_user.jpg" alt="Student Image">
+            <center>Hello: <span id="userName"></span></center>
+        </div>-->
 
     
         <center><h3>CANAANLAND  GROUP OF SCHOOLS EKUTE QUARTERS  ADO EKITI </h3></center> 
@@ -543,7 +543,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  DIGITAL TECHNOLOGY - SS1 (THIRD TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">  AGRICULTURAL SCIENCE - SS1 (THIRD TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -609,7 +609,7 @@
         <p id="unansweredLabel">Unanswered: 5/5</p>
     </div>
              <div class="marquee-container">
-        <span class="marquee-text">JUNE/JULY THIRD  TERM PROMOTION  EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
+        <span class="marquee-text">3RD TERM EXAMINATIONS 2025/2026 ACADEMIC SESSION</span>
     </div>
    
     <div class="windows-activate">
@@ -624,668 +624,1282 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-    {
+         {
       "id": 1,
-      "question": "Microsoft Word and Google Docs are examples of which type of application software?",
+      "question": "The application of machinery and technology in farming operations to increase productivity is known as?",
       "options": {
-        "A": "Spreadsheet",
-        "B": "Word processor",
-        "C": "Presentation software",
-        "D": "Database"
+        "A": "Agricultural modernisation",
+        "B": "Agricultural mechanisation",
+        "C": "Agricultural intensification",
+        "D": "Agricultural diversification"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 2,
-      "question": "In a word processor, changing the font style to bold is an example of?",
+      "question": "A major prospect of agricultural mechanisation is its potential to?",
       "options": {
-        "A": "Paragraph formatting",
-        "B": "Page layout",
-        "C": "Character formatting",
-        "D": "Document formatting"
+        "A": "Decrease food production",
+        "B": "Boost food production significantly",
+        "C": "Increase the cost of labour",
+        "D": "Reduce the land area for farming"
       },
-      "answer": "C",
+      "answer": "B",
       "image": null
     },
     {
       "id": 3,
-      "question": "The toolbar at the top of Microsoft Word, organized into tabs, is called the?",
+      "question": "Mechanisation opens up new employment opportunities in the?",
       "options": {
-        "A": "Menu bar",
-        "B": "Status bar",
-        "C": "Ribbon",
-        "D": "Title bar"
+        "A": "Traditional handicraft sector",
+        "B": "Agricultural technology (agri-tech) sector",
+        "C": "Subsistence farming sector",
+        "D": "Import-export trade only"
       },
-      "answer": "C",
+      "answer": "B",
       "image": null
     },
     {
       "id": 4,
-      "question": "Which type of text alignment is used to make text line up evenly on both the left and right margins, like in a newspaper?",
+      "question": "Mechanisation provides the foundation for which type of agriculture?",
       "options": {
-        "A": "Left align",
-        "B": "Right align",
-        "C": "Center align",
-        "D": "Justify"
-      },
-      "answer": "D",
-      "image": null
-    },
-    {
-      "id": 5,
-      "question": "The blank white space around the edge of a document is known as the?",
-      "options": {
-        "A": "Header",
-        "B": "Footer",
-        "C": "Margin",
-        "D": "Indent"
+        "A": "Shifting cultivation",
+        "B": "Subsistence agriculture",
+        "C": "Large-scale commercial agriculture",
+        "D": "Bush fallowing"
       },
       "answer": "C",
       "image": null
     },
     {
-      "id": 6,
-      "question": "Page orientation that is taller than it is wide is called?",
+      "id": 5,
+      "question": "As agriculture becomes more mechanised, it increases the supply of raw materials to?",
       "options": {
-        "A": "Landscape",
-        "B": "Portrait",
-        "C": "Wide",
-        "D": "Square"
+        "A": "Local markets only",
+        "B": "Agro-allied industries",
+        "C": "Foreign countries",
+        "D": "The service industry"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Mechanisation enhances the quality and quantity of farm produce, creating opportunities for?",
+      "options": {
+        "A": "Increased local consumption only",
+        "B": "Meeting international standards and export",
+        "C": "Reducing foreign exchange earnings",
+        "D": "Decreasing the need for packaging"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 7,
-      "question": "Small sections at the very top of every page, often used for page numbers or document titles, are called?",
+      "question": "The push for agricultural mechanisation fosters scientific research and the development of machines adapted to?",
       "options": {
-        "A": "Footers",
-        "B": "Margins",
-        "C": "Headers",
-        "D": "Footnotes"
+        "A": "Foreign conditions only",
+        "B": "Local conditions",
+        "C": "Urban environments",
+        "D": "Desert climates"
       },
-      "answer": "C",
+      "answer": "B",
       "image": null
     },
     {
       "id": 8,
-      "question": "The feature that allows you to create many personalized documents (like letters) from a single template and a list of names and addresses is?",
+      "question": "Mechanised farming allows for the precise application of water and fertilisers, which promotes?",
       "options": {
-        "A": "Spell Check",
-        "B": "Mail Merge",
-        "C": "Thesaurus",
-        "D": "Track Changes"
+        "A": "Environmental degradation",
+        "B": "Better resource management and sustainability",
+        "C": "Increased wastage",
+        "D": "Soil pollution"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 9,
-      "question": "Microsoft Excel and Google Sheets are examples of?",
+      "question": "Government programmes providing tractor-hiring schemes are a form of support for?",
       "options": {
-        "A": "Word processors",
-        "B": "Spreadsheet applications",
-        "C": "Presentation software",
-        "D": "Database management systems"
+        "A": "Reducing agricultural output",
+        "B": "Agricultural mechanisation",
+        "C": "Limiting farmers' access to technology",
+        "D": "Promoting manual labour"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 10,
-      "question": "In a spreadsheet, the intersection of a row and a column is called a?",
+      "question": "The business model where entrepreneurs offer rental services of machinery to small-scale farmers is known as?",
       "options": {
-        "A": "Worksheet",
-        "B": "Workbook",
-        "C": "Cell",
-        "D": "Field"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 11,
-      "question": "Rows in a spreadsheet are identified by?",
-      "options": {
-        "A": "Letters (A, B, C\u2026)",
-        "B": "Numbers (1, 2, 3\u2026)",
-        "C": "Symbols",
-        "D": "Cell addresses"
+        "A": "Subsistence farming",
+        "B": "Mechanisation service enterprises",
+        "C": "Cooperative marketing",
+        "D": "Sharecropping"
       },
       "answer": "B",
       "image": null
     },
     {
-      "id": 12,
-      "question": "Columns in a spreadsheet are identified by?",
+      "id": 11,
+      "question": "The energy or force required to carry out agricultural operations is known as?",
       "options": {
-        "A": "Numbers (1, 2, 3\u2026)",
-        "B": "Letters (A, B, C\u2026)",
-        "C": "Colours",
-        "D": "Dates"
+        "A": "Farm power",
+        "B": "Farm machinery",
+        "C": "Farm implement",
+        "D": "Farm labour"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Human power in agriculture refers to the?",
+      "options": {
+        "A": "Use of machines for farming",
+        "B": "Physical effort exerted by farm workers",
+        "C": "Use of animals for ploughing",
+        "D": "Energy from electricity"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 13,
-      "question": "The unique name for a cell, formed by its column letter and row number, is its?",
+      "question": "An advantage of human power is that it is?",
       "options": {
-        "A": "Formula",
-        "B": "Value",
-        "C": "Cell address (or reference)",
-        "D": "Range"
+        "A": "Very efficient for large-scale farming",
+        "B": "Cheap and readily available",
+        "C": "Not prone to fatigue",
+        "D": "Very fast"
       },
-      "answer": "C",
+      "answer": "B",
       "image": null
     },
     {
       "id": 14,
-      "question": "The bar at the top of a spreadsheet where you can see and edit the contents of the active cell is the?",
+      "question": "A major disadvantage of human power is its?",
       "options": {
-        "A": "Status bar",
-        "B": "Title bar",
-        "C": "Formula bar",
-        "D": "Menu bar"
+        "A": "High output",
+        "B": "Low output and efficiency",
+        "C": "Ability to perform heavy tasks",
+        "D": "Constant availability"
       },
-      "answer": "C",
+      "answer": "B",
       "image": null
     },
     {
       "id": 15,
-      "question": "The golden rule for starting any formula in a spreadsheet is to begin with?",
+      "question": "The use of domesticated animals like oxen and donkeys for farm work is known as?",
       "options": {
-        "A": "A letter",
-        "B": "A number",
-        "C": "The equals sign (=)",
-        "D": "A plus sign (+)"
+        "A": "Mechanical power",
+        "B": "Electrical power",
+        "C": "Animal power",
+        "D": "Solar power"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 16,
-      "question": "If you type =5+10 in a cell, what will the cell display?",
+      "question": "A disadvantage of animal power is that it?",
       "options": {
-        "A": "5+10",
-        "B": "15",
-        "C": "=5+10",
-        "D": "An error message"
+        "A": "Is more expensive than mechanical power",
+        "B": "Requires feeding, housing, and veterinary care",
+        "C": "Is not affected by weather",
+        "D": "Never gets tired"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 17,
-      "question": "A cell reference like A1 is an example of a(n)?",
+      "question": "Mechanical power in agriculture comes from sources such as?",
       "options": {
-        "A": "Absolute reference",
-        "B": "Relative reference",
-        "C": "Mixed reference",
-        "D": "Circular reference"
+        "A": "Oxen and camels",
+        "B": "Wind and water",
+        "C": "Tractors and harvesters",
+        "D": "Humans with hoes"
       },
-      "answer": "B",
+      "answer": "C",
       "image": null
     },
     {
       "id": 18,
-      "question": "A cell reference like $A$1 is an example of a(n)?",
+      "question": "A major advantage of mechanical power is its?",
       "options": {
-        "A": "Relative reference",
-        "B": "Absolute reference",
-        "C": "Mixed reference",
-        "D": "Fixed reference"
+        "A": "Low cost of purchase",
+        "B": "High efficiency and work rate",
+        "C": "Simplicity of operation for all farmers",
+        "D": "Suitability for all types of terrain"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 19,
-      "question": "The dollar sign ($) in a cell reference is used to?",
+      "question": "Electricity used to operate farm machinery and irrigation pumps is a form of?",
       "options": {
-        "A": "Indicate a currency value",
-        "B": "Make the reference absolute (lock it)",
-        "C": "Start a formula",
-        "D": "Hide the cell's contents"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 20,
-      "question": "If you copy the formula =A1+B1 down one row, it will change to?",
-      "options": {
-        "A": "=A1+B1",
-        "B": "=$A1+1+B$1",
-        "C": "=A2+B2",
-        "D": "=B1+C1"
+        "A": "Animal power",
+        "B": "Mechanical power",
+        "C": "Electrical power",
+        "D": "Human power"
       },
       "answer": "C",
       "image": null
     },
     {
-      "id": 21,
-      "question": "You have a tax rate of 5% in cell H1. To use this constant value in formulas you copy down a column, you should use the reference?",
+      "id": 20,
+      "question": "A limitation of electrical power in rural Nigeria is?",
       "options": {
-        "A": "=H1",
-        "B": "=$H$1",
-        "C": "=$H1",
-        "D": "=H$1"
+        "A": "Its low cost",
+        "B": "Its availability only in areas with grid access",
+        "C": "Its high efficiency",
+        "D": "Its environmental friendliness"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "Energy derived from the sun and converted into electricity using solar panels is called?",
+      "options": {
+        "A": "Wind power",
+        "B": "Solar power",
+        "C": "Hydraulic power",
+        "D": "Geothermal power"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 22,
-      "question": "A pre-built, named formula in a spreadsheet that performs a complex calculation is called a?",
+      "question": "An advantage of solar power is that it is?",
       "options": {
-        "A": "Formula",
-        "B": "Function",
-        "C": "Macro",
-        "D": "Query"
+        "A": "Non-renewable and polluting",
+        "B": "Renewable and environmentally friendly",
+        "C": "Very expensive to maintain",
+        "D": "Only available at night"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 23,
-      "question": "The function =SUM(A1:A10) is used to?",
+      "question": "Wind power is harnessed using wind turbines to perform tasks such as?",
       "options": {
-        "A": "Find the average of cells A1 to A10",
-        "B": "Add all the numbers in cells A1 through A10",
-        "C": "Count the number of cells in the range",
-        "D": "Find the highest value in the range"
+        "A": "Ploughing",
+        "B": "Water pumping and electricity generation",
+        "C": "Harvesting",
+        "D": "Planting"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 24,
-      "question": "Which function would you use to find the average of the numbers in cells B2 to B20?",
+      "question": "Water or hydraulic power is derived from?",
       "options": {
-        "A": "=SUM(B2:B20)",
-        "B": "=MAX(B2:B20)",
-        "C": "=AVERAGE(B2:B20)",
-        "D": "=COUNT(B2:B20)"
-      },
-      "answer": "C",
-      "image": null
-    },
-    {
-      "id": 25,
-      "question": "To find the highest score in a list of exam results in column C, you would use the function?",
-      "options": {
-        "A": "=MIN(C:C)",
-        "B": "=MAX(C:C)",
-        "C": "=COUNT(C:C)",
-        "D": "=AVERAGE(C:C)"
+        "A": "The burning of fuel",
+        "B": "Moving water, usually from dams or rivers",
+        "C": "The sun's radiation",
+        "D": "Wind"
       },
       "answer": "B",
       "image": null
     },
     {
-      "id": 26,
-      "question": "The =COUNT() function counts cells that contain?",
+      "id": 25,
+      "question": "Which source of farm power represented by W is derived from machines like tractors?",
       "options": {
-        "A": "Text only",
-        "B": "Any data (numbers and text)",
-        "C": "Numbers",
-        "D": "Formulas"
+        "A": "Human power",
+        "B": "Animal power",
+        "C": "Mechanical power",
+        "D": "Solar power"
       },
       "answer": "C",
       "image": null
     },
     {
-      "id": 27,
-      "question": "The =COUNTA() function counts cells that are?",
+      "id": 26,
+      "question": "The source of farm power represented by X is?",
       "options": {
-        "A": "Empty",
-        "B": "Numbers only",
-        "C": "Not empty (contain numbers or text)",
-        "D": "Text only"
+        "A": "Mechanical power",
+        "B": "Animal power",
+        "C": "Electrical power",
+        "D": "Human power"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "Watering can as a source of farm power, represented by Y, falls under which category?",
+      "options": {
+        "A": "Mechanical power",
+        "B": "Solar power",
+        "C": "Human power",
+        "D": "Wind power"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 28,
-      "question": "The logical function =IF(B2>=50, 'Pass', 'Fail') will display 'Pass' if the value in B2 is?",
+      "question": "Solar panel, represented by Z, is a device that harnesses?",
       "options": {
-        "A": "Less than 50",
-        "B": "Equal to 49",
-        "C": "Greater than or equal to 50",
-        "D": "A text value"
+        "A": "Wind power",
+        "B": "Electrical power",
+        "C": "Solar power",
+        "D": "Hydraulic power"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 29,
-      "question": "A chart that is best for comparing values across different categories, like sales per salesperson, is a?",
+      "question": "Which of the sources of farm power in Table 1 is most suitable for small-scale, subsistence farming but inefficient for large-scale commercial operations?",
       "options": {
-        "A": "Line chart",
-        "B": "Pie chart",
-        "C": "Bar or column chart",
-        "D": "Scatter plot"
+        "A": "W",
+        "B": "X",
+        "C": "Y",
+        "D": "Z"
       },
       "answer": "C",
-      "image": null
+      "image": {
+        "present": true,
+        "description": "Table 1: Sources of Farm Power showing W=Tractor, X=Oxen, Y=Watering can, Z=Solar panel"
+      }
     },
     {
       "id": 30,
-      "question": "A chart that is best for showing a trend over time, like company profit per month, is a?",
+      "question": "Crops grown primarily for human consumption, such as rice, yam, and cassava, are classified as?",
       "options": {
-        "A": "Bar chart",
-        "B": "Line chart",
-        "C": "Pie chart",
-        "D": "Area chart"
+        "A": "Cash crops",
+        "B": "Food crops",
+        "C": "Industrial crops",
+        "D": "Beverage crops"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 31,
-      "question": "The one major rule for using a pie chart is that the data must?",
+      "question": "Crops like cocoa, oil palm, and cotton, which are grown mainly for sale to generate income, are known as?",
       "options": {
-        "A": "Be numbers",
-        "B": "Show a trend over time",
-        "C": "Add up to 100% (represent parts of a whole)",
-        "D": "Be in a single row"
+        "A": "Food crops",
+        "B": "Subsistence crops",
+        "C": "Cash crops",
+        "D": "Forage crops"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 32,
-      "question": "Rearranging rows of data based on the values in a column (e.g., A-Z) is called?",
+      "question": "Crops used as raw materials in manufacturing processes, such as cotton for textiles, are classified as?",
       "options": {
-        "A": "Filtering",
-        "B": "Sorting",
-        "C": "Querying",
-        "D": "Grouping"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 33,
-      "question": "Hiding rows that don't match your criteria, so you can focus on specific data, is called?",
-      "options": {
-        "A": "Sorting",
-        "B": "Filtering",
-        "C": "Formatting",
-        "D": "Deleting"
-      },
-      "answer": "B",
-      "image": null
-    },
-    {
-      "id": 34,
-      "question": "Microsoft PowerPoint and Google Slides are examples of?",
-      "options": {
-        "A": "Word processors",
-        "B": "Spreadsheets",
-        "C": "Presentation software",
-        "D": "Databases"
+        "A": "Food crops",
+        "B": "Cash crops",
+        "C": "Industrial crops",
+        "D": "Oil crops"
       },
       "answer": "C",
       "image": null
     },
     {
-      "id": 35,
-      "question": "A single 'page' in a presentation is called a?",
+      "id": 33,
+      "question": "Coffee, tea, and cocoa are examples of?",
       "options": {
-        "A": "Sheet",
-        "B": "Slide",
-        "C": "Layout",
-        "D": "Screen"
+        "A": "Oil crops",
+        "B": "Fibre crops",
+        "C": "Beverage crops",
+        "D": "Spice crops"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Groundnut, oil palm, and coconut are classified as?",
+      "options": {
+        "A": "Spice crops",
+        "B": "Oil crops",
+        "C": "Beverage crops",
+        "D": "Fruit crops"
       },
       "answer": "B",
       "image": null
     },
     {
-      "id": 36,
-      "question": "A pre-defined template that arranges placeholders for content on a slide is a?",
+      "id": 35,
+      "question": "Crops cultivated for the fibre they produce, used in textiles, are called?",
       "options": {
-        "A": "Theme",
-        "B": "Transition",
-        "C": "Animation",
-        "D": "Layout"
+        "A": "Oil crops",
+        "B": "Forage crops",
+        "C": "Fibre crops",
+        "D": "Spice crops"
       },
-      "answer": "D",
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "Pepper, ginger, and garlic are examples of?",
+      "options": {
+        "A": "Spice and condiment crops",
+        "B": "Fruit crops",
+        "C": "Beverage crops",
+        "D": "Oil crops"
+      },
+      "answer": "A",
       "image": null
     },
     {
       "id": 37,
-      "question": "The 'master template' that controls the font, colours, and background for all slides in a presentation is the?",
+      "question": "Crops that complete their life cycle within one growing season (one year) are called?",
       "options": {
-        "A": "Theme",
-        "B": "Layout",
-        "C": "Slide Master",
-        "D": "Design tab"
+        "A": "Biennial crops",
+        "B": "Perennial crops",
+        "C": "Annual crops",
+        "D": "Ephemeral crops"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 38,
-      "question": "The visual effect used when moving from one slide to the next is called a?",
+      "question": "Maize, beans, and groundnut are examples of?",
       "options": {
-        "A": "Animation",
-        "B": "Transition",
-        "C": "Movement",
-        "D": "Theme"
+        "A": "Perennial crops",
+        "B": "Biennial crops",
+        "C": "Annual crops",
+        "D": "Tree crops"
       },
-      "answer": "B",
+      "answer": "C",
       "image": null
     },
     {
       "id": 39,
-      "question": "The visual effect applied to individual items on a slide (e.g., making text fly in) is called an?",
+      "question": "Crops that take two years to complete their life cycle are known as?",
       "options": {
-        "A": "Transition",
-        "B": "Animation",
-        "C": "Layout",
-        "D": "Effect"
+        "A": "Annual crops",
+        "B": "Biennial crops",
+        "C": "Perennial crops",
+        "D": "Arable crops"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 40,
-      "question": "A common bad practice in presentations is to?",
+      "question": "Carrot, onion, and cabbage are examples of?",
       "options": {
-        "A": "Use high-quality visuals",
-        "B": "Read the slides verbatim to the audience",
-        "C": "Be consistent with fonts",
-        "D": "Use keywords, not full sentences"
+        "A": "Annual crops",
+        "B": "Biennial crops",
+        "C": "Perennial crops",
+        "D": "Cereal crops"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 41,
-      "question": "An organized, structured collection of data stored electronically is a?",
+      "question": "In the first year of a biennial crop's life cycle, it focuses on?",
       "options": {
-        "A": "Spreadsheet",
-        "B": "Database",
-        "C": "Worksheet",
-        "D": "Document"
+        "A": "Flowering and seed production",
+        "B": "Vegetative growth and food storage",
+        "C": "Dying back",
+        "D": "Producing fruit"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 42,
-      "question": "A spreadsheet is good for a single list, whereas a database is designed to handle?",
+      "question": "Crops that live for more than two years and produce every season without replanting are called?",
       "options": {
-        "A": "Only numbers",
-        "B": "Complex relationships between multiple tables",
-        "C": "Simple text documents",
-        "D": "Presentations"
+        "A": "Annual crops",
+        "B": "Biennial crops",
+        "C": "Perennial crops",
+        "D": "Monocarpic crops"
       },
-      "answer": "B",
+      "answer": "C",
       "image": null
     },
     {
       "id": 43,
-      "question": "The software used to create, manage, and interact with a database is called a?",
+      "question": "Cocoa, oil palm, and mango are examples of?",
       "options": {
-        "A": "DBMS (Database Management System)",
-        "B": "OS",
-        "C": "Spreadsheet",
-        "D": "Word processor"
+        "A": "Annual crops",
+        "B": "Biennial crops",
+        "C": "Perennial crops",
+        "D": "Vegetable crops"
       },
-      "answer": "A",
+      "answer": "C",
       "image": null
     },
     {
       "id": 44,
-      "question": "Microsoft Access is an example of a?",
+      "question": "Cereal crops, like maize and rice, are classified based on?",
       "options": {
-        "A": "Desktop DBMS",
-        "B": "Server-based DBMS",
-        "C": "Spreadsheet",
-        "D": "Presentation tool"
+        "A": "Life cycle",
+        "B": "Use",
+        "C": "Botanical (morphological) features",
+        "D": "Environmental adaptation"
       },
-      "answer": "A",
+      "answer": "C",
       "image": null
     },
     {
       "id": 45,
-      "question": "In a database table, a column represents a?",
+      "question": "The recommended spacing for planting maize is?",
       "options": {
-        "A": "Record",
-        "B": "Field (or attribute)",
-        "C": "Table",
-        "D": "Query"
+        "A": "25 cm \u00d7 25 cm",
+        "B": "75 cm \u00d7 25 cm",
+        "C": "100 cm \u00d7 100 cm",
+        "D": "150 cm \u00d7 50 cm"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 46,
-      "question": "In a database table, a row represents a?",
+      "question": "The depth for planting maize seeds is typically?",
       "options": {
-        "A": "Field",
-        "B": "Record (or instance)",
-        "C": "Primary key",
-        "D": "Data type"
+        "A": "1 cm",
+        "B": "3-5 cm",
+        "C": "10-15 cm",
+        "D": "20-25 cm"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 47,
-      "question": "A field that uniquely identifies every single record in a table is called a?",
+      "question": "The fertiliser commonly applied to maize two weeks after planting at a rate of 200 kg/ha is?",
       "options": {
-        "A": "Foreign key",
-        "B": "Primary key",
-        "C": "Index",
-        "D": "Data type"
+        "A": "Urea only",
+        "B": "Single Superphosphate (SSP)",
+        "C": "NPK 15:15:15",
+        "D": "Muriate of Potash (MOP)"
       },
-      "answer": "B",
+      "answer": "C",
       "image": null
     },
     {
       "id": 48,
-      "question": "A good example of a primary key for a Students table is?",
+      "question": "Which of the following is a pest that attacks maize?",
       "options": {
-        "A": "FirstName",
-        "B": "LastName",
-        "C": "StudentID",
-        "D": "DateOfBirth"
+        "A": "Mealybug",
+        "B": "Cassava mosaic virus",
+        "C": "Stem borer",
+        "D": "Black pod disease"
       },
       "answer": "C",
       "image": null
     },
     {
       "id": 49,
-      "question": "A rule that specifies what kind of data can be stored in a field (e.g., Text, Number) is its?",
+      "question": "Cassava is propagated using?",
       "options": {
-        "A": "Field name",
-        "B": "Data type",
-        "C": "Primary key",
-        "D": "Record type"
+        "A": "Seeds",
+        "B": "Tubers",
+        "C": "Stem cuttings",
+        "D": "Suckers"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 50,
+      "question": "The recommended spacing for planting cassava is?",
+      "options": {
+        "A": "25 cm \u00d7 25 cm",
+        "B": "50 cm \u00d7 50 cm",
+        "C": "75 cm \u00d7 50 cm",
+        "D": "1 m \u00d7 1 m"
+      },
+      "answer": "D",
+      "image": null
+    }
+  ],
+  "batch_2": [
+    {
+      "id": 1,
+      "question": "A common disease that affects cassava is?",
+      "options": {
+        "A": "Rice blast",
+        "B": "Cassava mosaic virus",
+        "C": "Black pod disease",
+        "D": "Stem borer"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "Yam is a crop classified as a?",
+      "options": {
+        "A": "Cereal crop",
+        "B": "Leguminous crop",
+        "C": "Root and tuber crop",
+        "D": "Fruit crop"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "Yam is typically planted on?",
+      "options": {
+        "A": "Flat beds",
+        "B": "Mounds or heaps",
+        "C": "Ridges only",
+        "D": "In waterlogged areas"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "Supporting yam vines with sticks to promote healthy growth is a practice known as?",
+      "options": {
+        "A": "Mulching",
+        "B": "Pruning",
+        "C": "Staking",
+        "D": "Thinning"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Rice is a crop that can be grown in?",
+      "options": {
+        "A": "Upland areas only",
+        "B": "Swamp or lowland areas",
+        "C": "Desert areas",
+        "D": "Rocky areas"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "The land for swamp rice is typically prepared by?",
+      "options": {
+        "A": "Ridging",
+        "B": "Mounding",
+        "C": "Puddling",
+        "D": "Ploughing only"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Rice seedlings are often raised in a nursery and then?",
+      "options": {
+        "A": "Directly sown in the field",
+        "B": "Transplanted into the main field",
+        "C": "Harvested",
+        "D": "Threshed"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "A piece of land covered with grass or herbage suitable for grazing livestock is a?",
+      "options": {
+        "A": "Ranch",
+        "B": "Pasture",
+        "C": "Plantation",
+        "D": "Farmstead"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Pasture that occurs without deliberate planting is known as?",
+      "options": {
+        "A": "Artificial pasture",
+        "B": "Improved pasture",
+        "C": "Natural pasture",
+        "D": "Cultivated pasture"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Guinea grass (Panicum maximum) and elephant grass (Pennisetum purpureum) are examples of common?",
+      "options": {
+        "A": "Pasture legumes",
+        "B": "Pasture grasses",
+        "C": "Browse plants",
+        "D": "Forage crops for silage only"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "Centrosema, Stylo, and Calopogonium are examples of?",
+      "options": {
+        "A": "Pasture grasses",
+        "B": "Pasture legumes",
+        "C": "Cereal crops",
+        "D": "Root crops"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "A key characteristic of leguminous pasture crops is their ability to?",
+      "options": {
+        "A": "Grow very tall",
+        "B": "Fix atmospheric nitrogen through bacteria",
+        "C": "Tolerate waterlogging",
+        "D": "Produce large amounts of grain"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "The practice of moving animals from one paddock to another to allow grazed pastures to recover is called?",
+      "options": {
+        "A": "Continuous grazing",
+        "B": "Overgrazing",
+        "C": "Rotational grazing",
+        "D": "Tethering"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "The method of preserving forage by drying it under the sun until the moisture content is reduced is called?",
+      "options": {
+        "A": "Silage making",
+        "B": "Hay making",
+        "C": "Composting",
+        "D": "Ensiling"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Silage is made by fermenting green forage crops in?",
+      "options": {
+        "A": "Open fields",
+        "B": "Airtight conditions (e.g., silos)",
+        "C": "Direct sunlight",
+        "D": "Running water"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Plant nutrients that are required by plants in large quantities are called?",
+      "options": {
+        "A": "Micronutrients",
+        "B": "Macronutrients",
+        "C": "Trace elements",
+        "D": "Mineral elements"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Which of the following is a primary macronutrient?",
+      "options": {
+        "A": "Calcium",
+        "B": "Magnesium",
+        "C": "Sulphur",
+        "D": "Phosphorus"
+      },
+      "answer": "D",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "Nitrogen (N) is essential for plants primarily for?",
+      "options": {
+        "A": "Root development and flowering",
+        "B": "Vegetative growth and chlorophyll formation",
+        "C": "Water regulation and disease resistance",
+        "D": "Strengthening cell walls"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Phosphorus (P) is important for?",
+      "options": {
+        "A": "Leaf growth",
+        "B": "Root development, flowering, and fruiting",
+        "C": "Protein synthesis",
+        "D": "Enzyme activation"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Potassium (K) is essential for?",
+      "options": {
+        "A": "Vegetative growth",
+        "B": "Root development",
+        "C": "Enzyme activation and disease resistance",
+        "D": "Chlorophyll formation"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "A deficiency of nitrogen in plants is typically indicated by?",
+      "options": {
+        "A": "Purplish leaves",
+        "B": "Yellowing (chlorosis) of older leaves",
+        "C": "Leaf scorching",
+        "D": "Stunted roots"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "A deficiency of phosphorus can lead to?",
+      "options": {
+        "A": "Yellowing of leaves",
+        "B": "Purplish colouration of leaves and poor root development",
+        "C": "Leaf scorching",
+        "D": "Interveinal chlorosis"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "The process by which atmospheric nitrogen is converted into ammonia by bacteria like Rhizobium is called?",
+      "options": {
+        "A": "Nitrification",
+        "B": "Denitrification",
+        "C": "Nitrogen fixation",
+        "D": "Ammonification"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "The continuous movement and exchange of essential elements among soil, plants, animals, and the atmosphere is a?",
+      "options": {
+        "A": "Nutrient cycle",
+        "B": "Food chain",
+        "C": "Life cycle",
+        "D": "Rock cycle"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 25,
+      "question": "In Figure 1, the process labelled (1) by which atmospheric nitrogen is converted into ammonia is?",
+      "options": {
+        "A": "Nitrification",
+        "B": "Denitrification",
+        "C": "Nitrogen fixation",
+        "D": "Ammonification"
+      },
+      "answer": "C",
+      "image": {
+        "present": true,
+        "description": "Figure 1: Simplified diagram of the Nitrogen Cycle showing processes labelled (1) Nitrogen fixation, (2) Nitrification, (3) Assimilation, (4) Denitrification"
+      }
+    },
+    {
+      "id": 26,
+      "question": "The process labelled (2) in Figure 1, where ammonia is converted to nitrites and then nitrates, is known as?",
+      "options": {
+        "A": "Ammonification",
+        "B": "Denitrification",
+        "C": "Nitrogen fixation",
+        "D": "Nitrification"
+      },
+      "answer": "D",
+      "image": {
+        "present": true,
+        "description": "Figure 1: Simplified diagram of the Nitrogen Cycle showing processes labelled (1) Nitrogen fixation, (2) Nitrification, (3) Assimilation, (4) Denitrification"
+      }
+    },
+    {
+      "id": 27,
+      "question": "The process labelled (4) in Figure 1, where nitrates are converted back to atmospheric nitrogen, is called?",
+      "options": {
+        "A": "Nitrification",
+        "B": "Denitrification",
+        "C": "Ammonification",
+        "D": "Assimilation"
+      },
+      "answer": "B",
+      "image": {
+        "present": true,
+        "description": "Figure 1: Simplified diagram of the Nitrogen Cycle showing processes labelled (1) Nitrogen fixation, (2) Nitrification, (3) Assimilation, (4) Denitrification"
+      }
+    },
+    {
+      "id": 28,
+      "question": "The artificial application of water to soil to assist crop growth during periods of inadequate rainfall is?",
+      "options": {
+        "A": "Drainage",
+        "B": "Irrigation",
+        "C": "Mulching",
+        "D": "Tillage"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "A major importance of irrigation is that it allows for?",
+      "options": {
+        "A": "Dry-season farming only",
+        "B": "Multiple cropping throughout the year",
+        "C": "Dependence on rainfall",
+        "D": "Reduced crop yields"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "Which of the following is a source of irrigation water?",
+      "options": {
+        "A": "Treated wastewater",
+        "B": "Sewage sludge",
+        "C": "Industrial effluent",
+        "D": "All of the above can be sources if treated"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "The oldest and most common irrigation method, where water flows over the soil surface by gravity, is?",
+      "options": {
+        "A": "Drip irrigation",
+        "B": "Sprinkler irrigation",
+        "C": "Surface irrigation",
+        "D": "Subsurface irrigation"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "Furrow irrigation is a type of?",
+      "options": {
+        "A": "Sprinkler irrigation",
+        "B": "Surface irrigation",
+        "C": "Drip irrigation",
+        "D": "Subsurface irrigation"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "An advantage of surface irrigation is that it is?",
+      "options": {
+        "A": "Very efficient in water use",
+        "B": "Simple and cheap to operate",
+        "C": "Suitable for all soil types and slopes",
+        "D": "Not prone to water wastage"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Sprinkler irrigation simulates?",
+      "options": {
+        "A": "Underground water flow",
+        "B": "Artificial rainfall",
+        "C": "River flow",
+        "D": "Capillary action"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "A major disadvantage of sprinkler irrigation is that it?",
+      "options": {
+        "A": "Can be inefficient in windy conditions",
+        "B": "Is only suitable for rice",
+        "C": "Wastes very little water",
+        "D": "Does not require pumps"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 36,
+      "question": "The most efficient irrigation method, which delivers water directly to the root zone of plants, is?",
+      "options": {
+        "A": "Surface irrigation",
+        "B": "Sprinkler irrigation",
+        "C": "Drip (trickle) irrigation",
+        "D": "Basin irrigation"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 37,
+      "question": "An advantage of drip irrigation is that it?",
+      "options": {
+        "A": "Is very cheap to install",
+        "B": "Minimises weed growth and reduces evaporation",
+        "C": "Requires no maintenance",
+        "D": "Wets the entire field including leaves"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 38,
+      "question": "A problem associated with improper irrigation is?",
+      "options": {
+        "A": "Soil fertility increase",
+        "B": "Waterlogging and salinisation",
+        "C": "Improved soil aeration",
+        "D": "Enhanced root development"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 39,
+      "question": "The removal of excess water from the soil surface or root zone to create favourable conditions for crop growth is?",
+      "options": {
+        "A": "Irrigation",
+        "B": "Aeration",
+        "C": "Drainage",
+        "D": "Mulching"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 40,
+      "question": "Waterlogging occurs when excess water saturates the soil, preventing?",
+      "options": {
+        "A": "Nutrient absorption",
+        "B": "Air from reaching plant roots",
+        "C": "Seed germination",
+        "D": "Weed growth"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 41,
+      "question": "Proper drainage is important in agriculture because it?",
+      "options": {
+        "A": "Increases the risk of soil erosion",
+        "B": "Prevents waterlogging and improves soil aeration",
+        "C": "Encourages salt accumulation",
+        "D": "Delays farm operations after rainfall"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 42,
+      "question": "The natural movement of excess water away from an area through the land's slope is called?",
+      "options": {
+        "A": "Artificial drainage",
+        "B": "Natural drainage",
+        "C": "Subsurface drainage",
+        "D": "Vertical drainage"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 43,
+      "question": "The construction of shallow ditches or open drains to remove surface water is a method of?",
+      "options": {
+        "A": "Subsurface drainage",
+        "B": "Natural drainage",
+        "C": "Surface drainage",
+        "D": "Vertical drainage"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 44,
+      "question": "Tile drainage, using buried porous pipes to collect and carry away groundwater, is a type of?",
+      "options": {
+        "A": "Surface drainage",
+        "B": "Subsurface drainage",
+        "C": "Vertical drainage",
+        "D": "Mole drainage"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 45,
+      "question": "The harmful effects of farming activities on the environment, such as from chemicals and waste, is known as?",
+      "options": {
+        "A": "Agricultural pollution",
+        "B": "Soil degradation",
+        "C": "Eutrophication",
+        "D": "Desertification"
+      },
+      "answer": "A",
+      "image": null
+    },
+    {
+      "id": 46,
+      "question": "The excessive use of chemical fertilisers can lead to?",
+      "options": {
+        "A": "Improved soil structure",
+        "B": "Pollution of water bodies through runoff",
+        "C": "A decrease in crop yield",
+        "D": "Increased beneficial soil organisms"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 47,
+      "question": "Pesticides and herbicides can remain in the soil and water for a long time, harming?",
+      "options": {
+        "A": "Only the target pests",
+        "B": "Non-target organisms, including beneficial insects",
+        "C": "Only crop plants",
+        "D": "The air quality"
+      },
+      "answer": "B",
+      "image": null
+    },
+    {
+      "id": 48,
+      "question": "The process where excess nutrients in water bodies from fertilisers cause an overgrowth of algae, depleting oxygen, is called?",
+      "options": {
+        "A": "Salinisation",
+        "B": "Waterlogging",
+        "C": "Eutrophication",
+        "D": "Leaching"
+      },
+      "answer": "C",
+      "image": null
+    },
+    {
+      "id": 49,
+      "question": "An effective way to control agricultural pollution from fertilisers is to?",
+      "options": {
+        "A": "Apply fertilisers in any quantity",
+        "B": "Use only the right amounts at the right time",
+        "C": "Apply fertilisers just before heavy rain",
+        "D": "Never use organic manures"
       },
       "answer": "B",
       "image": null
     },
     {
       "id": 50,
-      "question": "A field designed to store true/false values would have which data type?",
+      "question": "The use of integrated pest management (IPM) helps to control agricultural pollution by?",
       "options": {
-        "A": "Text",
-        "B": "Number",
-        "C": "Date/Time",
-        "D": "Yes/No (Boolean)"
+        "A": "Increasing the use of chemical pesticides",
+        "B": "Combining biological, cultural, and mechanical methods to reduce pesticide use",
+        "C": "Encouraging the burning of crop residues",
+        "D": "Promoting monoculture"
       },
-      "answer": "D",
+      "answer": "B",
       "image": null
     }
 ];
 
 
         const staticTheoryQuestions = [
-                                    {
+      {
       "id": 1,
-      "question": "(a) Define a word processor and give two examples. (4 marks)\n(b) Distinguish between character formatting and paragraph formatting, giving two examples of each. (8 marks)\n(c) What is the difference between a header and a footer? (2 marks)\n(d) Explain what the \"Mail Merge\" feature is used for and describe a scenario where it would be helpful. (6 marks)",
-      "marks": 20,
+      "question": "(a) Define agricultural mechanisation. (2 marks)\n(b) Discuss five prospects or benefits of agricultural mechanisation in Nigeria. (8 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 2,
-      "question": "(a) Define a spreadsheet and list its core components: Workbook, Worksheet, Cell, Row, Column. (5 marks)\n(b) Explain the \"golden rule\" for creating formulas in a spreadsheet. (2 marks)\n(c) Differentiate between relative referencing (e.g., A1) and absolute referencing (e.g., $A$1). Provide an example of a scenario where you would need to use an absolute reference. (7 marks)\n(d) You have a price list in column A and a tax rate of 7.5% in cell C1. Write the formula you would put in cell B2 to calculate the tax for the item in A2, using the correct absolute reference for the tax rate. (6 marks)",
-      "marks": 20,
+      "question": "(a) List and explain the seven main sources of farm power. (7 marks)\n(b) State one advantage and one disadvantage of solar power as a source of farm power. (3 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 3,
-      "question": "(a) What is a function in a spreadsheet? (2 marks)\n(b) Explain the purpose of the following functions, giving an example of each: (i) =SUM() (ii) =AVERAGE() (iii) =MAX() (iv) =MIN() (v) =IF(). (10 marks)\n(c) A teacher has a list of students' scores in column B. She wants to automatically assign a grade of \"Distinction\" if the score is 70 or above, and \"Pass\" if it is below 70. Write the exact =IF() function she should put in cell C2. (4 marks)\n(d) Explain the difference between sorting and filtering data in a spreadsheet. (4 marks)",
-      "marks": 20,
+      "question": "(a) Classify crops based on their life cycle, giving two examples for each class. (6 marks)\n(b) Classify crops based on their uses, giving one example for each of the following: (i) Food crops (ii) Cash crops (iii) Oil crops (iv) Fibre crops. (4 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 4,
-      "question": "(a) What is presentation software and give two examples. (4 marks)\n(b) Explain the difference between a transition and an animation in presentation software. (4 marks)\n(c) What is the Slide Master and why is it a useful feature? (4 marks)\n(d) List and explain four (4) tips for creating and delivering an effective and professional presentation. (8 marks)",
-      "marks": 20,
+      "question": "(a) Outline the husbandry practices for maize production from land preparation to storage. (6 marks)\n(b) Describe the methods of propagating cassava and yam. (4 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 5,
-      "question": "(a) Define a database and explain the main difference between a database and a spreadsheet. (6 marks)\n(b) Explain the following database terms: (i) Table (ii) Field (iii) Record (iv) Primary Key. (8 marks)\n(c) What is a DBMS? Give two examples. (4 marks)\n(d) Why is it important for every record in a table to have a primary key? (2 marks)",
-      "marks": 20,
+      "question": "(a) Define pasture and forage crops. (2 marks)\n(b) Differentiate between natural pasture and artificial pasture. (4 marks)\n(c) List four common pasture grasses and four common pasture legumes found in Nigeria. (4 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 6,
-      "question": "(a) What does the acronym CRUD stand for in database management? (2 marks)\n(b) Explain the purpose of the following database objects: (i) Form (ii) Query (iii) Report. (6 marks)\n(c) What is a data type? Name and describe three different data types. (6 marks)\n(d) Write an SQL query to retrieve the FirstName and LastName of all students from a Students table who are in the class 'SS1'. (6 marks)",
-      "marks": 20,
+      "question": "(a) Explain the importance of pasture and forage crops in livestock production. (4 marks)\n(b) Describe two methods of preserving forage for use during the dry season. (4 marks)\n(c) What is rotational grazing and why is it important? (2 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 7,
-      "question": "(a) What is Artificial Intelligence (AI)? (2 marks)\n(b) Differentiate between Artificial Narrow Intelligence (ANI) and Artificial General Intelligence (AGI). Which one exists today? Give an example of ANI. (6 marks)\n(c) Explain the concept of Machine Learning in simple terms. How is it different from traditional programming? (6 marks)\n(d) What is the Internet of Things (IoT)? Describe the three main steps in how an IoT system works. (6 marks)",
-      "marks": 20,
+      "question": "(a) Distinguish between macronutrients and micronutrients, giving two examples of each. (4 marks)\n(b) State the major functions of Nitrogen (N), Phosphorus (P), and Potassium (K) in plant nutrition. (3 marks)\n(c) Explain, with the aid of a labelled diagram, the nitrogen cycle. (3 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 8,
-      "question": "(a) Differentiate between Artificial Intelligence (AI) and Robotics. Can you have one without the other? Explain with examples. (8 marks)\n(b) What is Virtual Reality (VR)? What is its core concept and what hardware is typically used to experience it? (6 marks)\n(c) What is Augmented Reality (AR)? Give two examples of AR applications from everyday life. (6 marks)",
-      "marks": 20,
+      "question": "(a) What is irrigation? (2 marks)\n(b) Describe the three main types of irrigation systems: surface, sprinkler, and drip irrigation. (6 marks)\n(c) State two problems associated with improper irrigation. (2 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 9,
-      "question": "(a) Describe the three cloud service models (IaaS, PaaS, SaaS) using an analogy or real-world example for each. (12 marks)\n(b) Explain the \"3-2-1 Rule\" for data backup. (4 marks)\n(c) What is the purpose of a firewall in a network? (4 marks)",
-      "marks": 20,
+      "question": "(a) Define drainage in an agricultural context. (2 marks)\n(b) Explain the importance of drainage in crop production. (4 marks)\n(c) Describe two methods of artificial drainage. (4 marks)",
+      "marks": 10,
       "image": null
     },
     {
       "id": 10,
-      "question": "Write short notes on the following topics:\n(a) The role of the SQL SELECT and WHERE clauses in a database query. (5 marks)\n(b) The difference between a pie chart and a line chart, including when you would use each one. (5 marks)\n(c) The concept of an \"echo chamber\" or \"filter bubble\" on social media. (5 marks)\n(d) Two-factor authentication (2FA) and why it enhances security. (5 marks)",
-      "marks": 20,
+      "question": "(a) What is agricultural pollution? (2 marks)\n(b) Discuss four major causes of agricultural pollution. (4 marks)\n(c) Suggest four ways to control and prevent agricultural pollution. (4 marks)",
+      "marks": 10,
       "image": null
     }
 ];
@@ -1343,10 +1957,8 @@
                   document.getElementById('username').innerText = username;
                   
               
-                //document.getElementById('userImage').src =
-              //'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
-
-              document.getElementById('userImage').src = sessionStorage.getItem('image') || 'img/default_user.jpg';
+                document.getElementById('userImage').src =
+              'img/' + (sessionStorage.getItem('image') || 'default_user.jpg');
                 }
            
             // Load static questions
@@ -1366,7 +1978,7 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 30; // 60 minutes
+        let timeLeft = 60 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
@@ -1650,7 +2262,7 @@
                     window.location.href = "results.html";
         }*/
 
-            /*function showResult() {
+            function showResult() {
 				    clearInterval(timerInterval);
 				    let score = 0;
 				    questions.forEach((q, i) => {
@@ -1707,76 +2319,7 @@
 				    
 				    alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
 				    window.location.href = "results.html";
-				}*/
-                function showResult() {
-                        clearInterval(timerInterval);
-                        let score = 0;
-                        questions.forEach((q, i) => {
-                            if (userAnswers[i] === q.answer) score++;
-                        });
-                        
-                        const username = sessionStorage.getItem('username') || "Guest";
-                        const cls = sessionStorage.getItem('class');
-                        const sub = sessionStorage.getItem('subject');
-                        
-                        localStorage.setItem("examUser", username);
-                        localStorage.setItem("examScore", score);
-                        localStorage.setItem("totalQuestions", questions.length);
-                        localStorage.setItem("pendingClass", cls);
-                        localStorage.setItem("pendingSubject", sub);
-                        localStorage.setItem("pendingUsername", username);
-                        
-                        // Get exam info from sessionStorage or use default
-                        const examInfo = sessionStorage.getItem('examInfo') || 'TEST - RESULT (SECOND TERM)';
-                        localStorage.setItem("examInfo", examInfo);
-                        
-                        // ✅ Build a clean record for history (to be used by records.html)
-                        const record = {
-                            username: username,
-                            class: cls,
-                            subject: sub,
-                            score: score,
-                            totalQuestions: questions.length,
-                            percentage: ((score / questions.length) * 100).toFixed(2) + '%',
-                            examInfo: examInfo,
-                            timestamp: new Date().toISOString()
-                        };
-                        
-                        // ✅ Save this attempt to localStorage (creates/updates examRecords array)
-                        let records = JSON.parse(localStorage.getItem('examRecords') || '[]');
-                        records.push(record);
-                        localStorage.setItem('examRecords', JSON.stringify(records));
-                        
-                        // ✅ Secretly download score details to downloads folder
-                        const scoreDetails = {
-                            ...record,
-                            userAnswers: userAnswers,
-                            correctAnswers: questions.map(q => q.answer)
-                        };
-                        
-                        // Create a blob with the data
-                        const blob = new Blob([JSON.stringify(scoreDetails, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        
-                        // Create a hidden anchor element and trigger download
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `exam_results_${username}_${new Date().getTime()}.json`;
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        
-                        // Clean up
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        
-                        // ✅ DO NOT mark exam as completed here - wait for confirmation on results page
-                        console.log(`Exam completed but not marked as attempted yet. Waiting for confirmation.`);
-                        
-                        alert(`Objective Exam Completed!\nYour Score: ${score} out of ${questions.length}\n\nClick OK to view your results and confirm your attempt.`);
-                        window.location.href = "results.html";
-                    }
-
+				}
 
 
 
